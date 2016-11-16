@@ -1,0 +1,64 @@
+﻿.green {
+    color: #15c23c;
+}
+
+.yellow {
+    color: #f1da91;
+}
+
+.header {
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    line-height: 34px;
+    background-color: #4c4f53;
+    font-family: 'Open Sans',Arial,Helvetica, sans-serif;
+}
+
+.body {
+    text-align: center;
+    font-size: 12px;
+    font-family: Tahoma;
+    color: black;
+    /*font-weight: bold;*/
+}
+
+.padding {
+    padding-bottom: 50px;
+}
+
+.title {
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.label {
+    display: inline-block;
+    color: black;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 2px;
+}
+
+
+.labelform {
+    font-weight: bold !important;
+}
+
+.btnwidth {
+    width: 100px;
+}
+
+table {
+    margin-bottom: 0px !important;
+}
+

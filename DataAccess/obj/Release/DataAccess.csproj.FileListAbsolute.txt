@@ -1,0 +1,6 @@
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DataAccess\bin\Release\DataAccess.dll.config
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DataAccess\bin\Release\DataAccess.dll
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DataAccess\bin\Release\DataAccess.pdb
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DataAccess\obj\Release\DataAccess.dll
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DataAccess\obj\Release\DataAccess.pdb
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache

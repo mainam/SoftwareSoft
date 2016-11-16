@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MNSHOP" Class="DbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-36VHM6E\SQLEXPRESS;Initial Catalog=MNSHOP;Integrated Security=True;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="MNSHOPConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbCategory" Member="tbCategories">
+    <Type Name="tbCategory">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbCategory_tbCategory" Member="tbCategories" ThisKey="Id" OtherKey="ParentId" Type="tbCategory" />
+      <Association Name="tbCategory_tbSoftware" Member="tbSoftwares" ThisKey="Id" OtherKey="CategoryId" Type="tbSoftware" />
+      <Association Name="tbCategory_tbCategory" Member="tbCategory1" ThisKey="ParentId" OtherKey="Id" Type="tbCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbInvoke" Member="tbInvokes">
+    <Type Name="tbInvoke">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SoftwareId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Discount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RealPrice" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="BoughtBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AutoGenLink" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpirationDateForLink" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tbInvoke_tbTransaction" Member="tbTransactions" ThisKey="Id" OtherKey="InvokeId" Type="tbTransaction" />
+      <Association Name="tbSoftware_tbInvoke" Member="tbSoftware" ThisKey="SoftwareId" OtherKey="Id" Type="tbSoftware" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tbUser_tbInvoke" Member="tbUser" ThisKey="BoughtBy" OtherKey="UserName" Type="tbUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSoftwaraStatus" Member="tbSoftwaraStatus">
+    <Type Name="tbSoftwaraStatus">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbSoftwaraStatus_tbSoftware" Member="tbSoftwares" ThisKey="Id" OtherKey="Status" Type="tbSoftware" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSoftware" Member="tbSoftwares">
+    <Type Name="tbSoftware">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UpBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumberGuaranteeDate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Discount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="tbSoftware_tbInvoke" Member="tbInvokes" ThisKey="Id" OtherKey="SoftwareId" Type="tbInvoke" />
+      <Association Name="tbCategory_tbSoftware" Member="tbCategory" ThisKey="CategoryId" OtherKey="Id" Type="tbCategory" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tbSoftwaraStatus_tbSoftware" Member="tbSoftwaraStatus" ThisKey="Status" OtherKey="Id" Type="tbSoftwaraStatus" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tbUser_tbSoftware" Member="tbUser" ThisKey="UpBy" OtherKey="UserName" Type="tbUser" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbTransaction" Member="tbTransactions">
+    <Type Name="tbTransaction">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="InvokeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destination" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbInvoke_tbTransaction" Member="tbInvoke" ThisKey="InvokeId" OtherKey="Id" Type="tbInvoke" IsForeignKey="true" />
+      <Association Name="tbTypeTransaction_tbTransaction" Member="tbTypeTransaction" ThisKey="Type" OtherKey="Id" Type="tbTypeTransaction" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tbUser_tbTransaction" Member="tbUser" ThisKey="Source" OtherKey="UserName" Type="tbUser" IsForeignKey="true" />
+      <Association Name="tbUser_tbTransaction1" Member="tbUser1" ThisKey="Destination" OtherKey="UserName" Type="tbUser" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbTypeTransaction" Member="tbTypeTransactions">
+    <Type Name="tbTypeTransaction">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbTypeTransaction_tbTransaction" Member="tbTransactions" ThisKey="Id" OtherKey="Type" Type="tbTransaction" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbTypeUser" Member="tbTypeUsers">
+    <Type Name="tbTypeUser">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbTypeUser_tbUser" Member="tbUsers" ThisKey="Id" OtherKey="TypeUser" Type="tbUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbUser" Member="tbUsers">
+    <Type Name="tbUser">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Money" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="tbUser_tbInvoke" Member="tbInvokes" ThisKey="UserName" OtherKey="BoughtBy" Type="tbInvoke" />
+      <Association Name="tbUser_tbSoftware" Member="tbSoftwares" ThisKey="UserName" OtherKey="UpBy" Type="tbSoftware" />
+      <Association Name="tbUser_tbTransaction" Member="tbTransactions" ThisKey="UserName" OtherKey="Source" Type="tbTransaction" />
+      <Association Name="tbUser_tbTransaction1" Member="tbTransactions1" ThisKey="UserName" OtherKey="Destination" Type="tbTransaction" />
+      <Association Name="tbTypeUser_tbUser" Member="tbTypeUser" ThisKey="TypeUser" OtherKey="Id" Type="tbTypeUser" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

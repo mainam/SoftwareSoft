@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{7B4A331B-CF47-404C-B3BF-95C0B253B6FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareStore", "DeviceManagement\SoftwareStore.csproj", "{FF5DA9B7-AA6D-4014-99A5-9BB9FF6E826E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B4A331B-CF47-404C-B3BF-95C0B253B6FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4A331B-CF47-404C-B3BF-95C0B253B6FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4A331B-CF47-404C-B3BF-95C0B253B6FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4A331B-CF47-404C-B3BF-95C0B253B6FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF5DA9B7-AA6D-4014-99A5-9BB9FF6E826E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5DA9B7-AA6D-4014-99A5-9BB9FF6E826E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5DA9B7-AA6D-4014-99A5-9BB9FF6E826E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5DA9B7-AA6D-4014-99A5-9BB9FF6E826E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

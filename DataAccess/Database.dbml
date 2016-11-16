@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SELPORTAL" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=107.113.53.35;Initial Catalog=SELPORTAL;Persist Security Info=True;User ID=sa" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="SELPORTALConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AllowBorrowDevice" Member="AllowBorrowDevices">
+    <Type Name="AllowBorrowDevice">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ApplyDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="User_AllowBorrowDevice" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Approve" Member="Approves">
+    <Type Name="Approve">
+      <Column Name="IDApprove" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDDevice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubmitDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="UserBorrow" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Manager" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Borrower" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StatusManager" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StatusKeeper" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Reason" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="StatusBorrow" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StatusDevice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AllowShowManager" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowShowKeeper" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowShowUserBorrow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TypeApprove" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Device_Approve" Member="Device" ThisKey="IDDevice" OtherKey="IDDevice" Type="Device" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Status_Approve" Member="Status" ThisKey="StatusDevice" OtherKey="ID" Type="Status" IsForeignKey="true" />
+      <Association Name="StatusApproval_Approve" Member="StatusApproval" ThisKey="StatusManager" OtherKey="ID" Type="StatusApproval" IsForeignKey="true" />
+      <Association Name="StatusApproval_Approve1" Member="StatusApproval1" ThisKey="StatusKeeper" OtherKey="ID" Type="StatusApproval" IsForeignKey="true" />
+      <Association Name="StatusBorrow_Approve" Member="StatusBorrow1" ThisKey="StatusBorrow" OtherKey="ID" Type="StatusBorrow" IsForeignKey="true" />
+      <Association Name="User_Approve" Member="User" ThisKey="UserBorrow" OtherKey="UserName" Type="User" IsForeignKey="true" />
+      <Association Name="User_Approve1" Member="User1" ThisKey="Manager" OtherKey="UserName" Type="User" IsForeignKey="true" />
+      <Association Name="User_Approve2" Member="User2" ThisKey="Borrower" OtherKey="UserName" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AwardReward" Member="AwardRewards">
+    <Type Name="AwardReward">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IssueDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="AwardBy" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="User_AwardReward" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cabinet" Member="Cabinets">
+    <Type Name="Cabinet">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Cabinet_Device" Member="Devices" ThisKey="ID" OtherKey="Cabinet" Type="Device" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CategoryDevice" Member="CategoryDevices">
+    <Type Name="CategoryDevice">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="CategoryDevice_CCEmailBorrow" Member="CCEmailBorrows" ThisKey="ID" OtherKey="Category" Type="CCEmailBorrow" />
+      <Association Name="CategoryDevice_DeviceModel" Member="DeviceModels" ThisKey="ID" OtherKey="Category" Type="DeviceModel" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCEmailBorrow" Member="CCEmailBorrows">
+    <Type Name="CCEmailBorrow">
+      <Column Name="Category" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="CategoryDevice_CCEmailBorrow" Member="CategoryDevice" ThisKey="Category" OtherKey="ID" Type="CategoryDevice" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="User_CCEmailBorrow" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataCertification" Member="DataCertifications">
+    <Type Name="DataCertification">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="DataCertification_UserCertification" Member="UserCertifications" ThisKey="ID" OtherKey="DataCertificationID" Type="UserCertification" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataConfig" Member="DataConfigs">
+    <Type Name="DataConfig">
+      <Column Name="DataKey" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DataValue" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ApplyDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataLanguage" Member="DataLanguages">
+    <Type Name="DataLanguage">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="DataLanguage_UserLanguage" Member="UserLanguages" ThisKey="ID" OtherKey="Languageid" Type="UserLanguage" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DestroyPlan" Member="DestroyPlans">
+    <Type Name="DestroyPlan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Manager" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PlanName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Approver" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ApproveStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ApproveComment" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="SealDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DestroyDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="StatusPlan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DestroyPlan_DestroyPlan_Device" Member="DestroyPlan_Devices" ThisKey="ID" OtherKey="DestroyID" Type="DestroyPlan_Device" />
+      <Association Name="User_DestroyPlan" Member="User" ThisKey="Manager" OtherKey="UserName" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="User_DestroyPlan1" Member="User1" ThisKey="Approver" OtherKey="UserName" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DestroyPlan_Device" Member="DestroyPlan_Devices">
+    <Type Name="DestroyPlan_Device">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DestroyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DeviceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DestroyPlan_DestroyPlan_Device" Member="DestroyPlan" ThisKey="DestroyID" OtherKey="ID" Type="DestroyPlan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Device_DestroyPlan_Device" Member="Device" ThisKey="DeviceID" OtherKey="IDDevice" Type="Device" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Device" Member="Devices">
+    <Type Name="Device">
+      <Column Name="IDDevice" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Model" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tag" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Project" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Keeper" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BorrowDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ReturnDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="StatusDevice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IMEI" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Serial" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Version" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Receiver" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="From_" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReceiveDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Borrower" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Cabinet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KeepDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NewKeeper" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransferDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="BorrowerNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Device_Approve" Member="Approves" ThisKey="IDDevice" OtherKey="IDDevice" Type="Approve" />
+      <Association Name="Device_DestroyPlan_Device" Member="DestroyPlan_Devices" ThisKey="IDDevice" OtherKey="DeviceID" Type="DestroyPlan_Device" />
+      <Association Name="Device_InventoryUserDevice" Member="InventoryUserDevices" ThisKey="IDDevice" OtherKey="DeviceID" Type="InventoryUserDevice" />
+      <Association Name="Cabinet_Device" Member="Cabinet1" ThisKey="Cabinet" OtherKey="ID" Type="Cabinet" IsForeignKey="true" />
+      <Association Name="DeviceModel_Device" Member="DeviceModel" ThisKey="Model" OtherKey="ModelName" Type="DeviceModel" IsForeignKey="true" />
+      <Association Name="Status_Device" Member="Status" ThisKey="StatusDevice" OtherKey="ID" Type="Status" IsForeignKey="true" />
+      <Association Name="User_Device" Member="User" ThisKey="Manager" OtherKey="UserName" Type="User" IsForeignKey="true" />
+      <Association Name="User_Device1" Member="User1" ThisKey="Keeper" OtherKey="UserName" Type="User" IsForeignKey="true" />
+      <Association Name="User_Device2" Member="User2" ThisKey="Receiver" OtherKey="UserName" Type="User" IsForeignKey="true" />
+      <Association Name="User_Device3" Member="User3" ThisKey="Borrower" OtherKey="UserName" Type="User" IsForeignKey="true" />
+      <Association Name="User_Device4" Member="User4" ThisKey="NewKeeper" OtherKey="UserName" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeviceManager" Member="DeviceManagers">
+    <Type Name="DeviceManager">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ApplyDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="User_DeviceManager" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeviceModel" Member="DeviceModels">
+    <Type Name="DeviceModel">
+      <Column Name="ModelName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Category" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Company" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="DeviceModel_Device" Member="Devices" ThisKey="ModelName" OtherKey="Model" Type="Device" />
+      <Association Name="CategoryDevice_DeviceModel" Member="CategoryDevice" ThisKey="Category" OtherKey="ID" Type="CategoryDevice" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeviceNotice" Member="DeviceNotices">
+    <Type Name="DeviceNotice">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="User_DeviceNotice" Member="User" ThisKey="CreateBy" OtherKey="UserName" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EducationLevel" Member="EducationLevels">
+    <Type Name="EducationLevel">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="EducationLevel_UserEducation" Member="UserEducations" ThisKey="ID" OtherKey="EducationLevel" Type="UserEducation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Inventory" Member="Inventories">
+    <Type Name="Inventory">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RequestBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RequestDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="InventoryName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Inventory_InventoryUserDevice" Member="InventoryUserDevices" ThisKey="id" OtherKey="InventoryID" Type="InventoryUserDevice" />
+      <Association Name="User_Inventory" Member="User" ThisKey="RequestBy" OtherKey="UserName" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InventoryUserDevice" Member="InventoryUserDevices">
+    <Type Name="InventoryUserDevice">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InventoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DeviceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Borrower" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Keeper" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ConfirmStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Reason" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BorrowDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LeaderConfirmStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LeaderReasonReject" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Device_InventoryUserDevice" Member="Device" ThisKey="DeviceID" OtherKey="IDDevice" Type="Device" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Inventory_InventoryUserDevice" Member="Inventory" ThisKey="InventoryID" OtherKey="id" Type="Inventory" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="User_InventoryUserDevice" Member="User" ThisKey="Borrower" OtherKey="UserName" Type="User" IsForeignKey="true" />
+      <Association Name="User_InventoryUserDevice1" Member="User1" ThisKey="Keeper" OtherKey="UserName" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobTitle" Member="JobTitles">
+    <Type Name="JobTitle">
+      <Column Name="JobTitleID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="JobName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="JobTitle_User" Member="Users" ThisKey="JobTitleID" OtherKey="JobTitleID" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Layout" Member="Layouts">
+    <Type Name="Layout">
+      <Column Name="LayoutID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LayoutName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="Layout_Location" Member="Locations" ThisKey="LayoutID" OtherKey="LayoutID" Type="Location" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Location" Member="Locations">
+    <Type Name="Location">
+      <Column Name="LocationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LayoutID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shape" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="coords" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Zone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Location_LocationForTeam" Member="LocationForTeams" ThisKey="LocationID" OtherKey="LocationID" Type="LocationForTeam" />
+      <Association Name="Location_LocationForUser" Member="LocationForUsers" ThisKey="LocationID" OtherKey="LocationID" Type="LocationForUser" />
+      <Association Name="Layout_Location" Member="Layout" ThisKey="LayoutID" OtherKey="LayoutID" Type="Layout" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationForTeam" Member="LocationForTeams">
+    <Type Name="LocationForTeam">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Location_LocationForTeam" Member="Location" ThisKey="LocationID" OtherKey="LocationID" Type="Location" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Team_LocationForTeam" Member="Team" ThisKey="TeamID" OtherKey="TeamID" Type="Team" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationForUser" Member="LocationForUsers">
+    <Type Name="LocationForUser">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Location_LocationForUser" Member="Location" ThisKey="LocationID" OtherKey="LocationID" Type="Location" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="User_LocationForUser" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogSendMailService" Member="LogSendMailServices">
+    <Type Name="LogSendMailService">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[To]" Member="To" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CC" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="[From]" Member="From" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Major" Member="Majors">
+    <Type Name="Major">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Major_UserEducation" Member="UserEducations" ThisKey="ID" OtherKey="MajorID" Type="UserEducation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Notification" Member="Notifications">
+    <Type Name="Notification">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeNotication" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="User_Notification" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Permission" Member="Permissions">
+    <Type Name="Permission">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Permission_User" Member="Users" ThisKey="id" OtherKey="PermissionId" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PermissionFunc" Member="PermissionFuncs">
+    <Type Name="PermissionFunc">
+      <Column Name="PermissionFuncID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FunctionName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="PermissionFunc_UserPermission" Member="UserPermissions" ThisKey="PermissionFuncID" OtherKey="PermissionFuncID" Type="UserPermission" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResetPassword" Member="ResetPasswords">
+    <Type Name="ResetPassword">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Token" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TimeExpiration" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="User_ResetPassword" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Role" Member="Roles">
+    <Type Name="Role">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Role_User_Role" Member="User_Roles" ThisKey="ID" OtherKey="RoleID" Type="User_Role" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Status" Member="Status">
+    <Type Name="Status">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Status_Approve" Member="Approves" ThisKey="ID" OtherKey="StatusDevice" Type="Approve" />
+      <Association Name="Status_Device" Member="Devices" ThisKey="ID" OtherKey="StatusDevice" Type="Device" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StatusApproval" Member="StatusApprovals">
+    <Type Name="StatusApproval">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="StatusApproval_Approve" Member="Approves" ThisKey="ID" OtherKey="StatusManager" Type="Approve" />
+      <Association Name="StatusApproval_Approve1" Member="Approves1" ThisKey="ID" OtherKey="StatusKeeper" Type="Approve" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StatusBorrow" Member="StatusBorrows">
+    <Type Name="StatusBorrow">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="StatusBorrow_Approve" Member="Approves" ThisKey="ID" OtherKey="StatusBorrow" Type="Approve" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Team" Member="Teams">
+    <Type Name="Team">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TeamName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TeamParent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Leader" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LevelTeam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Team_LocationForTeam" Member="LocationForTeams" ThisKey="TeamID" OtherKey="TeamID" Type="LocationForTeam" />
+      <Association Name="Team_Team" Member="Teams" ThisKey="TeamID" OtherKey="TeamParent" Type="Team" />
+      <Association Name="Team_User" Member="Users" ThisKey="TeamID" OtherKey="TeamID" Type="User" />
+      <Association Name="Team_Team" Member="Team1" ThisKey="TeamParent" OtherKey="TeamID" Type="Team" IsForeignKey="true" />
+      <Association Name="User_Team" Member="User" ThisKey="Leader" OtherKey="UserName" Type="User" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.University" Member="Universities">
+    <Type Name="University">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="University_UserEducation" Member="UserEducations" ThisKey="ID" OtherKey="UniversityID" Type="UserEducation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JobDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="JobTitleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Avatar" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PermissionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FavoriteProject" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GEN" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DateJoiningSEL" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ToeicScore" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="STCLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="User_AllowBorrowDevice" Member="AllowBorrowDevice" ThisKey="UserName" OtherKey="UserName" Type="AllowBorrowDevice" Cardinality="One" />
+      <Association Name="User_Approve" Member="Approves" ThisKey="UserName" OtherKey="UserBorrow" Type="Approve" />
+      <Association Name="User_Approve1" Member="Approves1" ThisKey="UserName" OtherKey="Manager" Type="Approve" />
+      <Association Name="User_Approve2" Member="Approves2" ThisKey="UserName" OtherKey="Borrower" Type="Approve" />
+      <Association Name="User_AwardReward" Member="AwardRewards" ThisKey="UserName" OtherKey="UserName" Type="AwardReward" />
+      <Association Name="User_CCEmailBorrow" Member="CCEmailBorrows" ThisKey="UserName" OtherKey="UserName" Type="CCEmailBorrow" />
+      <Association Name="User_DestroyPlan" Member="DestroyPlans" ThisKey="UserName" OtherKey="Manager" Type="DestroyPlan" />
+      <Association Name="User_DestroyPlan1" Member="DestroyPlans1" ThisKey="UserName" OtherKey="Approver" Type="DestroyPlan" />
+      <Association Name="User_Device" Member="Devices" ThisKey="UserName" OtherKey="Manager" Type="Device" />
+      <Association Name="User_Device1" Member="Devices1" ThisKey="UserName" OtherKey="Keeper" Type="Device" />
+      <Association Name="User_Device2" Member="Devices2" ThisKey="UserName" OtherKey="Receiver" Type="Device" />
+      <Association Name="User_Device3" Member="Devices3" ThisKey="UserName" OtherKey="Borrower" Type="Device" />
+      <Association Name="User_Device4" Member="Devices4" ThisKey="UserName" OtherKey="NewKeeper" Type="Device" />
+      <Association Name="User_DeviceManager" Member="DeviceManager" ThisKey="UserName" OtherKey="UserName" Type="DeviceManager" Cardinality="One" />
+      <Association Name="User_DeviceNotice" Member="DeviceNotices" ThisKey="UserName" OtherKey="CreateBy" Type="DeviceNotice" />
+      <Association Name="User_Inventory" Member="Inventories" ThisKey="UserName" OtherKey="RequestBy" Type="Inventory" />
+      <Association Name="User_InventoryUserDevice" Member="InventoryUserDevices" ThisKey="UserName" OtherKey="Borrower" Type="InventoryUserDevice" />
+      <Association Name="User_InventoryUserDevice1" Member="InventoryUserDevices1" ThisKey="UserName" OtherKey="Keeper" Type="InventoryUserDevice" />
+      <Association Name="User_LocationForUser" Member="LocationForUsers" ThisKey="UserName" OtherKey="UserName" Type="LocationForUser" />
+      <Association Name="User_Notification" Member="Notifications" ThisKey="UserName" OtherKey="UserName" Type="Notification" />
+      <Association Name="User_ResetPassword" Member="ResetPassword" ThisKey="UserName" OtherKey="UserName" Type="ResetPassword" Cardinality="One" />
+      <Association Name="User_Team" Member="Teams" ThisKey="UserName" OtherKey="Leader" Type="Team" />
+      <Association Name="User_User_Role" Member="User_Roles" ThisKey="UserName" OtherKey="UserName" Type="User_Role" />
+      <Association Name="User_UserCertification" Member="UserCertifications" ThisKey="UserName" OtherKey="UserName" Type="UserCertification" />
+      <Association Name="User_UserEducation" Member="UserEducations" ThisKey="UserName" OtherKey="UserName" Type="UserEducation" />
+      <Association Name="User_UserLanguage" Member="UserLanguages" ThisKey="UserName" OtherKey="UserName" Type="UserLanguage" />
+      <Association Name="User_UserPermission" Member="UserPermissions" ThisKey="UserName" OtherKey="UserName" Type="UserPermission" />
+      <Association Name="JobTitle_User" Member="JobTitle" ThisKey="JobTitleID" OtherKey="JobTitleID" Type="JobTitle" IsForeignKey="true" />
+      <Association Name="Permission_User" Member="Permission" ThisKey="PermissionId" OtherKey="id" Type="Permission" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="Team_User" Member="Team" ThisKey="TeamID" OtherKey="TeamID" Type="Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_Role" Member="User_Roles">
+    <Type Name="User_Role">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Role_User_Role" Member="Role" ThisKey="RoleID" OtherKey="ID" Type="Role" IsForeignKey="true" />
+      <Association Name="User_User_Role" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserCertification" Member="UserCertifications">
+    <Type Name="UserCertification">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DataCertificationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OtherDataCertification" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Grade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IssueDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Expiration" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LicenseNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IssuedBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="DataCertification_UserCertification" Member="DataCertification" ThisKey="DataCertificationID" OtherKey="ID" Type="DataCertification" IsForeignKey="true" />
+      <Association Name="User_UserCertification" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserEducation" Member="UserEducations">
+    <Type Name="UserEducation">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EducationLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UniversityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OtherUniversity" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Enteredat" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Graduated" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="MajorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OtherMajor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="EducationLevel_UserEducation" Member="EducationLevel1" ThisKey="EducationLevel" OtherKey="ID" Type="EducationLevel" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Major_UserEducation" Member="Major" ThisKey="MajorID" OtherKey="ID" Type="Major" IsForeignKey="true" />
+      <Association Name="University_UserEducation" Member="University" ThisKey="UniversityID" OtherKey="ID" Type="University" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="User_UserEducation" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserLanguage" Member="UserLanguages">
+    <Type Name="UserLanguage">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Languageid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OtherLanguage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Native" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ScoreOverall" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ScoreSpeak" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ScoreRead" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ScoreWrite" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="User_UserLanguage" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="DataLanguage_UserLanguage" Member="DataLanguage" ThisKey="Languageid" OtherKey="ID" Type="DataLanguage" IsForeignKey="true" DeleteRule="SET DEFAULT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserPermission" Member="UserPermissions">
+    <Type Name="UserPermission">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PermissionFuncID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PermissionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PermissionFunc_UserPermission" Member="PermissionFunc" ThisKey="PermissionFuncID" OtherKey="PermissionFuncID" Type="PermissionFunc" IsForeignKey="true" />
+      <Association Name="User_UserPermission" Member="User" ThisKey="UserName" OtherKey="UserName" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
