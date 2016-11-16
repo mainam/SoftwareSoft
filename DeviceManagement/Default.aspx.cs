@@ -4,57 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DataAccess;
-using DataAccess.Helper;
-using System.Web.Script.Serialization;
-using DataAccess.UserFolder;
-using DataAccess.UtilFolder;
-using DataAccess.DeviceFolder;
 
-namespace SoftwareStore
+namespace DeviceManagement
 {
     public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (var context = new DatabaseDataContext())
+            if (!IsPostBack)
             {
-                if (Utils.LocalHost == null)
-                    Utils.LocalHost = "http://" + Request.Url.Host + ":" + Request.Url.Port;
-
-                if (!IsPostBack)
-                {
-                    var username = HttpContext.Current.User.Identity.Name;
-                    User user = null;
-                    if (username != null)
-                        user = UserInfo.GetByID(context,username);
-
-                    if (user == null)
-                    {
-                        Response.Redirect(string.Format("~/Login.aspx?Url={0}", Request.Url));
-                    }
-                    else
-                    {
-                        var isAdmin = UserInfo.IsAdmin(context,user);
-
-                        if (!UserInfo.AllowBorrowDevice(context,user))
-                        {
-                            menuBorrowDevice.Visible = false;
-                            menuListDevice.Visible = false;
-                            menuInventory.Visible = false;
-                        }
-                        else
-                        {
-                            menuListDevice2.Visible = false;
-                        }
-
-                        liAdminWebsite.Visible = isAdmin;
-                        liDeviceManagement.Visible = liInventoryResolve.Visible = (isAdmin || user.UserName == "kim.yen");
-                        lbUserName.Text = string.Format("{0}", user.FullName);
-                        lbUserName.ToolTip = string.Format("SingleID: {0}", user.UserName);
-                        imgAvatar.ImageUrl = UserInfo.GetAvatar(user);
-                    }
-                }
+                List<object> list = new List<object> { 1, 23, 4, 5, 6, 7, 8, 9, 54435, 45234, 2345, 2435, 24352, 3542, 3452, 3452, 3452, 3452, 34523, 4 };
+                repListSoftware.DataSource = list;
+                repListSoftware.DataBind();
             }
         }
     }
