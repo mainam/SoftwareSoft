@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DeviceManagement</RootNamespace>
-    <AssemblyName>DeviceManagement</AssemblyName>
+    <RootNamespace>SoftwareStore</RootNamespace>
+    <AssemblyName>SoftwareStore</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -115,6 +115,7 @@
     <Content Include="css\tablecss.css" />
     <Content Include="css\tmscss.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Detail.aspx" />
     <Content Include="device\AddNewNotice.aspx" />
     <Content Include="device\AjaxProcess\ListDevice.aspx" />
     <Content Include="device\MyApprove\ApproveGroupByDevice.aspx" />
@@ -2257,6 +2258,13 @@
     </Compile>
     <Compile Include="Default1.aspx.designer.cs">
       <DependentUpon>Default1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail.aspx.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail.aspx.designer.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="device\AddNewNotice.aspx.cs">
       <DependentUpon>AddNewNotice.aspx</DependentUpon>

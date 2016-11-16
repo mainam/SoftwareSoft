@@ -9,10 +9,10 @@ D:\GIT\WEB\MLLSOFT\DeviceManagement\obj\Debug\SoftwareStore.csprojResolveAssembl
 D:\GIT\WEB\MLLSOFT\DeviceManagement\obj\Debug\DeviceManagement.dll
 D:\GIT\WEB\MLLSOFT\DeviceManagement\obj\Debug\DeviceManagement.pdb
 F:\GITHUB\MNSHOP\DeviceManagement\obj\Debug\SoftwareStore.csprojResolveAssemblyReference.cache
-F:\GITHUB\MNSHOP\DeviceManagement\bin\DeviceManagement.dll.config
-F:\GITHUB\MNSHOP\DeviceManagement\bin\DeviceManagement.dll
-F:\GITHUB\MNSHOP\DeviceManagement\bin\DeviceManagement.pdb
 F:\GITHUB\MNSHOP\DeviceManagement\bin\DataAccess.dll
 F:\GITHUB\MNSHOP\DeviceManagement\bin\DataAccess.pdb
-F:\GITHUB\MNSHOP\DeviceManagement\obj\Debug\DeviceManagement.dll
-F:\GITHUB\MNSHOP\DeviceManagement\obj\Debug\DeviceManagement.pdb
+F:\GITHUB\MNSHOP\DeviceManagement\bin\SoftwareStore.dll.config
+F:\GITHUB\MNSHOP\DeviceManagement\bin\SoftwareStore.dll
+F:\GITHUB\MNSHOP\DeviceManagement\bin\SoftwareStore.pdb
+F:\GITHUB\MNSHOP\DeviceManagement\obj\Debug\SoftwareStore.dll
+F:\GITHUB\MNSHOP\DeviceManagement\obj\Debug\SoftwareStore.pdb
