@@ -150,7 +150,6 @@
     <Content Include="device\DeviceManagement.aspx" />
     <Content Include="device\Confirmation\DialogConfirmDevices.aspx" />
     <Content Include="device\EditDevice.aspx" />
-    <Content Include="device\AjaxProcess\Export.aspx" />
     <Content Include="device\InventoryConfirm.aspx" />
     <Content Include="device\InventoryExportForm.aspx" />
     <Content Include="device\InventoryRequest.aspx" />
@@ -2503,13 +2502,6 @@
     </Compile>
     <Compile Include="device\EditDevice.aspx.designer.cs">
       <DependentUpon>EditDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\AjaxProcess\Export.aspx.cs">
-      <DependentUpon>Export.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\AjaxProcess\Export.aspx.designer.cs">
-      <DependentUpon>Export.aspx</DependentUpon>
     </Compile>
     <Compile Include="device\InventoryConfirm.aspx.cs">
       <DependentUpon>InventoryConfirm.aspx</DependentUpon>

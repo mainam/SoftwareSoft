@@ -75,69 +75,6 @@ namespace SoftwareStore
         }
 
 
-        [System.Web.Services.WebMethod]
-        public static string LoginSSO(string data)
-        {
-            try
-            {
-                using (var context = new DatabaseDataContext())
-                {
-                    string text = data;
-                    if (text != null || text.Trim() != "")
-                    {
-                        try
-                        {
-                            var dic = SSO.GetSSOInfo(text);
-                            if (dic.Count == 0)
-                                return new JavaScriptSerializer().Serialize(new { Status = false });
-                            var loginfo = dic[SSO.EnumSSO.EP_LOGINID.ToString()];
-                            if (loginfo == null)
-                                return new JavaScriptSerializer().Serialize(new { Status = false });
-                            else
-                            {
-                                var user = UserInfo.GetByID(context, loginfo);
-                                if (user != null)
-                                {
-                                    Log log = new Log()
-                                    {
-                                        UserName = user.UserName.Trim(),
-                                        Time = DateTime.Now,
-                                        IP = HttpContext.Current.Request.UserHostAddress,
-                                        Status = "Success"
-                                    };
-                                    LogInfo.Insert(log);
-                                    UserInfo.SetCookies(user.UserName, HttpContext.Current.Response);
-                                    return new JavaScriptSerializer().Serialize(new { Status = true });
-                                }
-                                else
-                                    return new JavaScriptSerializer().Serialize(new { Status = false });
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                        }
-                    }
-                    else
-                    {
-                    }
-                }
-
-            }
-            catch (Exception)
-            {
-            }
-            return new JavaScriptSerializer().Serialize(new { Status = false });
-
-        }
-
-
-
-
-
-
-
-
-
         //protected void Page_Load(object sender, EventArgs e)
         //{
         //    divMessageError.Visible = false;

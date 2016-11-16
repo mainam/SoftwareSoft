@@ -147,7 +147,6 @@
     <Compile Include="UtilFolder\ExtensionMethod.cs" />
     <Compile Include="Helper\OutlookDotComMail.cs" />
     <Compile Include="Helper\SendMail.cs" />
-    <Compile Include="Helper\SSO.cs" />
     <Compile Include="DeviceFolder\InventoryFolder\InventoryInfo.cs" />
     <Compile Include="DeviceFolder\InventoryFolder\InventoryUserDeviceInfo.cs" />
     <Compile Include="LogFolder\LogInfo.cs" />
