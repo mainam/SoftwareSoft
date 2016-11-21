@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoftwareStore.device {
+namespace DeviceManagement.device {
     
     
     public partial class Request {

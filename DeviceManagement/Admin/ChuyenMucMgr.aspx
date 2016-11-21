@@ -1,5 +1,99 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="ChuyenMucMgr.aspx.cs" Inherits="SoftwareStore.Admin.ChuyenMucMgr" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HolderScript" runat="server">
+    <script src="/js/selportalscript.js"></script>
+    <script type="text/javascript">
+        var ChuyenMucScript = {
+            ListHasSelected: [],
+            CurrentPage: 0,
+            NumberInpage: 5,
+            LoadData: function (page) {
+                currentpage = page;
+                var keyword = $('#inputSearch').val();
+                var numberinpage = ChuyenMucScript.NumberInpage;
+                AJAXFunction.CallAjax("POST", "/admin/chuyenmucmgr.aspx", "GetListCategory", {
+                    keyword: keyword,
+                    currentpage: page,
+                    numberinpage: numberinpage,
+                },
+                function (obj) {
+                    if (obj.Status) {
+                        var divtotalitem = $('#divtotalitem').empty();
+                        divtotalitem.append('Total Item: ' + obj.TotalItem)
+
+                        var _totalpage = Math.round(obj.TotalItem / numberinpage);
+                        var totalpage = Common.GetTotalPage(ChuyenMucScript.NumberInpage, obj.TotalItem);
+                        listdevices = obj.Data;
+                        listHasSelect = [];
+                        updateButton();
+                        $('#btncheck').get(0).checked = false;
+
+                        LoadTable(obj.Data, ((parseInt(page) - 1) * numberinpage));
+                        AJAXFunction.CreatePaging($("#divpaging"), page, totalpage, LoadData);
+                    }
+                });
+
+            },
+            ShowNumberDevice: function (numberdevice) {
+                $("#btnSelectNumberDevice").empty().append("Hiển thị: " + numberdevice).append($('<i class="fa fa-caret-down" style="margin-left:5px;">'))
+                ChuyenMucScript.NumberInpage = numberdevice;
+                ChuyenMucScript.LoadData(1);
+            },
+            CreateCheckBox: function (id, allowborrow, check) {
+                var td = $('<td>');
+                var label = $('<label class="checkbox">');
+                var checkbox = $('<input type="checkbox" name="checkbox" typecheckbox="itemdevice">');
+                if (check) {
+                    checkbox.attr("checked", "checked");
+                }
+                checkbox.attr('dataid', id);
+                label.append(checkbox);
+                label.append($('<i>'));
+                checkbox.click(function () {
+                    if (this.checked) {
+                        ChuyenMucScript.ListHasSelected.push(parseInt($(this).attr('dataid')));
+                    }
+                    else {
+                        $('#btncheck')[0].checked = false;
+                        var index = ChuyenMucScript.ListHasSelected.indexOf(parseInt($(this).attr('dataid')));
+                        if (index != -1)
+                            ChuyenMucScript.ListHasSelected.splice(index, 1);
+                    }
+                });
+                td.append(label);
+                return td;
+            }
+
+
+        }
+        $('#inputSearch').keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                ChuyenMucScript.LoadData(1);
+            }
+        });
+        //$('#btncheck').click(function () {
+
+        //    input = $('#datatable_tabletools > tbody').find('input[typecheckbox="itemdevice"][disabled!="disabled"]');
+        //    if (this.checked) {
+        //        for (var i = 0; i < input.length; i++)
+        //            input[i].checked = true;
+        //        listHasSelect = listAllowCancel;
+        //    }
+        //    else {
+        //        for (var i = 0; i < input.length; i++)
+        //            input[i].checked = false;
+        //        listHasSelect = [];
+        //    }
+        //    updateButton();
+        //});
+
+
+
+    </script>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="HolderContent" runat="server">
     <section id="widget-grid" class="">
         <div>
             <div class="row" style="margin-left: 0px; margin-bottom: 5px;">
@@ -84,7 +178,7 @@
                                                 </th>
                                                 <th class="theadtable" style="width: 200px">Tên chuyên mục</th>
                                                 <th class="theadtable" style="width: 200px">Chuyên mục cha</th>
-                                                <th class="theadtable" >Mô tả</th>
+                                                <th class="theadtable">Mô tả</th>
                                             </tr>
                                         </thead>
                                         <tbody>
