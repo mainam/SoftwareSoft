@@ -12,6 +12,7 @@ using DataAccess.UserFolder;
 using DataAccess.LogFolder;
 using DataAccess.UtilFolder;
 using DataAccess.Db;
+using DataAccess.Db.Db;
 
 namespace SoftwareStore
 {
@@ -20,7 +21,7 @@ namespace SoftwareStore
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (var context = new DatabaseDataContext())
+            using (var context = new dbUserDataContext())
             {
                 if (Utils.LocalHost == null)
                     Utils.LocalHost = "http://" + Request.Url.Host + ":" + Request.Url.Port;
@@ -40,7 +41,7 @@ namespace SoftwareStore
                 }
 
                 var username = HttpContext.Current.User.Identity.Name;
-                User user = UserInfo.GetByID(context, username);
+                tbUser user = UserInfo._GetByID(context, username);
                 if (user != null)
                 {
                     Response.Redirect("~/Default.aspx");
@@ -50,21 +51,12 @@ namespace SoftwareStore
         [System.Web.Services.WebMethod]
         public static string LoginAccount(string username, string pass)
         {
-            using (var context = new DatabaseDataContext())
+            using (var context = new dbUserDataContext())
             {
-                User user;
-                if ((user = UserInfo.GetByIDPW(context, username, pass, true)) != null)
+                tbUser user;
+                if ((user = UserInfo._GetByIDPW(context, username, pass)) != null)
                 {
                     UserInfo.SetCookies(username, HttpContext.Current.Response);
-                    Log log = new Log()
-                    {
-                        UserName = username,
-                        Time = DateTime.Now,
-                        IP = HttpContext.Current.Request.UserHostAddress,
-                        Status = "Success"
-
-                    };
-                    LogInfo.Insert(log);
                     return new JavaScriptSerializer().Serialize(new { Status = true });
                 }
                 else

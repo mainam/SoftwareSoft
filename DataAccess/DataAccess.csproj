@@ -43,7 +43,12 @@
       <LastGenOutput>Database.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Db\Db1\dbUser.dbml">
+    <None Include="Db\CategoryDb\CategoryDb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CategoryDb.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Db\Db\dbUser.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>dbUser1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
@@ -90,6 +95,7 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryInfo.cs" />
     <Compile Include="Constance.cs" />
     <Compile Include="Database.cs">
       <DependentUpon>Database.dbml</DependentUpon>
@@ -101,7 +107,12 @@
     </Compile>
     <Compile Include="DataConfigFolder\DataConfigInfo.cs" />
     <Compile Include="DataConfigFolder\ProjectConfig.cs" />
-    <Compile Include="Db\Db1\dbUser1.designer.cs">
+    <Compile Include="Db\CategoryDb\CategoryDb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CategoryDb.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Db\dbUser1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbUser.dbml</DependentUpon>
@@ -178,8 +189,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Db\Db1\dbUser.dbml.layout">
+    <None Include="Db\Db\dbUser.dbml.layout">
       <DependentUpon>dbUser.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Db\CategoryDb\CategoryDb.dbml.layout">
+      <DependentUpon>CategoryDb.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,11 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminPage.master.cs" Inherits="SoftwareStore.Admin.AdminPage" %>
+<body>
+    <link href="/device/style/styleText.css" rel="stylesheet" />
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>

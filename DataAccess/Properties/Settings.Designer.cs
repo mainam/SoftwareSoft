@@ -38,7 +38,7 @@ namespace DataAccess.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-36VHM6E\\SQLEXPRESS;Initial Catalog=MNSHOP;Integrated Security" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HOA-TUYET-PC;Initial Catalog=MNSHOP;Integrated Security" +
             "=True;Encrypt=False;TrustServerCertificate=True")]
         public string MNSHOPConnectionString {
             get {
@@ -49,11 +49,21 @@ namespace DataAccess.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=MNSHOP;Integrated Security=True;Encrypt=" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HOA-TUYET-PC;Initial Catalog=MNSHOP;Integrated Security=True;Encrypt=" +
             "False;TrustServerCertificate=True")]
         public string MNSHOPConnectionString1 {
             get {
                 return ((string)(this["MNSHOPConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HOA-TUYET-PC;Initial Catalog=MNSHOP;Integrated Security=True")]
+        public string MNSHOPConnectionString2 {
+            get {
+                return ((string)(this["MNSHOPConnectionString2"]));
             }
         }
     }

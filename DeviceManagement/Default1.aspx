@@ -275,9 +275,6 @@
                 <li>
                     <a href="#device/MyDevice/ListDeviceKeeping.aspx" style="display: none"></a>
                 </li>
-                                
-                
-                
                 <li>
                     <a href="#"><i class="fa fa-lg fa-fw fa-hdd-o"></i><span class="menu-item-parent">DEVICES</span></a>
                     <ul>

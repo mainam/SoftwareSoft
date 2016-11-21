@@ -1,6 +1,6 @@
 ﻿using DataAccess.DataConfigFolder;
 using DataAccess.Db;
-using DataAccess.Db.Db1;
+using DataAccess.Db.Db;
 using DataAccess.DeviceFolder;
 using DataAccess.Helper;
 using DataAccess.TeamFolder;

@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataAccess.Db.Db1
+namespace DataAccess.Db.Db
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;

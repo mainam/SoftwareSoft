@@ -93,6 +93,7 @@
     <Content Include="Admin\Config\Dialog\AddDataConfig.aspx" />
     <Content Include="Admin\Config\SendMailNotification.aspx" />
     <Content Include="Admin\Config\SetupDataConfig.aspx" />
+    <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\Device\ConfigAllowBorrowDevice.aspx" />
     <Content Include="Admin\Device\ConfigDevice.aspx" />
     <Content Include="Admin\Device\ConfigDeviceManager.aspx" />
@@ -109,6 +110,7 @@
     <Content Include="AJAXProcess\Document-Blank-icon.png" />
     <Content Include="AJAXProcess\FileExplorer.aspx" />
     <Content Include="AJAXProcess\Notification.aspx" />
+    <Content Include="Admin\ChuyenMucMgr.aspx" />
     <Content Include="css\common.css" />
     <Content Include="css\image\loading.gif" />
     <Content Include="css\selportalcss.css" />
@@ -2117,6 +2119,20 @@
     <Compile Include="account\dialogChangePassword.aspx.designer.cs">
       <DependentUpon>dialogChangePassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminPage.Master.cs">
+      <DependentUpon>AdminPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPage.Master.designer.cs">
+      <DependentUpon>AdminPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Config\Dialog\AddDataConfig.aspx.cs">
       <DependentUpon>AddDataConfig.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2137,6 +2153,13 @@
     </Compile>
     <Compile Include="Admin\Config\SetupDataConfig.aspx.designer.cs">
       <DependentUpon>SetupDataConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Device\ConfigAllowBorrowDevice.aspx.cs">
       <DependentUpon>ConfigAllowBorrowDevice.aspx</DependentUpon>
@@ -2245,6 +2268,13 @@
     </Compile>
     <Compile Include="AJAXProcess\UploadFile.ashx.cs">
       <DependentUpon>UploadFile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChuyenMucMgr.aspx.cs">
+      <DependentUpon>ChuyenMucMgr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ChuyenMucMgr.aspx.designer.cs">
+      <DependentUpon>ChuyenMucMgr.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -3033,6 +3063,8 @@
     <Content Include="js\plugin\amcharts\plugins\responsive\readme.md" />
     <Content Include="js\plugin\amcharts\plugins\responsive\responsive.min.js.map" />
     <Content Include="AJAXProcess\UploadFile.ashx" />
+    <Content Include="Admin\AdminMaster.Master" />
+    <Content Include="Admin\AdminPage.Master" />
     <None Include="Properties\PublishProfiles\Hieu.pubxml" />
     <None Include="Properties\PublishProfiles\selportal.pubxml" />
     <Content Include="Site1.Master" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" EnableViewStateMac="false" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="DeviceManagement.Login" %>
+﻿<%@ Page Language="C#" EnableViewStateMac="false" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="SoftwareStore.Login" %>
 
 <!DOCTYPE html>
 
