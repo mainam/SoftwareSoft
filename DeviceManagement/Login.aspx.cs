@@ -13,6 +13,7 @@ using DataAccess.LogFolder;
 using DataAccess.UtilFolder;
 using DataAccess.Db;
 using DataAccess.Db.Db;
+using DataAccess.Db.UserDb;
 
 namespace SoftwareStore
 {
@@ -21,7 +22,7 @@ namespace SoftwareStore
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (var context = new dbUserDataContext())
+            using (var context = new UserDbDataContext())
             {
                 if (Utils.LocalHost == null)
                     Utils.LocalHost = "http://" + Request.Url.Host + ":" + Request.Url.Port;
@@ -41,7 +42,7 @@ namespace SoftwareStore
                 }
 
                 var username = HttpContext.Current.User.Identity.Name;
-                tbUser user = UserInfo._GetByID(context, username);
+                DataAccess.Db.UserDb.tbUser user = UserInfo._GetByID(context, username);
                 if (user != null)
                 {
                     Response.Redirect("~/Default.aspx");
@@ -51,9 +52,9 @@ namespace SoftwareStore
         [System.Web.Services.WebMethod]
         public static string LoginAccount(string username, string pass)
         {
-            using (var context = new dbUserDataContext())
+            using (var context = new UserDbDataContext())
             {
-                tbUser user;
+                DataAccess.Db.UserDb.tbUser user;
                 if ((user = UserInfo._GetByIDPW(context, username, pass)) != null)
                 {
                     UserInfo.SetCookies(username, HttpContext.Current.Response);

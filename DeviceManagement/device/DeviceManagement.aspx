@@ -40,7 +40,6 @@
         return "";
     }
 
-    var listtype = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListCategoryDevice()%>');
     function LoadListCategory() {
         var ul = $('#ulddltype').empty();
         var a = $('<a href="javascript:void(0)">').text("All");
@@ -64,7 +63,6 @@
     }
     LoadListCategory();
 
-    var liststatus = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListStatusDevice()%>');
     function LoadListStatus() {
         var ul = $('#ulddlstatus').empty();
         var a = $('<a href="javascript:void(0)">').text("All");

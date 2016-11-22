@@ -15,7 +15,6 @@
         var currentpage;
         var numberdeviceinpage = 14;
         pageSetUp();
-        var listtype = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListCategoryDevice()%>');
         function LoadListCategory() {
             var ul = $('#ulddltype').empty();
             var a = $('<a href="javascript:void(0)">').text("All");

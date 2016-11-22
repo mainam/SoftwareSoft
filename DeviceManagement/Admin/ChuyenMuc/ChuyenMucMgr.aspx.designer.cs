@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DeviceManagement.device {
+namespace SoftwareStore.Admin.ChuyenMuc {
     
     
-    public partial class DeviceManagement {
+    public partial class ChuyenMucMgr {
         
         /// <summary>
         /// inputSearch control.

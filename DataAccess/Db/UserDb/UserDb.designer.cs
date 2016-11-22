@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataAccess.Db.Db
+namespace DataAccess.Db.UserDb
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -23,7 +23,7 @@ namespace DataAccess.Db.Db
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="MNSHOP")]
-	public partial class dbUserDataContext : System.Data.Linq.DataContext
+	public partial class UserDbDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -35,31 +35,31 @@ namespace DataAccess.Db.Db
     partial void DeletetbUser(tbUser instance);
     #endregion
 		
-		public dbUserDataContext() : 
-				base(global::DataAccess.Properties.Settings.Default.MNSHOPConnectionString1, mappingSource)
+		public UserDbDataContext() : 
+				base(global::DataAccess.Properties.Settings.Default.MNSHOPConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public dbUserDataContext(string connection) : 
+		public UserDbDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public dbUserDataContext(System.Data.IDbConnection connection) : 
+		public UserDbDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public dbUserDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public UserDbDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public dbUserDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public UserDbDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();

@@ -17,8 +17,8 @@ namespace SoftwareStore.device
         {
             var txtSearch = HttpContext.Current.Session["txtSearch"];
             HttpContext.Current.Session["txtSearch"] = "";
-            if (txtSearch != null)
-                inputSearch.Value = txtSearch.ToString();
+            //if (txtSearch != null)
+            //    inputSearch.Value = txtSearch.ToString();
             List<string> a = new List<string>();
             var data = a.FirstOrDefault();
         }
@@ -81,26 +81,26 @@ namespace SoftwareStore.device
             }
         }
 
-        [WebMethod]
-        public static string deleteDevice(int id)
-        {
-            try
+            [WebMethod]
+            public static string deleteDevice(int id)
             {
-                using (var context = new DatabaseDataContext())
+                try
                 {
-                    var username = HttpContext.Current.User.Identity.Name;
-                    if (DeviceInfo.DeleteDevice(context,id, username))
+                    using (var context = new DatabaseDataContext())
                     {
-                        return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = true });
+                        var username = HttpContext.Current.User.Identity.Name;
+                        if (DeviceInfo.DeleteDevice(context,id, username))
+                        {
+                            return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = true });
+                        }
+                        return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = false });
                     }
+                }
+                catch (Exception)
+                {
                     return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = false });
                 }
             }
-            catch (Exception)
-            {
-                return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = false });
-            }
-        }
 
     }
 }

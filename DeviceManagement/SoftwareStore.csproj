@@ -110,7 +110,7 @@
     <Content Include="AJAXProcess\Document-Blank-icon.png" />
     <Content Include="AJAXProcess\FileExplorer.aspx" />
     <Content Include="AJAXProcess\Notification.aspx" />
-    <Content Include="Admin\ChuyenMucMgr.aspx" />
+    <Content Include="Admin\ChuyenMuc\ChuyenMucMgr.aspx" />
     <Content Include="css\common.css" />
     <Content Include="css\image\loading.gif" />
     <Content Include="css\selportalcss.css" />
@@ -2269,11 +2269,11 @@
     <Compile Include="AJAXProcess\UploadFile.ashx.cs">
       <DependentUpon>UploadFile.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\ChuyenMucMgr.aspx.cs">
+    <Compile Include="Admin\ChuyenMuc\ChuyenMucMgr.aspx.cs">
       <DependentUpon>ChuyenMucMgr.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\ChuyenMucMgr.aspx.designer.cs">
+    <Compile Include="Admin\ChuyenMuc\ChuyenMucMgr.aspx.designer.cs">
       <DependentUpon>ChuyenMucMgr.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">

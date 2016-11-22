@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderLeftMenu" runat="server">
                 <li>
-                    <a href="ChuyenMucMgr.aspx"><i class="fa fa-lg fa-fw fa-hdd-o"></i><span class="menu-item-parent">Quản lý chuyên mục</span></a>
+                    <a href="chuyenmuc/ChuyenMucMgr.aspx"><i class="fa fa-lg fa-fw fa-hdd-o"></i><span class="menu-item-parent">Quản lý chuyên mục</span></a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-lg fa-fw fa-hdd-o"></i><span class="menu-item-parent">DEVICES</span></a>

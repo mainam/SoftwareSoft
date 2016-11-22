@@ -1,6 +1,7 @@
 ﻿using DataAccess.DataConfigFolder;
 using DataAccess.Db;
 using DataAccess.Db.Db;
+using DataAccess.Db.UserDb;
 using DataAccess.DeviceFolder;
 using DataAccess.Helper;
 using DataAccess.TeamFolder;
@@ -22,7 +23,7 @@ namespace DataAccess.UserFolder
     public class UserInfo
     {
 
-        public static tbUser _GetByIDPW(dbUserDataContext context, object id, string password)
+        public static Db.UserDb.tbUser _GetByIDPW(UserDbDataContext context, object id, string password)
         {
             try
             {
@@ -37,7 +38,7 @@ namespace DataAccess.UserFolder
                 return null;
             }
         }
-        public static tbUser _GetByID(dbUserDataContext context, object id)
+        public static Db.UserDb.tbUser _GetByID(UserDbDataContext context, object id)
         {
             try
             {

@@ -1,15 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="ChuyenMucMgr.aspx.cs" Inherits="SoftwareStore.Admin.ChuyenMucMgr" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="ChuyenMucMgr.aspx.cs" Inherits="SoftwareStore.Admin.ChuyenMuc.ChuyenMucMgr" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HolderScript" runat="server">
     <script src="/js/selportalscript.js"></script>
     <script type="text/javascript">
         var ChuyenMucScript = {
+            IdEdit: 0,
             ListHasSelected: [],
             CurrentPage: 0,
             NumberInpage: 5,
             LoadData: function (page) {
                 currentpage = page;
-                var keyword = $('#inputSearch').val();
+                var keyword = $('#<%=inputSearch.ClientID%>').val();
                 var numberinpage = ChuyenMucScript.NumberInpage;
                 AJAXFunction.CallAjax("POST", "/admin/chuyenmucmgr.aspx", "GetListCategory", {
                     keyword: keyword,
@@ -19,20 +20,110 @@
                 function (obj) {
                     if (obj.Status) {
                         var divtotalitem = $('#divtotalitem').empty();
-                        divtotalitem.append('Total Item: ' + obj.TotalItem)
+                        divtotalitem.append('Tổng số: ' + obj.TotalItem)
 
                         var _totalpage = Math.round(obj.TotalItem / numberinpage);
                         var totalpage = Common.GetTotalPage(ChuyenMucScript.NumberInpage, obj.TotalItem);
                         listdevices = obj.Data;
-                        listHasSelect = [];
-                        updateButton();
+                        ChuyenMucScript.ListHasSelected = [];
+                        ChuyenMucScript.UpdateButton();
                         $('#btncheck').get(0).checked = false;
-
-                        LoadTable(obj.Data, ((parseInt(page) - 1) * numberinpage));
-                        AJAXFunction.CreatePaging($("#divpaging"), page, totalpage, LoadData);
+                        ChuyenMucScript.LoadTable(obj.Data, ((parseInt(page) - 1) * numberinpage));
+                        AJAXFunction.CreatePaging($("#divpaging"), page, totalpage, ChuyenMucScript.LoadData);
                     }
                 });
 
+            },
+            CreateAction: function (category) {
+                var action = $('<a data-toggle="modal" data-target="#remoteModal">');
+                action.attr('dataid', category.Id);
+                action.click(function () {
+                    ChuyenMucScript.IdEdit = $(this).attr('dataid');
+                    AJAXFunction.ShowModal("remoteModal", "/admin/chuyenmuc/SuaChuyenMuc.aspx");
+                });
+
+                var btnedit = $('<label class="btn btn-xs btn-default">');
+                btnedit.append($('<i class="fa fa-edit"/>'))
+                action.append(btnedit);
+
+                var btndel = $('<label class="btn btn-xs btn-default" style="margin-left:1px;">');
+                btndel.attr('dataid', category.Id);
+                btndel.append($('<i class="fa fa-times"/>'))
+
+                btndel.click(function () {
+                    var id = $(this).attr('dataid');
+                    var callback = function () {
+                        AJAXFunction.CallAjax("POST", "/admin/chuyenmuc/chuyenmucmgr.aspx", "DeleteCategory", {
+                            id: id
+                        },
+                        function (response) {
+                            var status = response.Status;
+                            if (status) {
+                                alertSmallBox("Xóa thành công!", "1 giây trước!!", "Success");
+                                LoadData(currentpage);
+                            }
+                            else
+                                alertSmallBox("Xóa thất bại \n " + response.Message, "1 giây trước!!", "Error");
+                        });
+                    }
+                    confirm("Xác nhận", "Bạn có muốn xóa chuyên mục này!!", "OK", "Cancel", callback);
+                });
+                action.append(btndel);
+
+                var td = $('<td>');
+                td.append(action);
+                return td;
+            },
+            LoadTable: function (list, startindex) {
+                var table = $('#datatable_tabletools > tbody');
+                table.empty();
+                if (list.length == 0) {
+                    EmptyTable(table, "5")
+                }
+                for (i = 0; i < list.length; i++) {
+                    var tr = $('<tr>');
+                    var td = createCheckBox(list[i].Id, false, false, true);
+                    tr.append(td);
+
+                    var td = createCell(list[i].Name);
+                    tr.append(td);
+
+                    var td = createCell(list[i].ParentName);
+                    tr.append(td);
+
+                    var td = createCell(list[i].Description);
+                    tr.append(td);
+
+                    var td = ChuyenMucScript.CreateAction(list[i]);
+                    tr.append(td);
+
+                    //var td = createCell(list[i].SubmitDate);
+                    //tr.append(td);
+
+                    //var td = createCell(list[i].StartDate);
+                    //tr.append(td);
+
+                    //var td = createCell(list[i].EndDate);
+                    //tr.append(td);
+
+                    //var td = createCell(list[i].Model);
+                    //tr.append(td);
+
+                    //var td = createCell(list[i].TagDevice);
+                    //tr.append(td);
+
+                    //var td = createCellNameApprove(list[i].Manager, list[i].StatusManager);
+                    //tr.append(td);
+
+                    //var td = createCell(list[i].StatusBorrow);
+                    //tr.append(td);
+
+                    table.append(tr);
+
+                }
+            },
+            UpdateButton: function () {
+                document.getElementById("btnDelete").disabled = ChuyenMucScript.ListHasSelected.length == 0;
             },
             ShowNumberDevice: function (numberdevice) {
                 $("#btnSelectNumberDevice").empty().append("Hiển thị: " + numberdevice).append($('<i class="fa fa-caret-down" style="margin-left:5px;">'))
@@ -66,12 +157,14 @@
 
 
         }
-        $('#inputSearch').keypress(function (event) {
+        $('#<%=inputSearch.ClientID%>').keypress(function (event) {
             var keycode = (event.keyCode ? event.keyCode : event.which);
             if (keycode == '13') {
                 ChuyenMucScript.LoadData(1);
             }
         });
+
+        ChuyenMucScript.LoadData(1);
         //$('#btncheck').click(function () {
 
         //    input = $('#datatable_tabletools > tbody').find('input[typecheckbox="itemdevice"][disabled!="disabled"]');
@@ -179,6 +272,7 @@
                                                 <th class="theadtable" style="width: 200px">Tên chuyên mục</th>
                                                 <th class="theadtable" style="width: 200px">Chuyên mục cha</th>
                                                 <th class="theadtable">Mô tả</th>
+                                                <th class="theadtable" style="width: 100px">Hành động</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -204,9 +298,7 @@
             </article>
             <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div style="padding-top: 20px; clear: both;">
-                    <input type="button" class="btn btn-primary pull-left" id="btnReborrow" style="margin-right: 5px; width: 255px;" value="Borrow these devices have returned" onclick="BorrowDeviceReturned();" />
                     <input type="button" class="btn btn-primary pull-right" id="btnDelete" disabled="disabled" style="width: 95px;" value="Delete" onclick="Delete();" />
-                    <input type="button" class="btn btn-primary pull-right" id="btnCancel" disabled="disabled" style="margin-right: 5px; width: 95px;" value="Cancel" onclick="Cancel();" />
                 </div>
             </article>
 
