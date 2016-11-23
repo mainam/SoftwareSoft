@@ -156,7 +156,7 @@ namespace DataAccess
     #endregion
 		
 		public DatabaseDataContext() : 
-				base(global::DataAccess.Properties.Settings.Default.SELPORTALConnectionString, mappingSource)
+				base(global::DataAccess.Properties.Settings.Default.MNSHOPConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

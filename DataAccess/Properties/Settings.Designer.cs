@@ -26,44 +26,13 @@ namespace DataAccess.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-36VHM6E\\SQLEXPRESS;Initial Catalog=MNSHOP;Integrated Security" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=MNSHOP;Integrated Security" +
             "=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIn" +
             "tent=ReadWrite;MultiSubnetFailover=False")]
-        public string SELPORTALConnectionString {
-            get {
-                return ((string)(this["SELPORTALConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HOA-TUYET-PC;Initial Catalog=MNSHOP;Integrated Security" +
-            "=True;Encrypt=False;TrustServerCertificate=True")]
-        public string MNSHOPConnectionString {
+        public string MNSHOPConnectionString
+        {
             get {
                 return ((string)(this["MNSHOPConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HOA-TUYET-PC;Initial Catalog=MNSHOP;Integrated Security=True;Encrypt=" +
-            "False;TrustServerCertificate=True")]
-        public string MNSHOPConnectionString1 {
-            get {
-                return ((string)(this["MNSHOPConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HOA-TUYET-PC;Initial Catalog=MNSHOP;Integrated Security=True")]
-        public string MNSHOPConnectionString2 {
-            get {
-                return ((string)(this["MNSHOPConnectionString2"]));
             }
         }
     }

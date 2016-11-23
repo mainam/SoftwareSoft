@@ -4,15 +4,14 @@ D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DataAccess\bin\Debug\DataAccess.
 D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DataAccess\obj\Debug\DataAccess.dll
 D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DataAccess\obj\Debug\DataAccess.pdb
 D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
-D:\GIT\WEB\MLLSOFT\DataAccess\bin\Debug\DataAccess.dll.config
-D:\GIT\WEB\MLLSOFT\DataAccess\bin\Debug\DataAccess.dll
-D:\GIT\WEB\MLLSOFT\DataAccess\bin\Debug\DataAccess.pdb
-D:\GIT\WEB\MLLSOFT\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
-D:\GIT\WEB\MLLSOFT\DataAccess\obj\Debug\DataAccess.dll
-D:\GIT\WEB\MLLSOFT\DataAccess\obj\Debug\DataAccess.pdb
 F:\GITHUB\MNSHOP\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 F:\GITHUB\MNSHOP\DataAccess\bin\Debug\DataAccess.dll.config
 F:\GITHUB\MNSHOP\DataAccess\bin\Debug\DataAccess.dll
 F:\GITHUB\MNSHOP\DataAccess\bin\Debug\DataAccess.pdb
 F:\GITHUB\MNSHOP\DataAccess\obj\Debug\DataAccess.dll
 F:\GITHUB\MNSHOP\DataAccess\obj\Debug\DataAccess.pdb
+D:\GIT\WEB\MLLSOFT\DataAccess\bin\Debug\DataAccess.dll.config
+D:\GIT\WEB\MLLSOFT\DataAccess\bin\Debug\DataAccess.dll
+D:\GIT\WEB\MLLSOFT\DataAccess\bin\Debug\DataAccess.pdb
+D:\GIT\WEB\MLLSOFT\DataAccess\obj\Debug\DataAccess.dll
+D:\GIT\WEB\MLLSOFT\DataAccess\obj\Debug\DataAccess.pdb

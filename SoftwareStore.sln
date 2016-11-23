@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{7B4A331B-CF47-404C-B3BF-95C0B253B6FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareStore", "DeviceManagement\SoftwareStore.csproj", "{FF5DA9B7-AA6D-4014-99A5-9BB9FF6E826E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareStore", "SoftwareStore\SoftwareStore.csproj", "{FF5DA9B7-AA6D-4014-99A5-9BB9FF6E826E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -36,7 +36,7 @@ namespace DataAccess.Db.CategoryDb
     #endregion
 		
 		public CategoryDbDataContext() : 
-				base(global::DataAccess.Properties.Settings.Default.MNSHOPConnectionString2, mappingSource)
+				base(global::DataAccess.Properties.Settings.Default.MNSHOPConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

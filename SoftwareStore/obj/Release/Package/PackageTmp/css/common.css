@@ -1,0 +1,72 @@
+﻿table tbody td.cell-content {
+    text-align: center;
+}
+
+table tbody td {
+    vertical-align: middle !important;
+}
+
+table th {
+    background: darkgray !important;
+    vertical-align: middle !important;
+}
+
+table thead th {
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+    table thead th label {
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+    }
+
+table td.cell-important {
+    font-weight: bold;
+}
+
+.tickLabel {
+    font-weight: bold;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.text-inside {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.table-fixed {
+    table-layout: fixed;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.labelform {
+    font-weight: bold !important;
+}
+
+input[type="text"][disabled="disabled"] {
+    background: #f4f4f4 !important;
+}
+
+
+
+.legendColorBox div > div {
+    margin-top: -4px;
+    margin-left: -6px;
+    border-width:8px !important;
+    width: 0px !important;
+    height: 0px !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}

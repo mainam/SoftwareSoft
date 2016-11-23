@@ -1,0 +1,13 @@
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\bin\DeviceManagement.dll.config
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\bin\DeviceManagement.dll
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\bin\DeviceManagement.pdb
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\bin\DataAccess.dll
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\bin\DocumentFormat.OpenXml.dll
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\bin\Microsoft.Web.Infrastructure.dll
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\bin\Newtonsoft.Json.dll
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\bin\DataAccess.pdb
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\bin\DocumentFormat.OpenXml.xml
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\bin\Microsoft.Web.Infrastructure.xml
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\obj\Release\DeviceManagement.csprojResolveAssemblyReference.cache
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\obj\Release\DeviceManagement.dll
+D:\NGOCNAM-13615022\MY SOFT\18.DeviceManagement\DeviceManagement\obj\Release\DeviceManagement.pdb

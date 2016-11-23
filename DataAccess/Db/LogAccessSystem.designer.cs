@@ -36,7 +36,7 @@ namespace DataAccess.Db
     #endregion
 		
 		public LogAccessSystemDataContext() : 
-				base(global::DataAccess.Properties.Settings.Default.SELPORTALConnectionString, mappingSource)
+				base(global::DataAccess.Properties.Settings.Default.MNSHOPConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

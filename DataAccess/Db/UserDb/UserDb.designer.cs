@@ -36,7 +36,7 @@ namespace DataAccess.Db.UserDb
     #endregion
 		
 		public UserDbDataContext() : 
-				base(global::DataAccess.Properties.Settings.Default.MNSHOPConnectionString2, mappingSource)
+				base(global::DataAccess.Properties.Settings.Default.MNSHOPConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
