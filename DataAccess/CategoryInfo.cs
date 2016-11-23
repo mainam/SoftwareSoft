@@ -62,38 +62,32 @@ namespace DataAccess
 
         public static bool DeteteCategory(string name, int id)
         {
-            try
+
+            using (var context = new CategoryDbFullDataContext())
             {
-                using (var context = new CategoryDbFullDataContext())
+                var user = context.tbUsers.FirstOrDefault(x => x.UserName.Equals(name));
+                if (user == null)
+                    throw new Exception("Tài khoản không tồn tại");
+                if (user.tbTypeUser.Id != 1)
+                    throw new Exception("Bạn không có quyền xóa chuyên mục");
+                var category = context.tbCategories.SingleOrDefault(x => x.Id == id);
+                if (category != null)
                 {
-                    var user = context.tbUsers.FirstOrDefault(x => x.UserName.Equals(id));
-                    if (user == null)
-                        throw new Exception("Tài khoản không tồn tại");
-                    if (user.tbTypeUser.Id != 1)
-                        throw new Exception("Bạn không có quyền xóa chuyên mục");
-                    var category = context.tbCategories.SingleOrDefault(x => x.Id == id);
-                    if (category != null)
+                    if (category.Id == 1)
+                        throw new Exception("Không thể xóa chuyên mục này");
+                    foreach (var item in category.tbSoftwares)
                     {
-                        if (category.Id == 1)
-                            throw new Exception("Không thể xóa chuyên mục này");
-                        foreach (var item in category.tbSoftwares)
-                        {
-                            item.CategoryId = 1;
-                        }
-                        context.tbCategories.DeleteOnSubmit(category);
-                        context.SubmitChanges();
-                        return true;
+                        item.CategoryId = 1;
                     }
-                    else
-                    {
-                        throw new Exception("Không tìm thấy chuyên mục này");
-                    }
+                    context.tbCategories.DeleteOnSubmit(category);
+                    context.SubmitChanges();
+                    return true;
+                }
+                else
+                {
+                    throw new Exception("Không tìm thấy chuyên mục này");
                 }
             }
-            catch (Exception)
-            {
-            }
-            return false;
         }
         public static Object getAllCategory(Db.CategoryDb.tbCategory y)
         {

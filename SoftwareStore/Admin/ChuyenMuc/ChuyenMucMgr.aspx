@@ -40,7 +40,7 @@
                 btnedit.attr('dataid', category.Id);
                 btnedit.click(function () {
                     ChuyenMucScript.IdEdit = $(this).attr('dataid');
-                    AJAXFunction.ShowModal("remoteModal", "/admin/chuyenmuc/SuaChuyenMuc.aspx");
+                    AJAXFunction.ShowModal("remoteModal", "/admin/chuyenmuc/dialog/AddChuyenMuc.aspx");
                 });
 
                 var btndel = $('<label class="btn btn-xs btn-default" style="margin-left:1px;">');
@@ -60,7 +60,7 @@
                                 LoadData(currentpage);
                             }
                             else
-                                alertSmallBox("Xóa thất bại \n " + response.Message, "1 giây trước!!", "Error");
+                                alertSmallBox("Xóa thất bại \n " + response.Data, "1 giây trước!!", "Error");
                         });
                     }
                     confirm("Xác nhận", "Bạn có muốn xóa chuyên mục này!!", "OK", "Cancel", callback);
@@ -294,7 +294,8 @@
             </article>
             <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div style="padding-top: 20px; clear: both;">
-                    <input type="button" class="btn btn-primary pull-right" id="btnDelete" disabled="disabled" style="width: 95px;" value="Delete" onclick="Delete();" />
+                    <input type="button" class="btn btn-primary pull-right" id="btnDelete" disabled="disabled" style="width: 95px;" value="Delete" onclick="ChuyenMucScript.Delete();" />
+                    <input type="button" class="btn btn-primary pull-right" id="btnAdd"  style="width: 95px;" value="Delete" onclick="Add();" />
                 </div>
             </article>
 
