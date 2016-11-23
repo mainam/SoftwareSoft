@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginSystem.aspx.cs" Inherits="DeviceManagement.Admin.Log.LoginSystem" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginSystem.aspx.cs" Inherits="SoftwareStore.Admin.Log.LoginSystem" %>
 
 <link href="/device/style/styleText.css" rel="stylesheet" />
 <link href="/css/common.css" rel="stylesheet" />

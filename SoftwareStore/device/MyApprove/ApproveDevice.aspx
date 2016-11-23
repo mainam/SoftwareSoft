@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApproveDevice.aspx.cs" Inherits="DeviceManagement.device.MyApprove.ApproveDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApproveDevice.aspx.cs" Inherits="SoftwareStore.device.MyApprove.ApproveDevice" %>
 
 
 <style>

@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using DataAccess;
 using DataAccess.UtilFolder;
-using System.Web.UI.WebControls;
 using System.Web.Services;
-using DataAccess.Db.Db;
+using DataAccess;
 
 namespace SoftwareStore.Admin.ChuyenMuc.Dialog
 {
@@ -15,37 +13,18 @@ namespace SoftwareStore.Admin.ChuyenMuc.Dialog
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            String _id = Request.QueryString["id"];
+            int id = Converts.ToInt(_id, 0);
+            if (id == 0)
+                title.InnerHtml = "THÊM CHUYÊN MỤC";
+            else
+                title.InnerHtml = "CHỈNH SỬA CHUYÊN MỤC";
+            cbListCategory.DataSource = CategoryInfo.getCategory(id);
+            cbListCategory.DataTextField = "Name";
+            cbListCategory.DataValueField = "Id";
+            cbListCategory.DataBind();
+
         }
-
-        [WebMethod]
-        public static String AddNewCategory(int id, string name, string description, int parentId)
-        {
-            try
-            {
-                if (id == parentId)
-                    throw new Exception("Không thể tự thêm mình là chuyên mục cha");
-
-                using (var context = new CategoryDbFullDataContext())
-                {
-                    tbCategory category = null;             
-                    if(id!=0)
-                    {
-                        category = context.tbCategories.SingleOrDefault(x => x.Id == id);
-                    }
-                    var listmanager = context.DeviceManagers.Select(x => x.UserName);
-                    var listnew = listuser.Except(listmanager);
-                    context.DeviceManagers.InsertAllOnSubmit(listnew.Select(x => new DeviceManager() { UserName = x, ApplyDate = DateTime.Now }));
-                    context.SubmitChanges();
-                    return Converts.Serialize(new { Status = true });
-                }
-            }
-            catch (Exception)
-            {
-                return Converts.Serialize(new { Status = false });
-            }
-        }
-
 
     }
 }

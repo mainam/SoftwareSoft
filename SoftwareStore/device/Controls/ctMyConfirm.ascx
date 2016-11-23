@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctMyConfirm.ascx.cs" Inherits="DeviceManagement.device.Controls.ctMyConfirm" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctMyConfirm.ascx.cs" Inherits="SoftwareStore.device.Controls.ctMyConfirm" %>
 
 <style>
     #dialog-category {

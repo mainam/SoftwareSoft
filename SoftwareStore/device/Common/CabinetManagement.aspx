@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CabinetManagement.aspx.cs" Inherits="DeviceManagement.device.Common.CabinetManagement" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CabinetManagement.aspx.cs" Inherits="SoftwareStore.device.Common.CabinetManagement" %>
 
 <style>
     #dialog-cabinet {

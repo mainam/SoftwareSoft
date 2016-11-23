@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MyConfirm.aspx.cs" Inherits="DeviceManagement.device.Confirmation.MyConfirm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MyConfirm.aspx.cs" Inherits="SoftwareStore.device.Confirmation.MyConfirm" %>
 
 <style>
     #dialog-category {

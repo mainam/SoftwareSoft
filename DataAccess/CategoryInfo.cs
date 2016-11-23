@@ -1,40 +1,13 @@
 ﻿using DataAccess.Db.CategoryDb;
-using DataAccess.Db.Db;
+using DataAccess.Db.CategoryDbFull;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess
 {
     public class CategoryInfo
     {
-        public static bool addCategory(int parentId, String categoryName, String description)
-        {
-            try
-            {
-                using (var context = new CategoryDbDataContext())
-                {
-                    context.tbCategories.InsertOnSubmit(new Db.CategoryDb.tbCategory()
-                    {
-
-                        Name = categoryName,
-                        Description = description,
-                        ParentId = parentId
-                    });
-                    context.SubmitChanges();
-                    return true;
-
-                }
-            }
-            catch (Exception)
-            {
-
-            }
-            return false;
-
-        }
 
         public static Object getAllCategory()
         {
@@ -60,35 +33,73 @@ namespace DataAccess
             return new List<Object>();
         }
 
-        public static bool DeteteCategory(string name, int id)
+        public static List<Db.CategoryDb.tbCategory> GetChild(CategoryDbDataContext context, Db.CategoryDb.tbCategory category)
+        {
+            var data = new List<Db.CategoryDb.tbCategory>();
+            foreach (var item in category.tbCategories)
+            {
+                data.Add(item);
+                data.AddRange(GetChild(context, item));
+
+            }
+            return data;
+        }
+        public static object getCategory(int ignoreId)
+        {
+            using (var context = new CategoryDbDataContext())
+            {
+                if (ignoreId == 0)
+                {
+                    return context.tbCategories.Select(x => new { x.Name, x.Id }).ToList();
+                }
+                var category = context.tbCategories.SingleOrDefault(x => x.Id == ignoreId);
+                if (category == null)
+                    return context.tbCategories.Select(x => new { x.Name, x.Id }).ToList();
+                var ignorelist = GetChild(context, category);
+                ignorelist.Add(category);
+                return context.tbCategories.Where(x => !ignorelist.Contains(x)).Select(x => new { x.Name, x.Id }).ToList();
+            }
+        }
+
+        public static bool DeteteCategory(string name, List<int> arrid)
         {
 
             using (var context = new CategoryDbFullDataContext())
             {
-                var user = context.tbUsers.FirstOrDefault(x => x.UserName.Equals(name));
-                if (user == null)
-                    throw new Exception("Tài khoản không tồn tại");
-                if (user.tbTypeUser.Id != 1)
-                    throw new Exception("Bạn không có quyền xóa chuyên mục");
-                var category = context.tbCategories.SingleOrDefault(x => x.Id == id);
-                if (category != null)
+                checkUserPermission(context, name);
+
+                foreach (int id in arrid)
                 {
-                    if (category.Id == 1)
-                        throw new Exception("Không thể xóa chuyên mục này");
-                    foreach (var item in category.tbSoftwares)
+                    var category = context.tbCategories.SingleOrDefault(x => x.Id == id);
+                    if (category != null)
                     {
-                        item.CategoryId = 1;
+                        if (category.Id == 1)
+                            throw new Exception("Không thể xóa chuyên mục này");
+                        foreach (var item in category.tbSoftwares)
+                        {
+                            item.CategoryId = 1;
+                        }
+                        context.tbCategories.DeleteOnSubmit(category);
                     }
-                    context.tbCategories.DeleteOnSubmit(category);
-                    context.SubmitChanges();
-                    return true;
+                    else
+                    {
+                        throw new Exception("Không tìm thấy chuyên mục này");
+                    }
                 }
-                else
-                {
-                    throw new Exception("Không tìm thấy chuyên mục này");
-                }
+                context.SubmitChanges();
+                return true;
             }
         }
+
+        private static void checkUserPermission(CategoryDbFullDataContext context, string name)
+        {
+            var user = context.tbUsers.FirstOrDefault(x => x.UserName.Equals(name));
+            if (user == null)
+                throw new Exception("Tài khoản không tồn tại");
+            if (user.tbTypeUser.Id != 1)
+                throw new Exception("Bạn không có quyền xóa chuyên mục");
+        }
+
         public static Object getAllCategory(Db.CategoryDb.tbCategory y)
         {
             try
@@ -126,6 +137,42 @@ namespace DataAccess
             }
             totalItem = 0;
             return new List<Object>();
+        }
+
+
+
+        public static bool AddCategory(String currentUser, int id, string name, string description, int order, int parent)
+        {
+            int? _parent = null;
+            if (parent != 0)
+                _parent = parent;
+            using (var context = new CategoryDbFullDataContext())
+            {
+                checkUserPermission(context, currentUser);
+                if (id == 0)
+                {
+                    context.tbCategories.InsertOnSubmit(new Db.CategoryDbFull.tbCategory()
+                    {
+                        Name = name,
+                        Description = description,
+                        Order = order,
+                        ParentId = _parent
+                    });
+                    context.SubmitChanges();
+                }
+                else
+                {
+                    var category = context.tbCategories.SingleOrDefault(x => x.Id == id);
+                    if (category == null)
+                        throw new Exception("Không tìm thấy thông tin về chuyên mục này");
+                    category.Name = name;
+                    category.ParentId = _parent;
+                    category.Order = order;
+                    category.Description = description;
+                    context.SubmitChanges();
+                }
+                return true;
+            }
         }
 
     }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeviceInTeam.aspx.cs" Inherits="DeviceManagement.device.DeviceInTeam" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeviceInTeam.aspx.cs" Inherits="SoftwareStore.device.DeviceInTeam" %>
 
 <link href="/css/tablecss.css" rel="stylesheet" />
 <script src="/js/plugin/morris/morris.min1.js"></script>
@@ -12,7 +12,7 @@
     var listdevices = [];
     var numberdeviceinpage = 16;
     var type = JSON.parse('<%=GetTypeOnLoad()%>');
-    var listtype = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListCategoryDevice()%>');
+    var listtype = JSON.parse('<%=SoftwareStore.device.DeviceManagement.ListCategoryDevice()%>');
     LoadData(1);
 
     function LoadListCategory() {
@@ -40,7 +40,7 @@
     LoadListCategory();
 
 
-    var liststatus = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListStatusDevice()%>');
+    var liststatus = JSON.parse('<%=SoftwareStore.device.DeviceManagement.ListStatusDevice()%>');
     function LoadListStatus() {
         var ul = $('#ulddlstatus').empty();
         var a = $('<a href="javascript:void(0)">').text("All");

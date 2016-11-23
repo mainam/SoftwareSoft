@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="DeviceManagement.hr.UserProfile" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="SoftwareStore.hr.UserProfile" %>
 
 <%@ Register Src="~/hr/Controls/ctPersonalInformation.ascx" TagPrefix="uc1" TagName="ctPersonalInformation" %>
 <%@ Register Src="~/hr/Controls/ctEducation.ascx" TagPrefix="uc1" TagName="ctEducation" %>

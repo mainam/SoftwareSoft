@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BorrowDeviceHaveReturn.aspx.cs" Inherits="DeviceManagement.device.BorrowDevice.BorrowDeviceHaveReturn" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BorrowDeviceHaveReturn.aspx.cs" Inherits="SoftwareStore.device.BorrowDevice.BorrowDeviceHaveReturn" %>
 
 <link href="/css/tablecss.css" rel="stylesheet" />
 <link href="/device/style/styleText.css" rel="stylesheet" />
@@ -6,7 +6,7 @@
 <script type="text/javascript">
 
     pageSetUp();
-    var listtype = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListCategoryDevice()%>');
+    var listtype = JSON.parse('<%=SoftwareStore.device.DeviceManagement.ListCategoryDevice()%>');
     function LoadListCategory() {
         var ul = $('#ulddltype').empty();
         var a = $('<a href="javascript:void(0)">').text("All");
@@ -58,7 +58,7 @@
     }
 
     LoadListCategory();
-    var liststatus = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListStatusDevice()%>');
+    var liststatus = JSON.parse('<%=SoftwareStore.device.DeviceManagement.ListStatusDevice()%>');
     function LoadListStatus() {
         var ul = $('#ulddlstatus').empty();
         var a = $('<a href="javascript:void(0)">').text("All");

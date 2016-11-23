@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeviceManagement.aspx.cs" Inherits="SoftwareStore.device.DeviceManagement" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SoftwareStore.aspx.cs" Inherits="SoftwareStore.device.DeviceManagement" %>
 
 <link href="/css/tablecss.css" rel="stylesheet" />
 <script src="/js/plugin/morris/morris.min1.js"></script>
@@ -90,7 +90,7 @@
 
 
     function Export() {
-        window.open('/device/AjaxProcess/Export.aspx?type=devicemanagement');
+        window.open('/device/AjaxProcess/Export.aspx?type=SoftwareStore.');
 
     }
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddCertification.aspx.cs" Inherits="DeviceManagement.hr.dialog.AddCertification" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddCertification.aspx.cs" Inherits="SoftwareStore.hr.dialog.AddCertification" %>
 
 
 <style>

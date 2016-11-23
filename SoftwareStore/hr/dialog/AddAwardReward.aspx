@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddAwardReward.aspx.cs" Inherits="DeviceManagement.hr.dialog.AddAwardReward" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddAwardReward.aspx.cs" Inherits="SoftwareStore.hr.dialog.AddAwardReward" %>
 
 <style>
     .iconuser {

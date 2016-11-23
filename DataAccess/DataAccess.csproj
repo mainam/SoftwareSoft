@@ -48,7 +48,7 @@
       <LastGenOutput>CategoryDb.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Db\Db\CategoryDbFull.dbml">
+    <None Include="Db\CategoryDbFull\CategoryDbFull.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>CategoryDbFull.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
@@ -117,7 +117,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CategoryDb.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Db\Db\CategoryDbFull.designer.cs">
+    <Compile Include="Db\CategoryDbFull\CategoryDbFull.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CategoryDbFull.dbml</DependentUpon>
@@ -204,7 +204,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Db\Db\CategoryDbFull.dbml.layout">
+    <None Include="Db\CategoryDbFull\CategoryDbFull.dbml.layout">
       <DependentUpon>CategoryDbFull.dbml</DependentUpon>
     </None>
   </ItemGroup>

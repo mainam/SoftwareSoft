@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DialogError.aspx.cs" Inherits="DeviceManagement.home.DialogError" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DialogError.aspx.cs" Inherits="SoftwareStore.home.DialogError" %>
 
 <style>
     .smart-form .input input, .smart-form .select select, .smart-form .textarea textarea {

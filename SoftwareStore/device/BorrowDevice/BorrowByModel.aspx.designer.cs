@@ -7,8 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoftwareStore.device.BorrowDevice
-{
+namespace SoftwareStore.device.BorrowDevice {
     
     
     public partial class BorrowByModel {

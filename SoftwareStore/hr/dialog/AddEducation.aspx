@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddEducation.aspx.cs" Inherits="DeviceManagement.hr.dialog.AddEducation" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddEducation.aspx.cs" Inherits="SoftwareStore.hr.dialog.AddEducation" %>
 
 <style>
     .iconuser {

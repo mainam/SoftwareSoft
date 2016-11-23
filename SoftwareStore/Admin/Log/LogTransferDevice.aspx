@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogTransferDevice.aspx.cs" Inherits="DeviceManagement.Admin.Log.LogTransferDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogTransferDevice.aspx.cs" Inherits="SoftwareStore.Admin.Log.LogTransferDevice" %>
 
 <link href="/device/style/styleText.css" rel="stylesheet" />
 <link href="/css/common.css" rel="stylesheet" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OTSurvey.aspx.cs" Inherits="DeviceManagement.hr.OTSurvey" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OTSurvey.aspx.cs" Inherits="SoftwareStore.hr.OTSurvey" %>
 
 <%--<input runat="server" id="txtDataReport" type="text" />--%>
 <section id="widget-grid" class="">

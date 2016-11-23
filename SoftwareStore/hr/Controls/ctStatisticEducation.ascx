@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctStatisticEducation.ascx.cs" Inherits="DeviceManagement.hr.Controls.ctStatisticEducation" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctStatisticEducation.ascx.cs" Inherits="SoftwareStore.hr.Controls.ctStatisticEducation" %>
 <div class="jarviswidget  jarviswidget-color-teal" id="idEdu" runat="server" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-sortable="false" data-widget-attstyle="jarviswidget-color-teal" data-widget-fullscreenbutton="false">
     <header>
         <span class="widget-icon"><i class="fa fa-bar-chart-o"></i></span>
@@ -27,7 +27,7 @@
 <script>
 
     var EduChart = {
-        listdata: JSON.parse('<%=DeviceManagement.hr.HRStatistic.StatisticEducation()%>'),
+        listdata: JSON.parse('<%=SoftwareStore.hr.HRStatistic.StatisticEducation()%>'),
         //generateAllFlotCharts: function () {
         //    /* pie chart */
 

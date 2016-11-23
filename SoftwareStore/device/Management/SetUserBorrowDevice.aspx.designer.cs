@@ -7,8 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoftwareStore.device.Management
-{
+namespace SoftwareStore.device.Management {
     
     
     public partial class SetUserBorrowDevice {

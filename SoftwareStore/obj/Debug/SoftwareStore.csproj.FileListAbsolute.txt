@@ -24,3 +24,11 @@ D:\GIT\WEB\MLLSOFT\SoftwareStore\bin\DataAccess.pdb
 D:\GIT\WEB\MLLSOFT\SoftwareStore\obj\Debug\SoftwareStore.csprojResolveAssemblyReference.cache
 D:\GIT\WEB\MLLSOFT\SoftwareStore\obj\Debug\SoftwareStore.dll
 D:\GIT\WEB\MLLSOFT\SoftwareStore\obj\Debug\SoftwareStore.pdb
+F:\GITHUB\MNSHOP\SoftwareStore\obj\Debug\SoftwareStore.csprojResolveAssemblyReference.cache
+F:\GITHUB\MNSHOP\SoftwareStore\bin\SoftwareStore.dll.config
+F:\GITHUB\MNSHOP\SoftwareStore\bin\SoftwareStore.dll
+F:\GITHUB\MNSHOP\SoftwareStore\bin\SoftwareStore.pdb
+F:\GITHUB\MNSHOP\SoftwareStore\bin\DataAccess.dll
+F:\GITHUB\MNSHOP\SoftwareStore\bin\DataAccess.pdb
+F:\GITHUB\MNSHOP\SoftwareStore\obj\Debug\SoftwareStore.dll
+F:\GITHUB\MNSHOP\SoftwareStore\obj\Debug\SoftwareStore.pdb

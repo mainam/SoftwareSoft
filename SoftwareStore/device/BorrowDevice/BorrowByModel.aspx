@@ -1,5 +1,5 @@
 ﻿
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BorrowByModel.aspx.cs" Inherits="DeviceManagement.device.BorrowDevice.BorrowByModel" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BorrowByModel.aspx.cs" Inherits="SoftwareStore.device.BorrowDevice.BorrowByModel" %>
 
 <!DOCTYPE html>
 
@@ -56,7 +56,7 @@
             return null;
         }
 
-        var listtype = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListCategoryDevice()%>');
+        var listtype = JSON.parse('<%=SoftwareStore.device.DeviceManagement.ListCategoryDevice()%>');
         function LoadListCategory() {
             var ul = $('#ulddltype').empty();
             var a = $('<a href="javascript:void(0)">').text("All");

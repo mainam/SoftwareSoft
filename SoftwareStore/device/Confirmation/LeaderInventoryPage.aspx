@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LeaderInventoryPage.aspx.cs" Inherits="DeviceManagement.device.Confirmation.LeaderInventoryPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LeaderInventoryPage.aspx.cs" Inherits="SoftwareStore.device.Confirmation.LeaderInventoryPage" %>
 
 <%@ Register Src="~/device/Controls/ctLeaderUserNotConfirm.ascx" TagPrefix="uc1" TagName="ctLeaderUserNotConfirm" %>
 <%@ Register Src="~/device/Controls/ctLeaderHasRejected.ascx" TagPrefix="uc1" TagName="ctLeaderHasRejected" %>

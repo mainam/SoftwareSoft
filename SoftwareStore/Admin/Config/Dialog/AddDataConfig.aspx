@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddDataConfig.aspx.cs" Inherits="DeviceManagement.Admin.Config.Dialog.AddDataConfig" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddDataConfig.aspx.cs" Inherits="SoftwareStore.Admin.Config.Dialog.AddDataConfig" %>
 
 
 <style>

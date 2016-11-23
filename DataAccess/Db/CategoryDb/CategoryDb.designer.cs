@@ -88,6 +88,8 @@ namespace DataAccess.Db.CategoryDb
 		
 		private string _Description;
 		
+		private int _Order;
+		
 		private EntitySet<tbCategory> _tbCategories;
 		
 		private EntityRef<tbCategory> _tbCategory1;
@@ -104,6 +106,8 @@ namespace DataAccess.Db.CategoryDb
     partial void OnParentIdChanged();
     partial void OnDescriptionChanging(string value);
     partial void OnDescriptionChanged();
+    partial void OnOrderChanging(int value);
+    partial void OnOrderChanged();
     #endregion
 		
 		public tbCategory()
@@ -113,7 +117,7 @@ namespace DataAccess.Db.CategoryDb
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id
 		{
 			get
@@ -193,6 +197,26 @@ namespace DataAccess.Db.CategoryDb
 					this._Description = value;
 					this.SendPropertyChanged("Description");
 					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Order]", Storage="_Order", DbType="Int NOT NULL")]
+		public int Order
+		{
+			get
+			{
+				return this._Order;
+			}
+			set
+			{
+				if ((this._Order != value))
+				{
+					this.OnOrderChanging(value);
+					this.SendPropertyChanging();
+					this._Order = value;
+					this.SendPropertyChanged("Order");
+					this.OnOrderChanged();
 				}
 			}
 		}

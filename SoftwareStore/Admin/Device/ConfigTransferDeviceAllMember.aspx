@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfigTransferDeviceAllMember.aspx.cs" Inherits="DeviceManagement.Admin.Device.ConfigTransferDeviceAllMember" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfigTransferDeviceAllMember.aspx.cs" Inherits="SoftwareStore.Admin.Device.ConfigTransferDeviceAllMember" %>
 
 <section id="widget-grid" class="">
 

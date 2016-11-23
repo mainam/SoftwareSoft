@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctStatisticMemberAge.ascx.cs" Inherits="DeviceManagement.hr.Controls.ctStatisticMemberAge" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctStatisticMemberAge.ascx.cs" Inherits="SoftwareStore.hr.Controls.ctStatisticMemberAge" %>
 <div class="jarviswidget  jarviswidget-color-teal" id="idAge" runat="server" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-sortable="false" data-widget-attstyle="jarviswidget-color-teal" data-widget-fullscreenbutton="false">
     <header>
         <span class="widget-icon"><i class="fa fa-bar-chart-o"></i></span>
@@ -27,7 +27,7 @@
 <script>
 
     var AgeChart = {
-        listdata: JSON.parse('<%=DeviceManagement.hr.HRStatistic.StatisticAge()%>'),
+        listdata: JSON.parse('<%=SoftwareStore.hr.HRStatistic.StatisticAge()%>'),
         //generateAllFlotCharts: function () {
         //    /* pie chart */
 

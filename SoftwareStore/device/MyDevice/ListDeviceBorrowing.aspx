@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListDeviceBorrowing.aspx.cs" Inherits="DeviceManagement.device.MyDevice.ListDeviceBorrowing" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListDeviceBorrowing.aspx.cs" Inherits="SoftwareStore.device.MyDevice.ListDeviceBorrowing" %>
 
 
 <link href="/css/tablecss.css" rel="stylesheet" />
@@ -10,7 +10,7 @@
     pageSetUp();
 
     var numberdeviceinpage = 15;
-    var listtype = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListCategoryDevice()%>');
+    var listtype = JSON.parse('<%=SoftwareStore.device.DeviceManagement.ListCategoryDevice()%>');
     var currentpage = 1;
     var DeviceID = 0;
     var listdevices = [];
@@ -41,7 +41,7 @@
     LoadListCategory();
 
 
-    var liststatus = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListStatusDevice()%>');
+    var liststatus = JSON.parse('<%=SoftwareStore.device.DeviceManagement.ListStatusDevice()%>');
     function LoadListStatus() {
         var ul = $('#ulddlstatus').empty();
         var a = $('<a href="javascript:void(0)">').text("All");

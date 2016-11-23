@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AllowMemberBorrowDevice.aspx.cs" Inherits="DeviceManagement.Admin.Device.Dialog.AllowMemberBorrowDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AllowMemberBorrowDevice.aspx.cs" Inherits="SoftwareStore.Admin.Device.Dialog.AllowMemberBorrowDevice" %>
 
 <style>
     .tdheader {

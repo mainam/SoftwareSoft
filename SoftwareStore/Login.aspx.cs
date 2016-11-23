@@ -1,18 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using DataAccess;
 using System.Web.Security;
-using DataAccess.Helper;
 using System.Web.Script.Serialization;
 using DataAccess.UserFolder;
-using DataAccess.LogFolder;
 using DataAccess.UtilFolder;
-using DataAccess.Db;
-using DataAccess.Db.Db;
 using DataAccess.Db.UserDb;
 
 namespace SoftwareStore

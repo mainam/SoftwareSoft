@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApproveMultiDevice.aspx.cs" Inherits="DeviceManagement.device.MyApprove.ApproveMultiDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApproveMultiDevice.aspx.cs" Inherits="SoftwareStore.device.MyApprove.ApproveMultiDevice" %>
 
 
 <style>

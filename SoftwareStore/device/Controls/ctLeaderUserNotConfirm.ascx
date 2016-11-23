@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctLeaderUserNotConfirm.ascx.cs" Inherits="DeviceManagement.device.Controls.ctLeaderUserNotConfirm" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctLeaderUserNotConfirm.ascx.cs" Inherits="SoftwareStore.device.Controls.ctLeaderUserNotConfirm" %>
 <style>
     #dialog-category {
         margin-bottom: -30px;

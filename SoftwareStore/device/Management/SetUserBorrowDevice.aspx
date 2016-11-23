@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SetUserBorrowDevice.aspx.cs" Inherits="DeviceManagement.device.Management.SetUserBorrowDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SetUserBorrowDevice.aspx.cs" Inherits="SoftwareStore.device.Management.SetUserBorrowDevice" %>
 
 <style>
     .smart-form .input input, .smart-form .select select, .smart-form .textarea textarea {

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserInventoryPage.aspx.cs" Inherits="DeviceManagement.device.Confirmation.UserInventoryPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserInventoryPage.aspx.cs" Inherits="SoftwareStore.device.Confirmation.UserInventoryPage" %>
 
 <%@ Register Src="~/device/Controls/ctUserNeedConfirm.ascx" TagPrefix="uc1" TagName="ctUserNeedConfirm" %>
 <%@ Register Src="~/device/Controls/ctUserHasConfirm.ascx" TagPrefix="uc1" TagName="ctUserHasConfirm" %>

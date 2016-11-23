@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModelManagement.aspx.cs" Inherits="DeviceManagement.device.Common.ModelManagement" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModelManagement.aspx.cs" Inherits="SoftwareStore.device.Common.ModelManagement" %>
 
 <style>
     #dialog-model {

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListDeviceAvailable.aspx.cs" Inherits="DeviceManagement.device.Management.ListDeviceAvailable" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListDeviceAvailable.aspx.cs" Inherits="SoftwareStore.device.Management.ListDeviceAvailable" %>
 
 <link href="/css/tablecss.css" rel="stylesheet" />
 <script src="/js/plugin/morris/morris.min1.js"></script>
@@ -10,7 +10,7 @@
     pageSetUp();
     listdevices = [];
     var ListDeviceAvailable = {
-        listtype: JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListCategoryDevice()%>'),
+        listtype: JSON.parse('<%=SoftwareStore.device.DeviceManagement.ListCategoryDevice()%>'),
         currentpage: 1,
         numberdeviceinpage: 10,
         LoadListCategory: function () {

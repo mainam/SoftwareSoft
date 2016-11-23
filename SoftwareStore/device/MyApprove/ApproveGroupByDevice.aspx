@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApproveGroupByDevice.aspx.cs" Inherits="DeviceManagement.device.MyApprove.ApproveGroupByDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApproveGroupByDevice.aspx.cs" Inherits="SoftwareStore.device.MyApprove.ApproveGroupByDevice" %>
 
 <link href="device/style/styleText.css" rel="stylesheet" />
 <link href="/css/common.css" rel="stylesheet" />
 
 <script type="text/javascript">
     var ApproveGroupByDevicePage = {
-        listtype: JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListCategoryDevice()%>'),
+        listtype: JSON.parse('<%=SoftwareStore.device.DeviceManagement.ListCategoryDevice()%>'),
         currentpage: 1,
         numberdeviceinpage: 14,
         listHasSelect: [],

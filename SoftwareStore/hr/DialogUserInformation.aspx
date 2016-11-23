@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DialogUserInformation.aspx.cs" Inherits="DeviceManagement.hr.DialogUserInformation" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DialogUserInformation.aspx.cs" Inherits="SoftwareStore.hr.DialogUserInformation" %>
 
 <style>
     .tdheader {

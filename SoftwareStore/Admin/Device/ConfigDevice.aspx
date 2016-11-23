@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfigDevice.aspx.cs" Inherits="DeviceManagement.Admin.Device.ConfigDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfigDevice.aspx.cs" Inherits="SoftwareStore.Admin.Device.ConfigDevice" %>
 
 <!DOCTYPE html>
 

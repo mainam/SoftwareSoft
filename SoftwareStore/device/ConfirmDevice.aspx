@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfirmDevice.aspx.cs" Inherits="DeviceManagement.device.ConfirmDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfirmDevice.aspx.cs" Inherits="SoftwareStore.device.ConfirmDevice" %>
 
 <%@ Register Src="~/device/Controls/ctMyConfirm.ascx" TagPrefix="uc1" TagName="ctMyConfirm" %>
 <%@ Register Src="~/device/Controls/ctTeamConfirm.ascx" TagPrefix="uc1" TagName="ctTeamConfirm" %>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TeamList.aspx.cs" Inherits="DeviceManagement.hr.TeamList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TeamList.aspx.cs" Inherits="SoftwareStore.hr.TeamList" %>
 
 <!DOCTYPE html>
 

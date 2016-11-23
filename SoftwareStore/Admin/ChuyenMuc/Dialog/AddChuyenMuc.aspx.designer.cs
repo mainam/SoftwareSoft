@@ -10,16 +10,24 @@
 namespace SoftwareStore.Admin.ChuyenMuc.Dialog {
     
     
-    public partial class AddChuyenMuc
-    {
+    public partial class AddChuyenMuc {
         
         /// <summary>
-        /// cbListMember control.
+        /// title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cbListMember;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl title;
+        
+        /// <summary>
+        /// cbListCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cbListCategory;
     }
 }

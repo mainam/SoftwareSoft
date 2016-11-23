@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctReward.ascx.cs" Inherits="DeviceManagement.hr.Controls.ctReward" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctReward.ascx.cs" Inherits="SoftwareStore.hr.Controls.ctReward" %>
 
 <div class="jarviswidget jarviswidget-color-greenLight" id="wdReward" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-deletebutton="false">
     <header>

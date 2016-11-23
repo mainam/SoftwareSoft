@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Notification.aspx.cs" Inherits="DeviceManagement.AJAXProcess.Notification" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Notification.aspx.cs" Inherits="SoftwareStore.AJAXProcess.Notification" %>
 
 <!DOCTYPE html>
 

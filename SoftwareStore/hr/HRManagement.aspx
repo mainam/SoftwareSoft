@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HRManagement.aspx.cs" Inherits="DeviceManagement.hr.HRManagement" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HRManagement.aspx.cs" Inherits="SoftwareStore.hr.HRManagement" %>
 
 
 <link href="/device/style/styleText.css" rel="stylesheet" />

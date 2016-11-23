@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GetMySingle.aspx.cs" Inherits="DeviceManagement.GetMySingle" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GetMySingle.aspx.cs" Inherits="SoftwareStore.GetMySingle" %>
 
 <!DOCTYPE html>
 

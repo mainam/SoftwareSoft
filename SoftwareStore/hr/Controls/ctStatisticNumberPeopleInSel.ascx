@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctStatisticNumberPeopleInSel.ascx.cs" Inherits="DeviceManagement.hr.Controls.ctStatisticNumberPeopleInSel" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctStatisticNumberPeopleInSel.ascx.cs" Inherits="SoftwareStore.hr.Controls.ctStatisticNumberPeopleInSel" %>
 <div class="jarviswidget  jarviswidget-color-teal" id="idPeople" runat="server" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-sortable="false" data-widget-attstyle="jarviswidget-color-teal" data-widget-fullscreenbutton="false">
     <header>
         <span class="widget-icon"><i class="fa fa-group"></i></span>
@@ -27,7 +27,7 @@
 <script>
 
     var StcChart = {
-        listdata: JSON.parse('<%=DeviceManagement.hr.HRStatistic.StatisticQuantity()%>'),
+        listdata: JSON.parse('<%=SoftwareStore.hr.HRStatistic.StatisticQuantity()%>'),
 
     }
     ShowChart2(StcChart.listdata, "Type", ["Quantity"], "<%=columnchartpeople.ClientID%>");

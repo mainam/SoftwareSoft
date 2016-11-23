@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctEducation.ascx.cs" Inherits="DeviceManagement.hr.Controls.ctEducation" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctEducation.ascx.cs" Inherits="SoftwareStore.hr.Controls.ctEducation" %>
 <div class="jarviswidget jarviswidget-color-greenLight" id="wdEducation" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-deletebutton="false">
     <header>
         <span class="widget-icon"><i class="fa fa-edit"></i></span>

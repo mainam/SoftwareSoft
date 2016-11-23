@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeMember.aspx.cs" Inherits="DeviceManagement.hr.SeMember" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeMember.aspx.cs" Inherits="SoftwareStore.hr.SeMember" %>
 
 <link href="/device/style/styleText.css" rel="stylesheet" />
 <link href="/css/common.css" rel="stylesheet" />

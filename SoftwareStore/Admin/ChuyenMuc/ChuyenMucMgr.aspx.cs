@@ -34,11 +34,24 @@ namespace SoftwareStore.Admin.ChuyenMuc
 
 
         [WebMethod]
-        public static string DeleteCategory(int id)
+        public static string DeleteCategory(List<int> arrid)
         {
             try
             {
-                return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = CategoryInfo.DeteteCategory(HttpContext.Current.User.Identity.Name, id) });
+                return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = CategoryInfo.DeteteCategory(HttpContext.Current.User.Identity.Name, arrid) });
+            }
+            catch (Exception e)
+            {
+                return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = false, Data = e.Message });
+            }
+        }
+
+        [WebMethod]
+        public static string AddCategory(int id, string name, string description, int order, int parent)
+        {
+            try
+            {
+                return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = CategoryInfo.AddCategory(HttpContext.Current.User.Identity.Name, id, name, description, order, parent) });
             }
             catch (Exception e)
             {

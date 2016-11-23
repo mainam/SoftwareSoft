@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SetupDataConfig.aspx.cs" Inherits="DeviceManagement.Admin.Config.SetupDataConfig" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SetupDataConfig.aspx.cs" Inherits="SoftwareStore.Admin.Config.SetupDataConfig" %>
 
 <section id="widget-grid" class="">
 

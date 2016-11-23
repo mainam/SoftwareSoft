@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddDeviceManager.aspx.cs" Inherits="DeviceManagement.Admin.Device.Dialog.AddDeviceManager" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddDeviceManager.aspx.cs" Inherits="SoftwareStore.Admin.Device.Dialog.AddDeviceManager" %>
 
 
 <style>

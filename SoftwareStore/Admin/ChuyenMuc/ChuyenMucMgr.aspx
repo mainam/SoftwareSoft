@@ -8,6 +8,7 @@
             ListHasSelected: [],
             CurrentPage: 0,
             NumberInpage: 5,
+            Data: [],
             LoadData: function (page) {
                 currentpage = page;
                 var keyword = $('#<%=inputSearch.ClientID%>').val();
@@ -24,9 +25,8 @@
 
                         var _totalpage = Math.round(obj.TotalItem / numberinpage);
                         var totalpage = Common.GetTotalPage(ChuyenMucScript.NumberInpage, obj.TotalItem);
-                        listdevices = obj.Data;
+                        ChuyenMucScript.Data = obj.Data;
                         ChuyenMucScript.ListHasSelected = [];
-                        ChuyenMucScript.UpdateButton();
                         $('#btncheck').get(0).checked = false;
                         ChuyenMucScript.LoadTable(obj.Data, ((parseInt(page) - 1) * numberinpage));
                         AJAXFunction.CreatePaging($("#divpaging"), page, totalpage, ChuyenMucScript.LoadData);
@@ -34,13 +34,20 @@
                 });
 
             },
+            GetById: function (id) {
+                for (var i = 0; i < ChuyenMucScript.Data.length; i++) {
+                    if (ChuyenMucScript.Data[i].Id == id)
+                        return ChuyenMucScript.Data[i];
+                }
+                return null;
+            },
             CreateAction: function (category) {
                 var btnedit = $('<label class="btn btn-xs btn-default">');
                 btnedit.append($('<i class="fa fa-edit"/>'))
                 btnedit.attr('dataid', category.Id);
                 btnedit.click(function () {
                     ChuyenMucScript.IdEdit = $(this).attr('dataid');
-                    AJAXFunction.ShowModal("remoteModal", "/admin/chuyenmuc/dialog/AddChuyenMuc.aspx");
+                    AJAXFunction.ShowModal("remoteModal", "/admin/chuyenmuc/dialog/AddChuyenMuc.aspx?id=" + ChuyenMucScript.IdEdit);
                 });
 
                 var btndel = $('<label class="btn btn-xs btn-default" style="margin-left:1px;">');
@@ -51,7 +58,7 @@
                     var id = $(this).attr('dataid');
                     var callback = function () {
                         AJAXFunction.CallAjax("POST", "/admin/chuyenmuc/chuyenmucmgr.aspx", "DeleteCategory", {
-                            id: id
+                            id: [id]
                         },
                         function (response) {
                             var status = response.Status;
@@ -63,7 +70,7 @@
                                 alertSmallBox("Xóa thất bại \n " + response.Data, "1 giây trước!!", "Error");
                         });
                     }
-                    confirm("Xác nhận", "Bạn có muốn xóa chuyên mục này!!", "OK", "Cancel", callback);
+                    confirm("Xác nhận", "Bạn có muốn xóa chuyên mục này!!", "OK Xóa", "Hủy", callback);
                 });
                 var td = $('<td>');
                 td.append(btnedit);
@@ -78,7 +85,7 @@
                 }
                 for (i = 0; i < list.length; i++) {
                     var tr = $('<tr>');
-                    var td = createCheckBox(list[i].Id, false, false, true);
+                    var td = ChuyenMucScript.CreateCheckBox(list[i].Id, false, false, true);
                     tr.append(td);
 
                     var td = createCell(list[i].Name);
@@ -118,9 +125,6 @@
 
                 }
             },
-            UpdateButton: function () {
-                document.getElementById("btnDelete").disabled = ChuyenMucScript.ListHasSelected.length == 0;
-            },
             ShowNumberDevice: function (numberdevice) {
                 $("#btnSelectNumberDevice").empty().append("Hiển thị: " + numberdevice).append($('<i class="fa fa-caret-down" style="margin-left:5px;">'))
                 ChuyenMucScript.NumberInpage = numberdevice;
@@ -129,7 +133,7 @@
             CreateCheckBox: function (id, allowborrow, check) {
                 var td = $('<td>');
                 var label = $('<label class="checkbox">');
-                var checkbox = $('<input type="checkbox" name="checkbox" typecheckbox="itemdevice">');
+                var checkbox = $('<input type="checkbox" name="checkbox" typecheckbox="itemcheckbox">');
                 if (check) {
                     checkbox.attr("checked", "checked");
                 }
@@ -149,7 +153,35 @@
                 });
                 td.append(label);
                 return td;
+            },
+            Delete: function () {
+                if (ChuyenMucScript.ListHasSelected.length == 0) {
+                    alertSmallBox("Chọn chuyên mục cần xóa", "", "error");
+                    return;
+                }
+                var callback = function () {
+                    AJAXFunction.CallAjax("POST",
+                        "/admin/chuyenmuc/chuyenmucmgr.aspx", "DeleteCategory", {
+                            arrid: ChuyenMucScript.ListHasSelected,
+                        }, function (response) {
+                            if (response.Status) {
+                                ChuyenMucScript.ListHasSelected = [];
+                                $('#btncheck')[0].checked = false;
+                                ChuyenMucScript.LoadData(1);
+                                alertSmallBox("Xóa thành công", "", "success");
+                            }
+                            else {
+                                alertSmallBox("Xóa không thành công", response.Data, "error");
+                            }
+
+                        });
+                };
+                confirm("Xác nhận", "Bạn có muốn xóa các chuyên mục đã chọn!!", "OK Xóa", "Cancel", callback);
+            }, CreateNew: function () {
+                ChuyenMucScript.IdEdit = 0;
+                AJAXFunction.ShowModal("remoteModal", "/admin/chuyenmuc/dialog/AddChuyenMuc.aspx?id=" + 0);
             }
+
 
 
         }
@@ -161,21 +193,23 @@
         });
 
         ChuyenMucScript.LoadData(1);
-        //$('#btncheck').click(function () {
-
-        //    input = $('#datatable_tabletools > tbody').find('input[typecheckbox="itemdevice"][disabled!="disabled"]');
-        //    if (this.checked) {
-        //        for (var i = 0; i < input.length; i++)
-        //            input[i].checked = true;
-        //        listHasSelect = listAllowCancel;
-        //    }
-        //    else {
-        //        for (var i = 0; i < input.length; i++)
-        //            input[i].checked = false;
-        //        listHasSelect = [];
-        //    }
-        //    updateButton();
-        //});
+        $('#btncheck').click(function () {
+            debugger;
+            input = $('#datatable_tabletools > tbody').find('input[typecheckbox="itemcheckbox"]');
+            if (this.checked) {
+                for (var i = 0; i < input.length; i++) {
+                    input[i].checked = true;
+                    var dataid = $(input[i]).attr("dataid");
+                    ChuyenMucScript.ListHasSelected.push(dataid);
+                }
+            }
+            else {
+                for (var i = 0; i < input.length; i++) {
+                    input[i].checked = false;
+                }
+                ChuyenMucScript.ListHasSelected = [];
+            }
+        });
 
 
 
@@ -294,8 +328,8 @@
             </article>
             <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div style="padding-top: 20px; clear: both;">
-                    <input type="button" class="btn btn-primary pull-right" id="btnDelete" disabled="disabled" style="width: 95px;" value="Delete" onclick="ChuyenMucScript.Delete();" />
-                    <input type="button" class="btn btn-primary pull-right" id="btnAdd"  style="width: 95px;" value="Delete" onclick="Add();" />
+                    <a href="javascript:void(0);" class="btn btn-labeled btn-primary" id="btnAdd" onclick="ChuyenMucScript.CreateNew();"><span class="btn-label"><i class="glyphicon glyphicon-camera"></i></span>Thêm </a>
+                    <a href="javascript:void(0);" class="btn btn-labeled btn-danger" id="btnDelete" onclick="ChuyenMucScript.Delete();"><span class="btn-label"><i class="glyphicon glyphicon-trash"></i></span>Xóa </a>
                 </div>
             </article>
 

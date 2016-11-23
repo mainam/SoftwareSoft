@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoftwareStore.device.BorrowDevice
-{
-
-
-    public partial class Borrow
-    {
-
+namespace SoftwareStore.device.BorrowDevice {
+    
+    
+    public partial class Borrow {
+        
         /// <summary>
         /// startBorrow control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace SoftwareStore.device.BorrowDevice
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText startBorrow;
-
+        
         /// <summary>
         /// finishBorrow control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace SoftwareStore.device.BorrowDevice
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText finishBorrow;
-
+        
         /// <summary>
         /// txtReason control.
         /// </summary>

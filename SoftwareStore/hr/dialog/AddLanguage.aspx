@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddLanguage.aspx.cs" Inherits="DeviceManagement.hr.dialog.AddLanguage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddLanguage.aspx.cs" Inherits="SoftwareStore.hr.dialog.AddLanguage" %>
 
 <style>
     .iconuser {

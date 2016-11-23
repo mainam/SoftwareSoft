@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctUserNeedConfirm.ascx.cs" Inherits="DeviceManagement.device.Controls.ctUserNeedConfirm" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctUserNeedConfirm.ascx.cs" Inherits="SoftwareStore.device.Controls.ctUserNeedConfirm" %>
 
 <style>
     #dialog-category {

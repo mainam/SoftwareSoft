@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SWMgrPMember.aspx.cs" Inherits="DeviceManagement.hr.SWMgrPMember" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SWMgrPMember.aspx.cs" Inherits="SoftwareStore.hr.SWMgrPMember" %>
 
 <link href="/device/style/styleText.css" rel="stylesheet" />
 <link href="/css/common.css" rel="stylesheet" />

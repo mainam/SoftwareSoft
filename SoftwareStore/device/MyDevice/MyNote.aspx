@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MyNote.aspx.cs" Inherits="DeviceManagement.device.MyDevice.MyNote" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MyNote.aspx.cs" Inherits="SoftwareStore.device.MyDevice.MyNote" %>
 
 
 <style>

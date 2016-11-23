@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InventoryConfirm.aspx.cs" Inherits="DeviceManagement.device.InventoryConfirm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InventoryConfirm.aspx.cs" Inherits="SoftwareStore.device.InventoryConfirm" %>
 
 <!DOCTYPE html>
 
@@ -17,7 +17,7 @@
 
         var listdevices = [];
         var inventoryid = '<%=InventoryID()%>';
-        var listtype = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListCategoryDevice()%>');
+        var listtype = JSON.parse('<%= SoftwareStore.device.DeviceManagement.ListCategoryDevice()%>');
         function LoadListCategory() {
             var ul = $('#ulddltype').empty();
             var a = $('<a href="javascript:void(0)">').text("All");

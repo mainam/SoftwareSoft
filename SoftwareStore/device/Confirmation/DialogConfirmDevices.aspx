@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DialogConfirmDevices.aspx.cs" Inherits="DeviceManagement.device.Confirmation.DialogConfirmDevices" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DialogConfirmDevices.aspx.cs" Inherits="SoftwareStore.device.Confirmation.DialogConfirmDevices" %>
 
 
 <style>

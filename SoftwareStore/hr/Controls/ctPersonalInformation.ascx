@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctPersonalInformation.ascx.cs" Inherits="DeviceManagement.hr.Controls.ctPersonalInformation" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctPersonalInformation.ascx.cs" Inherits="SoftwareStore.hr.Controls.ctPersonalInformation" %>
 
 <div class="jarviswidget jarviswidget-color-pink" id="wdPersonalInformation" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-deletebutton="false">
     <header>

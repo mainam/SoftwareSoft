@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TransferMultipleDevice.aspx.cs" Inherits="DeviceManagement.device.MyDevice.TransferMultipleDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TransferMultipleDevice.aspx.cs" Inherits="SoftwareStore.device.MyDevice.TransferMultipleDevice" %>
 
 <style>
     .smart-form .input input, .smart-form .select select, .smart-form .textarea textarea {

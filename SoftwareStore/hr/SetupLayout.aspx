@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SetupLayout.aspx.cs" Inherits="DeviceManagement.hr.SetupLayout" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SetupLayout.aspx.cs" Inherits="SoftwareStore.hr.SetupLayout" %>
 
 <!DOCTYPE html>
 

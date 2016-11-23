@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InventoryConfirm.aspx.cs" Inherits="DeviceManagement.device.Confirmation.InventoryConfirm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InventoryConfirm.aspx.cs" Inherits="SoftwareStore.device.Confirmation.InventoryConfirm" %>
 
 <div id="contentinventoryconfirm">
 </div>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddUser.aspx.cs" Inherits="DeviceManagement.hr.AddUser" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddUser.aspx.cs" Inherits="SoftwareStore.hr.AddUser" %>
 
 <style>
     .smart-form .input input, .smart-form .select select, .smart-form .textarea textarea {

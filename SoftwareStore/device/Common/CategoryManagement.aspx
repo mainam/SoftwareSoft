@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CategoryManagement.aspx.cs" Inherits="DeviceManagement.device.Common.CategoryManagement" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CategoryManagement.aspx.cs" Inherits="SoftwareStore.device.Common.CategoryManagement" %>
 
 <style>
     #dialog-category {

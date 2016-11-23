@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddUserAllowTransferAllMember.aspx.cs" Inherits="DeviceManagement.Admin.Device.Dialog.AddUserAllowTransferAllMember" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddUserAllowTransferAllMember.aspx.cs" Inherits="SoftwareStore.Admin.Device.Dialog.AddUserAllowTransferAllMember" %>
 
 <style>
     .tdheader {

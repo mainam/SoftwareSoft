@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewNotice.aspx.cs" Inherits="DeviceManagement.device.ViewNotice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewNotice.aspx.cs" Inherits="SoftwareStore.device.ViewNotice" %>
 
 <style>
     .smart-form .input input, .smart-form .select select, .smart-form .textarea textarea {

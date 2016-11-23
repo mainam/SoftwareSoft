@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InventoryExportForm.aspx.cs" Inherits="DeviceManagement.device.InventoryExportForm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InventoryExportForm.aspx.cs" Inherits="SoftwareStore.device.InventoryExportForm" %>
 
 <!DOCTYPE html>
 

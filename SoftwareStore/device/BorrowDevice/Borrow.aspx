@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Borrow.aspx.cs" Inherits="DeviceManagement.device.BorrowDevice.Borrow" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Borrow.aspx.cs" Inherits="SoftwareStore.device.BorrowDevice.Borrow" %>
 
 <!DOCTYPE html>
 

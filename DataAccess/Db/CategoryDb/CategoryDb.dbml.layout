@@ -2,17 +2,17 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CategoryDb">
   <DataContextMoniker Name="/CategoryDbDataContext" />
   <nestedChildShapes>
-    <classShape Id="91337282-8826-463d-a2ab-d99bddfc5698" absoluteBounds="4, 3.125, 2, 1.5785953776041666">
+    <classShape Id="56bf3cb4-be92-4cc8-93fc-dbf1ef89100c" absoluteBounds="4, 4.375, 2, 1.7708968098958331">
       <DataClassMoniker Name="/CategoryDbDataContext/tbCategory" />
       <nestedChildShapes>
-        <elementListCompartment Id="84b086b9-edbf-4f79-aae9-8e8193a0c426" absoluteBounds="4.015, 3.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="a8cd78d9-66d6-4143-8523-bc48d71ee090" absoluteBounds="4.015, 4.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(4.70242346379207 : 4.70359537760417); (4.70242346379207 : 4.95359537760417); (5.31174684745593 : 4.95359537760417); (5.31174684745593 : 4.70359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.70552987154447 : 6.14589680989583); (4.70552987154447 : 6.39589680989583); (5.30849251552484 : 6.39589680989583); (5.30849251552484 : 6.14589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/CategoryDbDataContext/tbCategory/tbCategory_tbCategory" />
       <nodes>
-        <classShapeMoniker Id="91337282-8826-463d-a2ab-d99bddfc5698" />
-        <classShapeMoniker Id="91337282-8826-463d-a2ab-d99bddfc5698" />
+        <classShapeMoniker Id="56bf3cb4-be92-4cc8-93fc-dbf1ef89100c" />
+        <classShapeMoniker Id="56bf3cb4-be92-4cc8-93fc-dbf1ef89100c" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

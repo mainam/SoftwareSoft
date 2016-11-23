@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfigAllowBorrowDevice.aspx.cs" Inherits="DeviceManagement.Admin.Device.ConfigAllowBorrowDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfigAllowBorrowDevice.aspx.cs" Inherits="SoftwareStore.Admin.Device.ConfigAllowBorrowDevice" %>
 
 <section id="widget-grid" class="">
 

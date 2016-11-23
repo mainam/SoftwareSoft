@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfirmKeepingDevice.aspx.cs" Inherits="DeviceManagement.device.MyDevice.ConfirmKeepingDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfirmKeepingDevice.aspx.cs" Inherits="SoftwareStore.device.MyDevice.ConfirmKeepingDevice" %>
 
 
 <link href="/css/tablecss.css" rel="stylesheet" />
@@ -10,7 +10,7 @@
     pageSetUp();
     var listdevices = [];
     var numberdeviceinpage = 16;
-    var listtype = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListCategoryDevice()%>');
+    var listtype = JSON.parse('<%=SoftwareStore.device.DeviceManagement.ListCategoryDevice()%>');
     var currentpage = 1;
     LoadData(1);
 
@@ -38,7 +38,7 @@
     }
     LoadListCategory();
 
-    var liststatus = JSON.parse('<%=DeviceManagement.device.DeviceManagement.ListStatusDevice()%>');
+    var liststatus = JSON.parse('<%=SoftwareStore.device.DeviceManagement.ListStatusDevice()%>');
     function LoadListStatus() {
         var ul = $('#ulddlstatus').empty();
         var a = $('<a href="javascript:void(0)">').text("All");

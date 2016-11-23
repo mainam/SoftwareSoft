@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctCertification.ascx.cs" Inherits="DeviceManagement.hr.Controls.ctCertification" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctCertification.ascx.cs" Inherits="SoftwareStore.hr.Controls.ctCertification" %>
 
 <div class="jarviswidget jarviswidget-color-greenLight" id="wdCertification" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-deletebutton="false">
     <header>

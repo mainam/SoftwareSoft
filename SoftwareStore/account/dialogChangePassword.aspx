@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dialogChangePassword.aspx.cs" Inherits="DeviceManagement.account.dialogChangePassword" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dialogChangePassword.aspx.cs" Inherits="SoftwareStore.account.dialogChangePassword" %>
 
 <style>
     .iconuser {

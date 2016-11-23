@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SendMail.aspx.cs" Inherits="DeviceManagement.Admin.Mail.SendMail" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SendMail.aspx.cs" Inherits="SoftwareStore.Admin.Mail.SendMail" %>
 
 <script>
     pageSetUp();

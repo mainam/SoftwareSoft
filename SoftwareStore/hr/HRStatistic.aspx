@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HRStatistic.aspx.cs" Inherits="DeviceManagement.hr.HRStatistic" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HRStatistic.aspx.cs" Inherits="SoftwareStore.hr.HRStatistic" %>
 
 <%@ Register Src="~/hr/Controls/ctStatisticMemberAge.ascx" TagPrefix="uc1" TagName="ctStatisticMemberAge" %>
 <%@ Register Src="~/hr/Controls/ctStatisticEducation.ascx" TagPrefix="uc1" TagName="ctStatisticEducation" %>
@@ -67,7 +67,7 @@
 
 
     <%-- var SCTLevel = {
-        listdata: JSON.parse('<%=DeviceManagement.hr.HRStatistic.StatisticSTCLevel()%>'),
+        listdata: JSON.parse('<%=SoftwareStore.hr.HRStatistic.StatisticSTCLevel()%>'),
 
         generateAllFlotCharts: function () {
             /* pie chart */
@@ -116,7 +116,7 @@
     }--%>
 
     <%-- var EducationChart = {
-            listdata: JSON.parse('<%=DeviceManagement.hr.HRStatistic.StatisticEducation()%>'),
+            listdata: JSON.parse('<%=SoftwareStore.hr.HRStatistic.StatisticEducation()%>'),
 
             generateAllFlotCharts: function () {
                 /* pie chart */
@@ -167,7 +167,7 @@
 
 
 <%--        var AgeChart = {
-            listdata: JSON.parse('<%=DeviceManagement.hr.HRStatistic.StatisticAge()%>'),
+            listdata: JSON.parse('<%=SoftwareStore.hr.HRStatistic.StatisticAge()%>'),
 
         generateAllFlotCharts: function () {
             /* pie chart */
@@ -219,8 +219,8 @@
 
 
     pageSetUp();
-    var listQuantity = JSON.parse('<%=DeviceManagement.hr.HRStatistic.StatisticQuantity()%>');
-    var listTOEIC = JSON.parse('<%=DeviceManagement.hr.HRStatistic.StatisticTOEIC()%>');
+    var listQuantity = JSON.parse('<%=SoftwareStore.hr.HRStatistic.StatisticQuantity()%>');
+    var listTOEIC = JSON.parse('<%=SoftwareStore.hr.HRStatistic.StatisticTOEIC()%>');
 
     // Load morris dependency 2
     loadScript("/js/plugin/morris/raphael.2.1.0.min1.js", loadMorris);

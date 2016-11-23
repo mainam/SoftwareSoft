@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReturnDeviceByIMEI.aspx.cs" Inherits="DeviceManagement.device.ReturnDeviceByIMEI" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReturnDeviceByIMEI.aspx.cs" Inherits="SoftwareStore.device.ReturnDeviceByIMEI" %>
 
 
 <style>

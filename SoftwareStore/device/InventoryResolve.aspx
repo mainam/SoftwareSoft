@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InventoryResolve.aspx.cs" Inherits="DeviceManagement.device.InventoryResolve" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InventoryResolve.aspx.cs" Inherits="SoftwareStore.device.InventoryResolve" %>
 
 <link href="/css/tablecss.css" rel="stylesheet" />
 <link href="/device/style/styleText.css" rel="stylesheet" />

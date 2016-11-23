@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CommonManagement.aspx.cs" Inherits="DeviceManagement.device.CommonManagement" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CommonManagement.aspx.cs" Inherits="SoftwareStore.device.CommonManagement" %>
 
 <link href="/css/common.css" rel="stylesheet" />
 <style>

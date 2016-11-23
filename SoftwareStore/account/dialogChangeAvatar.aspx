@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dialogChangeAvatar.aspx.cs" Inherits="DeviceManagement.account.dialogChangeAvatar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dialogChangeAvatar.aspx.cs" Inherits="SoftwareStore.account.dialogChangeAvatar" %>
 
 <style>
     .iconuser {

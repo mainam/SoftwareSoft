@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeviceDashboard.aspx.cs" Inherits="DeviceManagement.device.DeviceDashboard" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeviceDashboard.aspx.cs" Inherits="SoftwareStore.device.DeviceDashboard" %>
 
 <!DOCTYPE html>
 

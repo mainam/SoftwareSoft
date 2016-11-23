@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctLanguageAbility.ascx.cs" Inherits="DeviceManagement.hr.Controls.ctLanguageAbility" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctLanguageAbility.ascx.cs" Inherits="SoftwareStore.hr.Controls.ctLanguageAbility" %>
 
 <div class="jarviswidget  jarviswidget-color-greenLight" id="wdLanguage" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-deletebutton="false">
     <header>

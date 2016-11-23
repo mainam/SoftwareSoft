@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctLeaderNeedAccept.ascx.cs" Inherits="DeviceManagement.device.Controls.ctLeaderNeedAccept" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctLeaderNeedAccept.ascx.cs" Inherits="SoftwareStore.device.Controls.ctLeaderNeedAccept" %>
 
 <style>
     #dialog-category {

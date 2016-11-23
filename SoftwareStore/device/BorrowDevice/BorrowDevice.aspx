@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BorrowDevice.aspx.cs" Inherits="DeviceManagement.device.BorrowDevice.BorrowDevice" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BorrowDevice.aspx.cs" Inherits="SoftwareStore.device.BorrowDevice.BorrowDevice" %>
 
 <link href="/device/style/styleText.css" rel="stylesheet" />
 <style>
