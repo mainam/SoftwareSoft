@@ -40,7 +40,7 @@ namespace DataAccess.UserFolder
                 var currentUser = context.tbUsers.SingleOrDefault(x => x.UserName.Equals(userName));
                 if (currentUser == null || currentUser.TypeUser != 1)
                     throw new Exception("Bạn không có quyền thực hiện tao tác này");
-                var list = context.tbUsers.ToList();
+                var list = context.tbUsers.Where(x=>type==0||x.TypeUser==type).ToList();
                 if (!String.IsNullOrWhiteSpace(keyword))
                 {
                     keyword = keyword.ToLower().Trim();
@@ -56,7 +56,7 @@ namespace DataAccess.UserFolder
             using (var context = new UserDbDataContext())
             {
                 var currentUser = context.tbUsers.SingleOrDefault(x => x.UserName.Equals(userName));
-                if (currentUser == null || currentUser.TypeUser != 1)
+                if (currentUser == null || currentUser.TypeUser != 1 || !currentUser.Active)
                     throw new Exception("Bạn không có quyền thực hiện tao tác này");
                 var user = context.tbUsers.SingleOrDefault(x => x.UserName.Equals(id));
                 if(user==null)

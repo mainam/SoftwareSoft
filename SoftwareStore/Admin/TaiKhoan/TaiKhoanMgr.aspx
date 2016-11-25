@@ -11,6 +11,7 @@
             Data: [],
             Type: 0,
             ChangeType: function (number) {
+                $("#changeType").text(number == 0 ? "Tất cả" : number == 1 ? "Admin" : number == 2 ? "Bán hàng" : "Người dùng");
                 TaiKhoanScript.Type = number;
                 TaiKhoanScript.LoadData(1);
             },
@@ -42,22 +43,22 @@
             },
             GetById: function (id) {
                 for (var i = 0; i < TaiKhoanScript.Data.length; i++) {
-                    if (TaiKhoanScript.Data[i].Id == id)
+                    if (TaiKhoanScript.Data[i].UserName == id)
                         return TaiKhoanScript.Data[i];
                 }
                 return null;
             },
-            CreateAction: function (category) {
+            CreateAction: function (taikhoan) {
                 var btnedit = $('<label class="btn btn-xs btn-default">');
                 btnedit.append($('<i class="fa fa-edit"/>'))
-                btnedit.attr('dataid', category.Id);
+                btnedit.attr('dataid', taikhoan.UserName);
                 btnedit.click(function () {
                     TaiKhoanScript.IdEdit = $(this).attr('dataid');
                     AJAXFunction.ShowModal("remoteModal", "/admin/chuyenmuc/dialog/AddChuyenMuc.aspx?id=" + TaiKhoanScript.IdEdit);
                 });
 
                 var btndel = $('<label class="btn btn-xs btn-default" style="margin-left:1px;">');
-                btndel.attr('dataid', category.Id);
+                btndel.attr('dataid', taikhoan.UserName);
                 btndel.append($('<i class="fa fa-times"/>'))
 
                 btndel.click(function () {
@@ -79,11 +80,13 @@
                     confirm("Xác nhận", "Bạn có muốn xóa chuyên mục này!!", "OK Xóa", "Hủy", callback);
                 });
                 var btntransaction = $('<label class="btn btn-xs btn-default" style="margin-left:1px;">');
-                btntransaction.attr('dataid', category.Id);
+                btntransaction.attr('dataid', taikhoan.UserName);
                 btntransaction.append($('<i class="fa fa-times"/>'))
 
                 btntransaction.click(function () {
                     var id = $(this).attr('dataid');
+                    TaiKhoanScript.IdEdit = id;
+                    AJAXFunction.ShowModal("remoteModal", "/admin/taikhoan/dialog/taogiaodich.aspx?id=" + TaiKhoanScript.IdEdit);
                 });
                 var td = $('<td>');
                 td.append(btnedit);
@@ -99,17 +102,36 @@
                     var status = response.Status;
                     if (status) {
                         alertSmallBox(response.Data, "1 giây trước!!", "Success");
-                        LoadData(currentpage);
+                        TaiKhoanScript.LoadData(currentpage);
                     }
                     else
                         alertSmallBox(response.Data, "1 giây trước!!", "Error");
+                });
+            },
+            MakeATransaction: function (id, description, value, type) {
+                AJAXFunction.CallAjax("POST", "/admin/taikhoan/taikhoanmgr.aspx", "MakeATransaction", {
+                    username: id,
+                    description: description,
+                    value: value,
+                    type: type
+                },
+                function (response) {
+                    var status = response.Status;
+                    if (status) {
+                        alertSmallBox(response.Data, "1 giây trước!!", "Success");
+                        $('#remoteModal').modal("hide");
+                        TaiKhoanScript.LoadData(currentpage);
+                    }
+                    else
+                        alertSmallBox(response.Data, "1 giây trước!!", "Error");
+
                 });
             },
             LoadTable: function (list, startindex) {
                 var table = $('#datatable_tabletools > tbody');
                 table.empty();
                 if (list.length == 0) {
-                    EmptyTable(table, "5")
+                    EmptyTable(table, "8")
                 }
                 for (i = 0; i < list.length; i++) {
                     var tr = $('<tr>');
@@ -121,8 +143,6 @@
 
                     var td = createCell(list[i].Email);
                     tr.append(td);
-                    debugger;
-
                     var td = createCell(list[i].Phone);
                     tr.append(td);
                     var chucdanh = list[i].TypeUser;
@@ -144,7 +164,7 @@
                     }));
 
                     tr.append(TaiKhoanScript.CreateAction(list[i]));
-                    
+
 
 
 
@@ -225,7 +245,6 @@
 
         TaiKhoanScript.LoadData(1);
         $('#btncheck').click(function () {
-            debugger;
             input = $('#datatable_tabletools > tbody').find('input[typecheckbox="itemcheckbox"]');
             if (this.checked) {
                 for (var i = 0; i < input.length; i++) {
@@ -259,7 +278,7 @@
                     <div class="col-md-6" style="padding: 0px;">
                         <div class="col-md-6" style="padding: 0px;">
                             <div class="btn-group">
-                                <button class="btn btn-primary">
+                                <button class="btn btn-primary" id="changeType">
                                     Tất cả
                                 </button>
                                 <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">

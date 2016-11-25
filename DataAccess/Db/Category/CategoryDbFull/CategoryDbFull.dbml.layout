@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CategoryDbFull">
+  <DataContextMoniker Name="/CategoryDbFullDataContext" />
+  <nestedChildShapes>
+    <classShape Id="146e6b7c-2d9b-45d3-b325-477cca18dba8" absoluteBounds="0.75, 3, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/CategoryDbFullDataContext/tbUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40340ad7-9e34-482c-89aa-ac40b02763ee" absoluteBounds="0.76500000000000012, 3.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b1eb24c0-ce82-45b3-9108-ff1a79bb0874" absoluteBounds="3.875, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CategoryDbFullDataContext/tbCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5fbd849c-2411-4946-85b0-efb99c36c939" absoluteBounds="3.89, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 1.62798725335537); (3.625 : 1.62798725335537); (3.625 : 2.1551696113782); (3.875 : 2.1551696113782)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CategoryDbFullDataContext/tbCategory/tbCategory_tbCategory" />
+      <nodes>
+        <classShapeMoniker Id="b1eb24c0-ce82-45b3-9108-ff1a79bb0874" />
+        <classShapeMoniker Id="b1eb24c0-ce82-45b3-9108-ff1a79bb0874" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="54aea3dd-99fc-46be-aa0d-fffa65aefb8d" absoluteBounds="4.375, 4, 2, 3.1170068359375">
+      <DataClassMoniker Name="/CategoryDbFullDataContext/tbSoftware" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4818eae5-600e-4816-8eab-5eed6609ecd2" absoluteBounds="4.39, 4.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.125 : 2.77089680989583); (5.125 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CategoryDbFullDataContext/tbCategory/tbCategory_tbSoftware" />
+      <nodes>
+        <classShapeMoniker Id="b1eb24c0-ce82-45b3-9108-ff1a79bb0874" />
+        <classShapeMoniker Id="54aea3dd-99fc-46be-aa0d-fffa65aefb8d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.77005126953125); (4.375 : 4.77005126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CategoryDbFullDataContext/tbUser/tbUser_tbSoftware" />
+      <nodes>
+        <classShapeMoniker Id="146e6b7c-2d9b-45d3-b325-477cca18dba8" />
+        <classShapeMoniker Id="54aea3dd-99fc-46be-aa0d-fffa65aefb8d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7ca3bd07-0bcd-457b-8bf9-c635ee7ab762" absoluteBounds="1.25, 2.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CategoryDbFullDataContext/tbTypeUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ef19c25-579e-4213-8092-51894bde2823" absoluteBounds="1.2650000000000001, 2.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.25 : 2.375); (2.25 : 2.125); (1.75 : 2.125); (1.75 : 3)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CategoryDbFullDataContext/tbTypeUser/tbTypeUser_tbUser" />
+      <nodes>
+        <classShapeMoniker Id="7ca3bd07-0bcd-457b-8bf9-c635ee7ab762" />
+        <classShapeMoniker Id="146e6b7c-2d9b-45d3-b325-477cca18dba8" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -37,9 +37,27 @@ namespace SoftwareStore.Admin.TaiKhoan
         {
             try
             {
+                if (id.Equals(HttpContext.Current.User.Identity.Name))
+                    throw new Exception("Bạn không thể tự active tài khoản của mình");
                 var user = UserInfo.ActiveMember(HttpContext.Current.User.Identity.Name, id);
 
                 return Converts.Serialize(new { Status = true, Data = user.Active ? "Kích hoạt tài khoản thành công" : "Hủy kích hoạt tài khoản thành công" });
+            }
+            catch (Exception e)
+            {
+                return Converts.Serialize(new { Status = false, Data = e.Message });
+            }
+        }
+        [WebMethod]
+        public static string MakeATransaction(String username, decimal value, string description, int type)
+        {
+            try
+            {
+                if (type == 1)
+                    TransactionInfo.AddTransaction(HttpContext.Current.User.Identity.Name, HttpContext.Current.User.Identity.Name, username, description, value, 1);
+                else
+                    TransactionInfo.AddTransaction(HttpContext.Current.User.Identity.Name, username, HttpContext.Current.User.Identity.Name, description, value, 1);
+                return Converts.Serialize(new { Status = true, Data = "Tạo giao dịch thành công" });
             }
             catch (Exception e)
             {
@@ -73,6 +91,7 @@ namespace SoftwareStore.Admin.TaiKhoan
                 return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = false, Data = e.Message });
             }
         }
+
 
     }
 }

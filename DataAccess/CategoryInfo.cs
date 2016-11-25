@@ -1,5 +1,5 @@
-﻿using DataAccess.Db.CategoryDb;
-using DataAccess.Db.CategoryDbFull;
+﻿using DataAccess.Db.Category.CategoryDb;
+using DataAccess.Db.Category.CategoryDbFull;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,9 +33,9 @@ namespace DataAccess
             return new List<Object>();
         }
 
-        public static List<Db.CategoryDb.tbCategory> GetChild(CategoryDbDataContext context, Db.CategoryDb.tbCategory category)
+        public static List<Db.Category.CategoryDb.tbCategory> GetChild(CategoryDbDataContext context, Db.Category.CategoryDb.tbCategory category)
         {
-            var data = new List<Db.CategoryDb.tbCategory>();
+            var data = new List<Db.Category.CategoryDb.tbCategory>();
             foreach (var item in category.tbCategories)
             {
                 data.Add(item);
@@ -100,7 +100,7 @@ namespace DataAccess
                 throw new Exception("Bạn không có quyền xóa chuyên mục");
         }
 
-        public static Object getAllCategory(Db.CategoryDb.tbCategory y)
+        public static Object getAllCategory(Db.Category.CategoryDb.tbCategory y)
         {
             try
             {
@@ -151,7 +151,7 @@ namespace DataAccess
                 checkUserPermission(context, currentUser);
                 if (id == 0)
                 {
-                    context.tbCategories.InsertOnSubmit(new Db.CategoryDbFull.tbCategory()
+                    context.tbCategories.InsertOnSubmit(new Db.Category.CategoryDbFull.tbCategory()
                     {
                         Name = name,
                         Description = description,

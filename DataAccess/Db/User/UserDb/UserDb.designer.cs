@@ -90,7 +90,7 @@ namespace DataAccess.Db.User.UserDb
 		
 		private bool _Active;
 		
-		private long _Money;
+		private decimal _Money;
 		
 		private System.DateTime _LastLogin;
 		
@@ -112,7 +112,7 @@ namespace DataAccess.Db.User.UserDb
     partial void OnTypeUserChanged();
     partial void OnActiveChanging(bool value);
     partial void OnActiveChanged();
-    partial void OnMoneyChanging(long value);
+    partial void OnMoneyChanging(decimal value);
     partial void OnMoneyChanged();
     partial void OnLastLoginChanging(System.DateTime value);
     partial void OnLastLoginChanged();
@@ -227,8 +227,8 @@ namespace DataAccess.Db.User.UserDb
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Money", DbType="BigInt NOT NULL")]
-		public long Money
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Money", DbType="Decimal(18,0) NOT NULL")]
+		public decimal Money
 		{
 			get
 			{

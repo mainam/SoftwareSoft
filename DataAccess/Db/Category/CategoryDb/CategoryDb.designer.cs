@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataAccess.Db.CategoryDb
+namespace DataAccess.Db.Category.CategoryDb
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;

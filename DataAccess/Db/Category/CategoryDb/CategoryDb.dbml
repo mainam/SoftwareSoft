@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MNSHOP" Class="CategoryDbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=HOA-TUYET-PC;Initial Catalog=MNSHOP;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="MNSHOPConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=MNSHOP;Integrated Security=True;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="MNSHOPConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tbCategory" Member="tbCategories">
     <Type Name="tbCategory">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

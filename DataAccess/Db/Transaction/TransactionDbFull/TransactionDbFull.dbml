@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MNSHOP" Class="TransactionDbFullDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=MNSHOP;Integrated Security=True;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="MNSHOPConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbTypeTransaction" Member="tbTypeTransactions">
+    <Type Name="tbTypeTransaction">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbTypeTransaction_tbTransaction" Member="tbTransactions" ThisKey="Id" OtherKey="Type" Type="tbTransaction" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbTransaction" Member="tbTransactions">
+    <Type Name="tbTransaction">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="InvokeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destination" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbTypeTransaction_tbTransaction" Member="tbTypeTransaction" ThisKey="Type" OtherKey="Id" Type="tbTypeTransaction" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tbUser_tbTransaction" Member="tbUser" ThisKey="Source" OtherKey="UserName" Type="tbUser" IsForeignKey="true" />
+      <Association Name="tbUser_tbTransaction1" Member="tbUser1" ThisKey="Destination" OtherKey="UserName" Type="tbUser" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbUser" Member="tbUsers">
+    <Type Name="tbUser">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Money" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="LastLogin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(14) NOT NULL" CanBeNull="false" />
+      <Association Name="tbUser_tbTransaction" Member="tbTransactions" ThisKey="UserName" OtherKey="Source" Type="tbTransaction" />
+      <Association Name="tbUser_tbTransaction1" Member="tbTransactions1" ThisKey="UserName" OtherKey="Destination" Type="tbTransaction" />
+    </Type>
+  </Table>
+</Database>

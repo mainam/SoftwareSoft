@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CategoryDb">
+  <DataContextMoniker Name="/CategoryDbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="36c0b582-5e71-4351-9ff3-775150f65324" absoluteBounds="3.375, 2.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CategoryDbDataContext/tbCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="577fd1c5-4525-4fa2-81d6-f2041394b708" absoluteBounds="3.39, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.08052987154447 : 4.39589680989583); (4.08052987154447 : 4.64589680989583); (4.68349251552484 : 4.64589680989583); (4.68349251552484 : 4.39589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CategoryDbDataContext/tbCategory/tbCategory_tbCategory" />
+      <nodes>
+        <classShapeMoniker Id="36c0b582-5e71-4351-9ff3-775150f65324" />
+        <classShapeMoniker Id="36c0b582-5e71-4351-9ff3-775150f65324" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

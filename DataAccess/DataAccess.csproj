@@ -43,14 +43,14 @@
       <LastGenOutput>Database.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Db\CategoryDb\CategoryDb.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>CategoryDb.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Db\CategoryDbFull\CategoryDbFull.dbml">
+    <None Include="Db\Category\CategoryDbFull\CategoryDbFull.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>CategoryDbFull.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Db\Category\CategoryDb\CategoryDb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CategoryDb.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="Db\LogAccessSystem.dbml">
@@ -61,6 +61,16 @@
     <None Include="Db\LogTransferDevice.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>LogTransferDevice.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Db\Transaction\TransactionDbFull\TransactionDbFull.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>TransactionDbFull.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Db\Transaction\TransactionDb\TransactionDb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>TransactionDb.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="Db\User\UserDb\UserDb.dbml">
@@ -112,15 +122,15 @@
     </Compile>
     <Compile Include="DataConfigFolder\DataConfigInfo.cs" />
     <Compile Include="DataConfigFolder\ProjectConfig.cs" />
-    <Compile Include="Db\CategoryDb\CategoryDb.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CategoryDb.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Db\CategoryDbFull\CategoryDbFull.designer.cs">
+    <Compile Include="Db\Category\CategoryDbFull\CategoryDbFull.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CategoryDbFull.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Category\CategoryDb\CategoryDb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CategoryDb.dbml</DependentUpon>
     </Compile>
     <Compile Include="Db\LogAccessSystem.designer.cs">
       <AutoGen>True</AutoGen>
@@ -131,6 +141,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LogTransferDevice.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Transaction\TransactionDbFull\TransactionDbFull.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDbFull.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Transaction\TransactionDb\TransactionDb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDb.dbml</DependentUpon>
     </Compile>
     <Compile Include="Db\User\UserDb\UserDb.designer.cs">
       <AutoGen>True</AutoGen>
@@ -158,6 +178,7 @@
     <Compile Include="HRFolder\DataLanguageInfo.cs" />
     <Compile Include="JobTitleInfo.cs" />
     <Compile Include="SendMailFolder\LogSendMailServiceInfo.cs" />
+    <Compile Include="TransactionInfo.cs" />
     <Compile Include="UserFolder\DataUser.cs" />
     <Compile Include="UtilFolder\Compare.cs" />
     <Compile Include="UtilFolder\Converts.cs" />
@@ -199,18 +220,28 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Db\CategoryDb\CategoryDb.dbml.layout">
+    <None Include="Db\User\UserDb\UserDb.dbml.layout">
+      <DependentUpon>UserDb.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Db\Transaction\TransactionDb\TransactionDb.dbml.layout">
+      <DependentUpon>TransactionDb.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Db\Transaction\TransactionDbFull\TransactionDbFull.dbml.layout">
+      <DependentUpon>TransactionDbFull.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Db\Category\CategoryDb\CategoryDb.dbml.layout">
       <DependentUpon>CategoryDb.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Db\CategoryDbFull\CategoryDbFull.dbml.layout">
+    <None Include="Db\Category\CategoryDbFull\CategoryDbFull.dbml.layout">
       <DependentUpon>CategoryDbFull.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Db\User\UserDb\UserDb.dbml.layout">
-      <DependentUpon>UserDb.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
