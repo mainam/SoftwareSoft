@@ -107,6 +107,7 @@
     <Content Include="Admin\Log\LoginSystem.aspx" />
     <Content Include="Admin\Log\LogTransferDevice.aspx" />
     <Content Include="Admin\Mail\SendMail.aspx" />
+    <Content Include="Admin\TaiKhoan\TaiKhoanMgr.aspx" />
     <Content Include="Admin\Utils\BarcodeGenerator.aspx" />
     <Content Include="AJAXProcess\Document-Blank-icon.png" />
     <Content Include="AJAXProcess\FileExplorer.aspx" />
@@ -2252,6 +2253,13 @@
     </Compile>
     <Compile Include="Admin\Mail\SendMail.aspx.designer.cs">
       <DependentUpon>SendMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TaiKhoan\TaiKhoanMgr.aspx.cs">
+      <DependentUpon>TaiKhoanMgr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TaiKhoan\TaiKhoanMgr.aspx.designer.cs">
+      <DependentUpon>TaiKhoanMgr.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Utils\BarcodeGenerator.aspx.cs">
       <DependentUpon>BarcodeGenerator.aspx</DependentUpon>

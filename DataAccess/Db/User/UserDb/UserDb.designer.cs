@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataAccess.Db.UserDb
+namespace DataAccess.Db.User.UserDb
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -92,6 +92,12 @@ namespace DataAccess.Db.UserDb
 		
 		private long _Money;
 		
+		private System.DateTime _LastLogin;
+		
+		private string _Email;
+		
+		private string _Phone;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -108,6 +114,12 @@ namespace DataAccess.Db.UserDb
     partial void OnActiveChanged();
     partial void OnMoneyChanging(long value);
     partial void OnMoneyChanged();
+    partial void OnLastLoginChanging(System.DateTime value);
+    partial void OnLastLoginChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnPhoneChanging(string value);
+    partial void OnPhoneChanged();
     #endregion
 		
 		public tbUser()
@@ -231,6 +243,66 @@ namespace DataAccess.Db.UserDb
 					this._Money = value;
 					this.SendPropertyChanged("Money");
 					this.OnMoneyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastLogin", DbType="DateTime NOT NULL")]
+		public System.DateTime LastLogin
+		{
+			get
+			{
+				return this._LastLogin;
+			}
+			set
+			{
+				if ((this._LastLogin != value))
+				{
+					this.OnLastLoginChanging(value);
+					this.SendPropertyChanging();
+					this._LastLogin = value;
+					this.SendPropertyChanged("LastLogin");
+					this.OnLastLoginChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(14) NOT NULL", CanBeNull=false)]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this.OnPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Phone = value;
+					this.SendPropertyChanged("Phone");
+					this.OnPhoneChanged();
 				}
 			}
 		}

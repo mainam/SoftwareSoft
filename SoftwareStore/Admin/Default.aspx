@@ -7,6 +7,9 @@
                     <a href="chuyenmuc/ChuyenMucMgr.aspx"><i class="fa fa-lg fa-fw fa-hdd-o"></i><span class="menu-item-parent">Quản lý chuyên mục</span></a>
                 </li>
                 <li>
+                    <a href="taikhoan/TaiKhoanMgr.aspx"><i class="fa fa-lg fa-fw fa-hdd-o"></i><span class="menu-item-parent">Quản lý chuyên mục</span></a>
+                </li>
+                <li>
                     <a href="#"><i class="fa fa-lg fa-fw fa-hdd-o"></i><span class="menu-item-parent">DEVICES</span></a>
                     <ul>
                         <li runat="server" id="liDeviceManagement"><a href="#">Device Management</a>

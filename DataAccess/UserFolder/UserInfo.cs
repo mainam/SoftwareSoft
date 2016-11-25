@@ -1,5 +1,5 @@
 ﻿using DataAccess.DataConfigFolder;
-using DataAccess.Db.UserDb;
+using DataAccess.Db.User.UserDb;
 using DataAccess.Helper;
 using DataAccess.TeamFolder;
 using DataAccess.UtilFolder;
@@ -8,11 +8,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web;
-using System.Web.Script.Serialization;
 using System.Web.Security;
-using System.Web.Services;
 
 namespace DataAccess.UserFolder
 {
@@ -20,13 +17,13 @@ namespace DataAccess.UserFolder
     public class UserInfo
     {
 
-        public static Db.UserDb.tbUser _GetByIDPW(UserDbDataContext context, object id, string password)
+        public static Db.User.UserDb.tbUser _GetByIDPW(UserDbDataContext context, object id, string password)
         {
             try
             {
                 var pasmd5 = Utils.Encryption(password);
                 var user = _GetByID(context, id);
-                if(!user.Active)
+                if (!user.Active)
                     return null;
                 return user.Password.Equals(pasmd5) ? user : null;
             }
@@ -35,7 +32,42 @@ namespace DataAccess.UserFolder
                 return null;
             }
         }
-        public static Db.UserDb.tbUser _GetByID(UserDbDataContext context, object id)
+
+        public static object getAll(String userName, int type, int currentpage, int numberinpage, string keyword, ref int totalItem)
+        {
+            using (var context = new UserDbDataContext())
+            {
+                var currentUser = context.tbUsers.SingleOrDefault(x => x.UserName.Equals(userName));
+                if (currentUser == null || currentUser.TypeUser != 1)
+                    throw new Exception("Bạn không có quyền thực hiện tao tác này");
+                var list = context.tbUsers.ToList();
+                if (!String.IsNullOrWhiteSpace(keyword))
+                {
+                    keyword = keyword.ToLower().Trim();
+                    list = list.Where(x => x.FullName.ToLower().Contains(keyword)).ToList();
+                }
+                totalItem = list.Count();
+                return list.Skip((currentpage - 1) * numberinpage).Take(numberinpage).Select(x => new { x.UserName, x.FullName, x.Email, x.Active, x.Money, x.TypeUser,x.Phone });
+            }
+        }
+
+        public static tbUser ActiveMember(string userName, string id)
+        {
+            using (var context = new UserDbDataContext())
+            {
+                var currentUser = context.tbUsers.SingleOrDefault(x => x.UserName.Equals(userName));
+                if (currentUser == null || currentUser.TypeUser != 1)
+                    throw new Exception("Bạn không có quyền thực hiện tao tác này");
+                var user = context.tbUsers.SingleOrDefault(x => x.UserName.Equals(id));
+                if(user==null)
+                    throw new Exception("Tài khoản này không tồn tại");
+                user.Active = !user.Active;
+                context.SubmitChanges();
+                return user;
+            }
+        }
+
+        public static Db.User.UserDb.tbUser _GetByID(UserDbDataContext context, object id)
         {
             try
             {
@@ -241,7 +273,7 @@ namespace DataAccess.UserFolder
             }
         }
 
-       
+
         public static Dictionary<string, string> getAllUsersDictionary(DatabaseDataContext context)
         {
             try
@@ -574,19 +606,24 @@ namespace DataAccess.UserFolder
                             switch (stclevel)
                             {
                                 case 0: break;
-                                case 1: if (item.STCLevel == 1)
+                                case 1:
+                                    if (item.STCLevel == 1)
                                         break;
                                     continue;
-                                case 2: if (item.STCLevel == 2)
+                                case 2:
+                                    if (item.STCLevel == 2)
                                         break;
                                     continue;
-                                case 3: if (item.STCLevel == 3)
+                                case 3:
+                                    if (item.STCLevel == 3)
                                         break;
                                     continue;
-                                case 4: if (item.STCLevel == 4)
+                                case 4:
+                                    if (item.STCLevel == 4)
                                         break;
                                     continue;
-                                case 5: if (item.STCLevel == 5)
+                                case 5:
+                                    if (item.STCLevel == 5)
                                         break;
                                     continue;
                                 default:
@@ -596,7 +633,8 @@ namespace DataAccess.UserFolder
                             switch (permission)
                             {
                                 case 0: break;
-                                default: if (item.Permission != null && item.PermissionId == permission)
+                                default:
+                                    if (item.Permission != null && item.PermissionId == permission)
                                         break;
                                     continue;
                             }
@@ -860,7 +898,7 @@ namespace DataAccess.UserFolder
         //    return true;
         //}
 
-      
+
 
         /// <summary>
         /// ngoc.nam 04.04.2015

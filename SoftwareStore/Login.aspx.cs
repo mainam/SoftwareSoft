@@ -5,7 +5,7 @@ using System.Web.Security;
 using System.Web.Script.Serialization;
 using DataAccess.UserFolder;
 using DataAccess.UtilFolder;
-using DataAccess.Db.UserDb;
+using DataAccess.Db.User.UserDb;
 
 namespace SoftwareStore
 {
@@ -34,7 +34,7 @@ namespace SoftwareStore
                 }
 
                 var username = HttpContext.Current.User.Identity.Name;
-                DataAccess.Db.UserDb.tbUser user = UserInfo._GetByID(context, username);
+                DataAccess.Db.User.UserDb.tbUser user = UserInfo._GetByID(context, username);
                 if (user != null)
                 {
                     Response.Redirect("~/Default.aspx");
@@ -46,7 +46,7 @@ namespace SoftwareStore
         {
             using (var context = new UserDbDataContext())
             {
-                DataAccess.Db.UserDb.tbUser user;
+                DataAccess.Db.User.UserDb.tbUser user;
                 if ((user = UserInfo._GetByIDPW(context, username, pass)) != null)
                 {
                     UserInfo.SetCookies(username, HttpContext.Current.Response);

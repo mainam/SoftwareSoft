@@ -63,7 +63,7 @@
       <LastGenOutput>LogTransferDevice.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Db\UserDb\UserDb.dbml">
+    <None Include="Db\User\UserDb\UserDb.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>UserDb.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
@@ -132,7 +132,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LogTransferDevice.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Db\UserDb\UserDb.designer.cs">
+    <Compile Include="Db\User\UserDb\UserDb.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserDb.dbml</DependentUpon>
@@ -209,7 +209,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Db\UserDb\UserDb.dbml.layout">
+    <None Include="Db\User\UserDb\UserDb.dbml.layout">
       <DependentUpon>UserDb.dbml</DependentUpon>
     </None>
   </ItemGroup>
