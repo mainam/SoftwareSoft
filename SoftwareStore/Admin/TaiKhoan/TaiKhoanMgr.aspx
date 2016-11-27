@@ -64,20 +64,20 @@
                 btndel.click(function () {
                     var id = $(this).attr('dataid');
                     var callback = function () {
-                        AJAXFunction.CallAjax("POST", "/admin/chuyenmuc/chuyenmucmgr.aspx", "DeleteCategory", {
-                            id: [id]
+                        AJAXFunction.CallAjax("POST", "/admin/taikhoan/taikhoanmgr.aspx", "DeleteUser", {
+                            arrid: [id]
                         },
                         function (response) {
                             var status = response.Status;
                             if (status) {
                                 alertSmallBox("Xóa thành công!", "1 giây trước!!", "Success");
-                                LoadData(currentpage);
+                                TaiKhoanScript.LoadData(TaiKhoanScript.CurrentPage);
                             }
                             else
                                 alertSmallBox("Xóa thất bại \n " + response.Data, "1 giây trước!!", "Error");
                         });
                     }
-                    confirm("Xác nhận", "Bạn có muốn xóa chuyên mục này!!", "OK Xóa", "Hủy", callback);
+                    confirm("Xác nhận", "Bạn có muốn xóa tài khoản này!!", "OK Xóa", "Hủy", callback);
                 });
                 var btntransaction = $('<label class="btn btn-xs btn-default" style="margin-left:1px;">');
                 btntransaction.attr('dataid', taikhoan.UserName);
@@ -102,7 +102,7 @@
                     var status = response.Status;
                     if (status) {
                         alertSmallBox(response.Data, "1 giây trước!!", "Success");
-                        TaiKhoanScript.LoadData(currentpage);
+                        TaiKhoanScript.LoadData(TaiKhoanScript.CurrentPage);
                     }
                     else
                         alertSmallBox(response.Data, "1 giây trước!!", "Error");
@@ -120,7 +120,7 @@
                     if (status) {
                         alertSmallBox(response.Data, "1 giây trước!!", "Success");
                         $('#remoteModal').modal("hide");
-                        TaiKhoanScript.LoadData(currentpage);
+                        TaiKhoanScript.LoadData(TaiKhoanScript.CurrentPage);
                     }
                     else
                         alertSmallBox(response.Data, "1 giây trước!!", "Error");
@@ -135,7 +135,7 @@
                 }
                 for (i = 0; i < list.length; i++) {
                     var tr = $('<tr>');
-                    var td = TaiKhoanScript.CreateCheckBox(list[i].Id, false, false, true);
+                    var td = TaiKhoanScript.CreateCheckBox(list[i].UserName, false, false, true);
                     tr.append(td);
 
                     var td = createCell(list[i].FullName);
@@ -189,11 +189,11 @@
                 label.append($('<i>'));
                 checkbox.click(function () {
                     if (this.checked) {
-                        TaiKhoanScript.ListHasSelected.push(parseInt($(this).attr('dataid')));
+                        TaiKhoanScript.ListHasSelected.push($(this).attr('dataid'));
                     }
                     else {
                         $('#btncheck')[0].checked = false;
-                        var index = TaiKhoanScript.ListHasSelected.indexOf(parseInt($(this).attr('dataid')));
+                        var index = TaiKhoanScript.ListHasSelected.indexOf($(this).attr('dataid'));
                         if (index != -1)
                             TaiKhoanScript.ListHasSelected.splice(index, 1);
                     }
@@ -203,12 +203,12 @@
             },
             Delete: function () {
                 if (TaiKhoanScript.ListHasSelected.length == 0) {
-                    alertSmallBox("Chọn chuyên mục cần xóa", "", "error");
+                    alertSmallBox("Chọn tài khoản cần xóa", "", "error");
                     return;
                 }
                 var callback = function () {
                     AJAXFunction.CallAjax("POST",
-                        "/admin/chuyenmuc/chuyenmucmgr.aspx", "DeleteCategory", {
+                        "/admin/taikhoan/taikhoanmgr.aspx", "DeleteUser", {
                             arrid: TaiKhoanScript.ListHasSelected,
                         }, function (response) {
                             if (response.Status) {
@@ -223,10 +223,10 @@
 
                         });
                 };
-                confirm("Xác nhận", "Bạn có muốn xóa các chuyên mục đã chọn!!", "OK Xóa", "Cancel", callback);
+                confirm("Xác nhận", "Bạn có muốn xóa các tài khoản đã chọn!!", "OK Xóa", "Cancel", callback);
             }, CreateNew: function () {
                 TaiKhoanScript.IdEdit = 0;
-                AJAXFunction.ShowModal("remoteModal", "/admin/chuyenmuc/dialog/AddChuyenMuc.aspx?id=" + 0);
+                AJAXFunction.ShowModal("remoteModal", "/admin/taikhoan/dialog/TaoTaiKhoan.aspx?id=" + 0);
             }, ShowNumber: function (number) {
                 TaiKhoanScript.NumberInpage = number;
                 $("#btnSelectNumberItem").text("Hiện: " + number);

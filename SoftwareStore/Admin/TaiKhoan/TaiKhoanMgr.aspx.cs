@@ -67,11 +67,11 @@ namespace SoftwareStore.Admin.TaiKhoan
 
 
         [WebMethod]
-        public static string DeleteCategory(List<int> arrid)
+        public static string DeleteUser(List<String> arrid)
         {
             try
             {
-                return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = CategoryInfo.DeteteCategory(HttpContext.Current.User.Identity.Name, arrid) });
+                return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = UserInfo.DeteteUser(HttpContext.Current.User.Identity.Name, arrid) });
             }
             catch (Exception e)
             {

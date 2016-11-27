@@ -58,13 +58,13 @@
                     var id = $(this).attr('dataid');
                     var callback = function () {
                         AJAXFunction.CallAjax("POST", "/admin/chuyenmuc/chuyenmucmgr.aspx", "DeleteCategory", {
-                            id: [id]
+                            arrid: [id]
                         },
                         function (response) {
                             var status = response.Status;
                             if (status) {
                                 alertSmallBox("Xóa thành công!", "1 giây trước!!", "Success");
-                                LoadData(currentpage);
+                                ChuyenMucScript.LoadData(ChuyenMucScript.CurrentPage);
                             }
                             else
                                 alertSmallBox("Xóa thất bại \n " + response.Data, "1 giây trước!!", "Error");

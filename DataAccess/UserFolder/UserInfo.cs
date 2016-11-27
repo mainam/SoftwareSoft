@@ -79,6 +79,38 @@ namespace DataAccess.UserFolder
             }
         }
 
+        public static object DeteteUser(string name, List<String> arrid)
+        {
+            using (var context = new UserDbDataContext())
+            {
+                var user = context.tbUsers.FirstOrDefault(x => x.UserName.Equals(name));
+                if (user == null || user.TypeUser!= 1 ||!user.Active)
+                    throw new Exception("Bạn không có quyền thực hiện chức năng này");
+
+
+                foreach (String id in arrid)
+                {
+                    if (id.Equals(name))
+                        throw new Exception("Bạn không thể tự xóa chính tài khoản của bạn");
+
+                    var _user = context.tbUsers.SingleOrDefault(x => x.UserName == id);
+                    if (_user != null)
+                    {
+                        if (_user.UserName == "admin")
+                            throw new Exception("Không thể xóa tài khoản này");
+                        context.tbUsers.DeleteOnSubmit(_user);
+                    }
+                    else
+                    {
+                        throw new Exception("Tài khoản không tồn tại. Vui lòng refresh lại trang");
+                    }
+                }
+                context.SubmitChanges();
+                return true;
+            }
+
+        }
+
         public static List<User> GetAll(DatabaseDataContext context)
         {
             try
