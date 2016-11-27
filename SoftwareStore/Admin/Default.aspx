@@ -20,6 +20,17 @@
             </li>
         </ul>
     </li>
+    <li>
+        <a href="#"><i class="fa fa-lg fa-fw fa-hdd-o"></i><span class="menu-item-parent">Quản lý sản phẩm</span></a>
+        <ul>
+            <li>
+                <a href="giaodich/tatcagiaodich.aspx">Tất cả sản phẩm</a>
+            </li>
+            <li>
+                <a href="giaodich/giaodichcuatoi.aspx">Sản phẩm của bạn</a>
+            </li>
+        </ul>
+    </li>
 
     <li>
         <a href="giaodich/GiaoDichMgr.aspx"><i class="fa fa-lg fa-fw fa-hdd-o"></i><span class="menu-item-parent">Quản lý giao dịch</span></a>
