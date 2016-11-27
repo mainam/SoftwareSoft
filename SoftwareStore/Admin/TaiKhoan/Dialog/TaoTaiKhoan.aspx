@@ -24,6 +24,12 @@
         <label class="input">
             <input type="text" id="txtUserName" runat="server" />
         </label>
+                <label>
+            Loại tài khoản
+        </label>
+        <select runat="server" id="cbUserType" class="select2">
+        </select>
+
         <label>
             Họ tên
         </label>
@@ -56,7 +62,7 @@
         </label>
         <div class="inline-group">
             <label class="toggle state-success" style="margin-right: 20px;">
-                <input type="checkbox" name="checkbox-toggle" checked="" runat="server" />
+                <input type="checkbox" id="chkActive" name="checkbox-toggle" checked="" runat="server" />
                 <i data-swchon-text="ON" data-swchoff-text="OFF"></i>Kích hoạt</label>
         </div>
 
@@ -93,18 +99,44 @@
                 alertSmallBox("Vui lòng nhập đúng định dạng email", "1 giây trước!!", "Error");
                 return;
             }
+            var phonenumber = $("#txtPhoneNumber").val();
+            var password = $("#txtPassword").val();
+            var confirmpassword = $("#txtConfirmPassword").val();
+            if (password != "" && !validatePassword(password)) {
+                alertSmallBox("Mật khẩu cần nhập nhiều hơn 6 ký tự", "1 giây trước!!", "Error");
+                return;
+            }
+            if (TaiKhoanScript.IdEdit == "" && password == "") {
+                alertSmallBox("Mật khẩu cần nhập nhiều hơn 6 ký tự", "1 giây trước!!", "Error");
+                return;
+            }
+            if (password != confirmpassword) {
+                alertSmallBox("Xác nhận mật khẩu không trùng khớp", "1 giây trước!!", "Error");
+                return;
+            }
+            var active = $("#chkActive").is(':checked');
+            AJAXFunction.CallAjax("POST",
+                       "/admin/taikhoan/taikhoanmgr.aspx", "CreateNew", {
+                           isedit: TaiKhoanScript.IdEdit != "",
+                           username: username,
+                           fullname: fullname,
+                           email: email,
+                           phonenumber: phonenumber,
+                           active: active,
+                           password: password,
+                           type: 1
+                       }, function (response) {
+                           if (response.Status) {
+                               TaiKhoanScript.ListHasSelected = [];
+                               TaiKhoanScript.LoadData(1);
+                               alertSmallBox(response.Data, "1 giây trước", "success");
+                               $('#remoteModal').modal("hide");
+                           }
+                           else {
+                               alertSmallBox(response.Data, "1 giây trước", "error");
+                           }
 
-            var type = $('input[name=rdTransactionType]:checked').val();
-            var value = $("#txtValue").val();
-            if (value == "") {
-                alertSmallBox("Vui lòng nhập số tiền giao dịch", "1 giây trước!!", "Error");
-                return;
-            }
-            var description = $("#txtDescription").val().trim();
-            if (description == "") {
-                alertSmallBox("Vui lòng nhập chi tiết giao dịch", "1 giây trước!!", "Error");
-                return;
-            }
+                       });
         }
     }
 </script>

@@ -33,6 +33,14 @@ namespace DataAccess.UserFolder
             }
         }
 
+        public static tbUser GetById(string id)
+        {
+            using (var context = new UserDbDataContext())
+            {
+                return context.tbUsers.SingleOrDefault(x => x.UserName.Equals(id));
+            }
+        }
+
         public static object getAll(String userName, int type, int currentpage, int numberinpage, string keyword, ref int totalItem)
         {
             using (var context = new UserDbDataContext())
@@ -40,14 +48,14 @@ namespace DataAccess.UserFolder
                 var currentUser = context.tbUsers.SingleOrDefault(x => x.UserName.Equals(userName));
                 if (currentUser == null || currentUser.TypeUser != 1)
                     throw new Exception("Bạn không có quyền thực hiện tao tác này");
-                var list = context.tbUsers.Where(x=>type==0||x.TypeUser==type).ToList();
+                var list = context.tbUsers.Where(x => type == 0 || x.TypeUser == type).ToList();
                 if (!String.IsNullOrWhiteSpace(keyword))
                 {
                     keyword = keyword.ToLower().Trim();
                     list = list.Where(x => x.FullName.ToLower().Contains(keyword)).ToList();
                 }
                 totalItem = list.Count();
-                return list.Skip((currentpage - 1) * numberinpage).Take(numberinpage).Select(x => new { x.UserName, x.FullName, x.Email, x.Active, x.Money, x.TypeUser,x.Phone });
+                return list.Skip((currentpage - 1) * numberinpage).Take(numberinpage).Select(x => new { x.UserName, x.FullName, x.Email, x.Active, x.Money, x.TypeUser, x.Phone });
             }
         }
 
@@ -59,7 +67,7 @@ namespace DataAccess.UserFolder
                 if (currentUser == null || currentUser.TypeUser != 1 || !currentUser.Active)
                     throw new Exception("Bạn không có quyền thực hiện tao tác này");
                 var user = context.tbUsers.SingleOrDefault(x => x.UserName.Equals(id));
-                if(user==null)
+                if (user == null)
                     throw new Exception("Tài khoản này không tồn tại");
                 user.Active = !user.Active;
                 context.SubmitChanges();
@@ -84,7 +92,7 @@ namespace DataAccess.UserFolder
             using (var context = new UserDbDataContext())
             {
                 var user = context.tbUsers.FirstOrDefault(x => x.UserName.Equals(name));
-                if (user == null || user.TypeUser!= 1 ||!user.Active)
+                if (user == null || user.TypeUser != 1 || !user.Active)
                     throw new Exception("Bạn không có quyền thực hiện chức năng này");
 
 
@@ -109,6 +117,46 @@ namespace DataAccess.UserFolder
                 return true;
             }
 
+        }
+
+        public static void CreateNew(String name, bool isedit, int type, string username, string fullname, string password, string email, string phonenumber, bool active)
+        {
+            using (var context = new UserDbDataContext())
+            {
+                var user = context.tbUsers.FirstOrDefault(x => x.UserName.Equals(name));
+                if (user == null || user.TypeUser != 1 || !user.Active)
+                    throw new Exception("Bạn không có quyền thực hiện chức năng này");
+                if (!isedit)
+                {
+                    context.tbUsers.InsertOnSubmit(new tbUser()
+                    {
+                        Active = active,
+                        Email = email,
+                        FullName = fullname,
+                        LastLogin = DateTime.Now,
+                        Money = 0,
+                        Password = Utils.Encryption(password),
+                        Phone = phonenumber,
+                        TypeUser = type,
+                        UserName = username
+                    });
+                    context.SubmitChanges();
+                }
+                else
+                {
+                    user = context.tbUsers.SingleOrDefault(x => x.UserName.Equals(username));
+                    if (user == null)
+                        throw new Exception("Tài khoản chỉnh sửa không tồn tại");
+                    user.Email = email;
+                    user.Active = active;
+                    if (password != "")
+                        user.Password = Utils.Encryption(password);
+                    user.Phone = phonenumber;
+                    user.TypeUser = type;
+                    user.FullName = fullname;
+                    context.SubmitChanges();
+                }
+            }
         }
 
         public static List<User> GetAll(DatabaseDataContext context)

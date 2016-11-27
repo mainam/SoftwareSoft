@@ -73,6 +73,11 @@
       <LastGenOutput>TransactionDb.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Db\UserType\UserTypeDb\UserTypeDb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>UserTypeDb.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Db\User\UserDb\UserDb.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>UserDb.designer.cs</LastGenOutput>
@@ -152,6 +157,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TransactionDb.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Db\UserType\UserTypeDb\UserTypeDb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserTypeDb.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Db\User\UserDb\UserDb.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -179,6 +189,7 @@
     <Compile Include="JobTitleInfo.cs" />
     <Compile Include="SendMailFolder\LogSendMailServiceInfo.cs" />
     <Compile Include="TransactionInfo.cs" />
+    <Compile Include="TypeUserInfo.cs" />
     <Compile Include="UserFolder\DataUser.cs" />
     <Compile Include="UtilFolder\Compare.cs" />
     <Compile Include="UtilFolder\Converts.cs" />
@@ -242,6 +253,11 @@
   <ItemGroup>
     <None Include="Db\Category\CategoryDbFull\CategoryDbFull.dbml.layout">
       <DependentUpon>CategoryDbFull.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Db\UserType\UserTypeDb\UserTypeDb.dbml.layout">
+      <DependentUpon>UserTypeDb.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

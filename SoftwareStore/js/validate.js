@@ -3,5 +3,5 @@
     return re.test(email);
 }
 function validatePassword(pasword) {
-    return pasword.length > 6;
+    return pasword.length >= 6;
 }

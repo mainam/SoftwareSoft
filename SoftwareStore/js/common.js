@@ -9,6 +9,7 @@ function getDateString(d) {
 function getShortDisplayIndexList(l) {
     var result = [];
 
+
     if (l > 10) {
         for (i = 0; i < 9; i++) {
             result.push(Math.round(i / 10 * (l - 1)));

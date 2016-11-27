@@ -6,6 +6,7 @@ using System.Web.UI;
 using DataAccess.UtilFolder;
 using System.Web.Services;
 using DataAccess;
+using DataAccess.UserFolder;
 
 namespace SoftwareStore.Admin.TaiKhoan.Dialog
 {
@@ -13,9 +14,8 @@ namespace SoftwareStore.Admin.TaiKhoan.Dialog
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            String _id = Request.QueryString["id"];
-            int id = Converts.ToInt(_id, 0);
-            if (id == 0)
+            String id = Request.QueryString["id"];
+            if (id == "")
             {
                 title.InnerText = "THÊM TÀI KHOẢN MỚI";
             }
@@ -23,6 +23,16 @@ namespace SoftwareStore.Admin.TaiKhoan.Dialog
             {
                 title.InnerText = "CHỈNH SỬA TÀI KHOẢN";
                 inputPassword.InnerText = "Mật khẩu (để trống nếu không muốn thay đổi)";
+                txtUserName.Disabled = true;
+                var user = UserInfo.GetById(id);
+                if(user!=null)
+                {
+                    txtFullName.Value = user.FullName;
+                    txtEmail.Value = user.Email;
+                    txtPhoneNumber.Value = user.Phone;
+                    txtUserName.Value = user.UserName;
+                    chkActive.Checked = user.Active;                   
+                }
             }
         }
 

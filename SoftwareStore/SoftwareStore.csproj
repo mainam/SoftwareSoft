@@ -415,6 +415,7 @@
     <Content Include="images\Slide\DSC_0329.JPG" />
     <Content Include="images\Slide\DSC_0332.JPG" />
     <Content Include="images\Slide\DSC_0348.JPG" />
+    <Content Include="js\validate.js" />
     <Content Include="js\ImageMap\jquery.maphilight.min.js" />
     <Content Include="js\ImageMap\jquery.maphilight.min1.js" />
     <Content Include="js\ImageMap\jquery.maphilight.min2.js" />

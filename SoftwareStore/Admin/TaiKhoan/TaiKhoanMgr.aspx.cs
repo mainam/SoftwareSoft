@@ -80,11 +80,12 @@ namespace SoftwareStore.Admin.TaiKhoan
         }
 
         [WebMethod]
-        public static string AddCategory(int id, string name, string description, int order, int parent)
+        public static string CreateNew(int type, bool isedit, string username, string fullname, string password, string email, string phonenumber, bool active)
         {
             try
             {
-                return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = CategoryInfo.AddCategory(HttpContext.Current.User.Identity.Name, id, name, description, order, parent) });
+                UserInfo.CreateNew(HttpContext.Current.User.Identity.Name, isedit, type, username, fullname, password, email, phonenumber, active);
+                return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = true, Data = isedit ? "Chỉnh sửa thành công" : "Thêm mới tài khoản thành công" });
             }
             catch (Exception e)
             {

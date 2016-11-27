@@ -226,8 +226,8 @@
                 };
                 confirm("Xác nhận", "Bạn có muốn xóa các tài khoản đã chọn!!", "OK Xóa", "Cancel", callback);
             }, CreateNew: function () {
-                TaiKhoanScript.IdEdit = 0;
-                AJAXFunction.ShowModal("remoteModal", "/admin/taikhoan/dialog/TaoTaiKhoan.aspx?id=" + 0);
+                TaiKhoanScript.IdEdit = "";
+                AJAXFunction.ShowModal("remoteModal", "/admin/taikhoan/dialog/TaoTaiKhoan.aspx?id=" );
             }, ShowNumber: function (number) {
                 TaiKhoanScript.NumberInpage = number;
                 $("#btnSelectNumberItem").text("Hiện: " + number);
