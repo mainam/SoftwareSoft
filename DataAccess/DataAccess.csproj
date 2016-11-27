@@ -207,6 +207,7 @@
     <Compile Include="HRFolder\UniversityInfo.cs" />
     <Compile Include="HRFolder\DataLanguageInfo.cs" />
     <Compile Include="JobTitleInfo.cs" />
+    <Compile Include="ProductInfo.cs" />
     <Compile Include="SendMailFolder\LogSendMailServiceInfo.cs" />
     <Compile Include="TransactionInfo.cs" />
     <Compile Include="TypeUserInfo.cs" />

@@ -39,6 +39,9 @@ namespace DataAccess.Db.Product.ProductDbFull
     partial void InserttbUser(tbUser instance);
     partial void UpdatetbUser(tbUser instance);
     partial void DeletetbUser(tbUser instance);
+    partial void InserttbCategory(tbCategory instance);
+    partial void UpdatetbCategory(tbCategory instance);
+    partial void DeletetbCategory(tbCategory instance);
     #endregion
 		
 		public ProductDbFullDataContext() : 
@@ -94,6 +97,14 @@ namespace DataAccess.Db.Product.ProductDbFull
 				return this.GetTable<tbUser>();
 			}
 		}
+		
+		public System.Data.Linq.Table<tbCategory> tbCategories
+		{
+			get
+			{
+				return this.GetTable<tbCategory>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbSoftware")]
@@ -132,6 +143,8 @@ namespace DataAccess.Db.Product.ProductDbFull
 		
 		private EntityRef<tbUser> _tbUser;
 		
+		private EntityRef<tbCategory> _tbCategory;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -168,6 +181,7 @@ namespace DataAccess.Db.Product.ProductDbFull
 		{
 			this._tbSoftwaraStatus = default(EntityRef<tbSoftwaraStatus>);
 			this._tbUser = default(EntityRef<tbUser>);
+			this._tbCategory = default(EntityRef<tbCategory>);
 			OnCreated();
 		}
 		
@@ -390,6 +404,10 @@ namespace DataAccess.Db.Product.ProductDbFull
 			{
 				if ((this._CategoryId != value))
 				{
+					if (this._tbCategory.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnCategoryIdChanging(value);
 					this.SendPropertyChanging();
 					this._CategoryId = value;
@@ -503,6 +521,40 @@ namespace DataAccess.Db.Product.ProductDbFull
 						this._UpBy = default(string);
 					}
 					this.SendPropertyChanged("tbUser");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbCategory_tbSoftware", Storage="_tbCategory", ThisKey="CategoryId", OtherKey="Id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
+		public tbCategory tbCategory
+		{
+			get
+			{
+				return this._tbCategory.Entity;
+			}
+			set
+			{
+				tbCategory previousValue = this._tbCategory.Entity;
+				if (((previousValue != value) 
+							|| (this._tbCategory.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbCategory.Entity = null;
+						previousValue.tbSoftwares.Remove(this);
+					}
+					this._tbCategory.Entity = value;
+					if ((value != null))
+					{
+						value.tbSoftwares.Add(this);
+						this._CategoryId = value.Id;
+					}
+					else
+					{
+						this._CategoryId = default(int);
+					}
+					this.SendPropertyChanged("tbCategory");
 				}
 			}
 		}
@@ -650,21 +702,9 @@ namespace DataAccess.Db.Product.ProductDbFull
 		
 		private string _UserName;
 		
-		private string _Password;
-		
 		private string _FullName;
 		
 		private int _TypeUser;
-		
-		private bool _Active;
-		
-		private decimal _Money;
-		
-		private System.DateTime _LastLogin;
-		
-		private string _Email;
-		
-		private string _Phone;
 		
 		private EntitySet<tbSoftware> _tbSoftwares;
 		
@@ -674,22 +714,10 @@ namespace DataAccess.Db.Product.ProductDbFull
     partial void OnCreated();
     partial void OnUserNameChanging(string value);
     partial void OnUserNameChanged();
-    partial void OnPasswordChanging(string value);
-    partial void OnPasswordChanged();
     partial void OnFullNameChanging(string value);
     partial void OnFullNameChanged();
     partial void OnTypeUserChanging(int value);
     partial void OnTypeUserChanged();
-    partial void OnActiveChanging(bool value);
-    partial void OnActiveChanged();
-    partial void OnMoneyChanging(decimal value);
-    partial void OnMoneyChanged();
-    partial void OnLastLoginChanging(System.DateTime value);
-    partial void OnLastLoginChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnPhoneChanging(string value);
-    partial void OnPhoneChanged();
     #endregion
 		
 		public tbUser()
@@ -714,26 +742,6 @@ namespace DataAccess.Db.Product.ProductDbFull
 					this._UserName = value;
 					this.SendPropertyChanged("UserName");
 					this.OnUserNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Password
-		{
-			get
-			{
-				return this._Password;
-			}
-			set
-			{
-				if ((this._Password != value))
-				{
-					this.OnPasswordChanging(value);
-					this.SendPropertyChanging();
-					this._Password = value;
-					this.SendPropertyChanged("Password");
-					this.OnPasswordChanged();
 				}
 			}
 		}
@@ -774,106 +782,6 @@ namespace DataAccess.Db.Product.ProductDbFull
 					this._TypeUser = value;
 					this.SendPropertyChanged("TypeUser");
 					this.OnTypeUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Active", DbType="Bit NOT NULL")]
-		public bool Active
-		{
-			get
-			{
-				return this._Active;
-			}
-			set
-			{
-				if ((this._Active != value))
-				{
-					this.OnActiveChanging(value);
-					this.SendPropertyChanging();
-					this._Active = value;
-					this.SendPropertyChanged("Active");
-					this.OnActiveChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Money", DbType="Decimal(18,0) NOT NULL")]
-		public decimal Money
-		{
-			get
-			{
-				return this._Money;
-			}
-			set
-			{
-				if ((this._Money != value))
-				{
-					this.OnMoneyChanging(value);
-					this.SendPropertyChanging();
-					this._Money = value;
-					this.SendPropertyChanged("Money");
-					this.OnMoneyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastLogin", DbType="DateTime NOT NULL")]
-		public System.DateTime LastLogin
-		{
-			get
-			{
-				return this._LastLogin;
-			}
-			set
-			{
-				if ((this._LastLogin != value))
-				{
-					this.OnLastLoginChanging(value);
-					this.SendPropertyChanging();
-					this._LastLogin = value;
-					this.SendPropertyChanged("LastLogin");
-					this.OnLastLoginChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(14) NOT NULL", CanBeNull=false)]
-		public string Phone
-		{
-			get
-			{
-				return this._Phone;
-			}
-			set
-			{
-				if ((this._Phone != value))
-				{
-					this.OnPhoneChanging(value);
-					this.SendPropertyChanging();
-					this._Phone = value;
-					this.SendPropertyChanged("Phone");
-					this.OnPhoneChanged();
 				}
 			}
 		}
@@ -921,6 +829,120 @@ namespace DataAccess.Db.Product.ProductDbFull
 		{
 			this.SendPropertyChanging();
 			entity.tbUser = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbCategory")]
+	public partial class tbCategory : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _Name;
+		
+		private EntitySet<tbSoftware> _tbSoftwares;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    #endregion
+		
+		public tbCategory()
+		{
+			this._tbSoftwares = new EntitySet<tbSoftware>(new Action<tbSoftware>(this.attach_tbSoftwares), new Action<tbSoftware>(this.detach_tbSoftwares));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbCategory_tbSoftware", Storage="_tbSoftwares", ThisKey="Id", OtherKey="CategoryId")]
+		public EntitySet<tbSoftware> tbSoftwares
+		{
+			get
+			{
+				return this._tbSoftwares;
+			}
+			set
+			{
+				this._tbSoftwares.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_tbSoftwares(tbSoftware entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbCategory = this;
+		}
+		
+		private void detach_tbSoftwares(tbSoftware entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbCategory = null;
 		}
 	}
 }

@@ -17,6 +17,7 @@
       <Column Name="CloseDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="tbSoftwaraStatus_tbSoftware" Member="tbSoftwaraStatus" ThisKey="Status" OtherKey="Id" Type="tbSoftwaraStatus" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="tbUser_tbSoftware" Member="tbUser" ThisKey="UpBy" OtherKey="UserName" Type="tbUser" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tbCategory_tbSoftware" Member="tbCategory" ThisKey="CategoryId" OtherKey="Id" Type="tbCategory" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbSoftwaraStatus" Member="tbSoftwaraStatus">
@@ -29,15 +30,16 @@
   <Table Name="dbo.tbUser" Member="tbUsers">
     <Type Name="tbUser">
       <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="FullName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="TypeUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Money" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
-      <Column Name="LastLogin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Phone" Type="System.String" DbType="NVarChar(14) NOT NULL" CanBeNull="false" />
       <Association Name="tbUser_tbSoftware" Member="tbSoftwares" ThisKey="UserName" OtherKey="UpBy" Type="tbSoftware" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbCategory" Member="tbCategories">
+    <Type Name="tbCategory">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbCategory_tbSoftware" Member="tbSoftwares" ThisKey="Id" OtherKey="CategoryId" Type="tbSoftware" />
     </Type>
   </Table>
 </Database>
