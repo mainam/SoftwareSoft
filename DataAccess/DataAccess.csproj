@@ -63,6 +63,16 @@
       <LastGenOutput>LogTransferDevice.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Db\Product\ProductDbFull\ProductDbFull.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ProductDbFull.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Db\Product\ProductDb\ProductDb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ProductDb.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Db\Transaction\TransactionDbFull\TransactionDbFull.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>TransactionDbFull.designer.cs</LastGenOutput>
@@ -146,6 +156,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LogTransferDevice.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Product\ProductDbFull\ProductDbFull.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductDbFull.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Product\ProductDb\ProductDb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductDb.dbml</DependentUpon>
     </Compile>
     <Compile Include="Db\Transaction\TransactionDbFull\TransactionDbFull.designer.cs">
       <AutoGen>True</AutoGen>
@@ -258,6 +278,16 @@
   <ItemGroup>
     <None Include="Db\UserType\UserTypeDb\UserTypeDb.dbml.layout">
       <DependentUpon>UserTypeDb.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Db\Product\ProductDb\ProductDb.dbml.layout">
+      <DependentUpon>ProductDb.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Db\Product\ProductDbFull\ProductDbFull.dbml.layout">
+      <DependentUpon>ProductDbFull.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

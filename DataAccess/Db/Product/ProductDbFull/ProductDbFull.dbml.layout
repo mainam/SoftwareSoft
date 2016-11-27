@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ProductDbFull">
+  <DataContextMoniker Name="/ProductDbFullDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f419e7b1-d289-4fe0-929c-bea6eb7ef64e" absoluteBounds="3.5, 1, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/ProductDbFullDataContext/tbSoftware" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26f6ab77-6ea3-464f-817e-ffc73864c1e5" absoluteBounds="3.5149999999999997, 1.46, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51485edd-9005-4df6-bc64-94a5fcdc8f9d" absoluteBounds="0.75, 2, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/ProductDbFullDataContext/tbSoftwaraStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b90209a-8dca-44de-a133-b0faa151e19f" absoluteBounds="0.76499999999999968, 2.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.59699625651042); (3.5 : 2.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ProductDbFullDataContext/tbSoftwaraStatus/tbSoftwaraStatus_tbSoftware" />
+      <nodes>
+        <classShapeMoniker Id="51485edd-9005-4df6-bc64-94a5fcdc8f9d" />
+        <classShapeMoniker Id="f419e7b1-d289-4fe0-929c-bea6eb7ef64e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="83f576d9-65a6-4bfa-9c64-4e171159bc17" absoluteBounds="0.75, 5.375, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/ProductDbFullDataContext/tbUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38f4e9a8-3d66-48cd-8c6d-7852380485cf" absoluteBounds="0.76499999999999968, 5.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.64505126953125); (4.5 : 6.64505126953125); (4.5 : 4.30930826822917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ProductDbFullDataContext/tbUser/tbUser_tbSoftware" />
+      <nodes>
+        <classShapeMoniker Id="83f576d9-65a6-4bfa-9c64-4e171159bc17" />
+        <classShapeMoniker Id="f419e7b1-d289-4fe0-929c-bea6eb7ef64e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
