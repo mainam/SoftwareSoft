@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HolderScript" runat="server">
     <script src="/js/selportalscript.js"></script>
+    <script src="/js/validate.js"></script>
     <script type="text/javascript">
         var TaiKhoanScript = {
             IdEdit: 0,
@@ -54,7 +55,7 @@
                 btnedit.attr('dataid', taikhoan.UserName);
                 btnedit.click(function () {
                     TaiKhoanScript.IdEdit = $(this).attr('dataid');
-                    AJAXFunction.ShowModal("remoteModal", "/admin/chuyenmuc/dialog/AddChuyenMuc.aspx?id=" + TaiKhoanScript.IdEdit);
+                    AJAXFunction.ShowModal("remoteModal", "/admin/taikhoan/dialog/TaoTaiKhoan.aspx?id=" + TaiKhoanScript.IdEdit);
                 });
 
                 var btndel = $('<label class="btn btn-xs btn-default" style="margin-left:1px;">');

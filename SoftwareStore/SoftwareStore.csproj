@@ -107,6 +107,7 @@
     <Content Include="Admin\Log\LoginSystem.aspx" />
     <Content Include="Admin\Log\LogTransferDevice.aspx" />
     <Content Include="Admin\Mail\SendMail.aspx" />
+    <Content Include="Admin\TaiKhoan\Dialog\TaoTaiKhoan.aspx" />
     <Content Include="Admin\TaiKhoan\Dialog\TaoGiaoDich.aspx" />
     <Content Include="Admin\TaiKhoan\TaiKhoanMgr.aspx" />
     <Content Include="Admin\Utils\BarcodeGenerator.aspx" />
@@ -2254,6 +2255,13 @@
     </Compile>
     <Compile Include="Admin\Mail\SendMail.aspx.designer.cs">
       <DependentUpon>SendMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TaiKhoan\Dialog\TaoTaiKhoan.aspx.cs">
+      <DependentUpon>TaoTaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TaiKhoan\Dialog\TaoTaiKhoan.aspx.designer.cs">
+      <DependentUpon>TaoTaiKhoan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\TaiKhoan\Dialog\TaoGiaoDich.aspx.cs">
       <DependentUpon>TaoGiaoDich.aspx</DependentUpon>

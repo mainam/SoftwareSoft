@@ -1,4 +1,4 @@
-﻿<img alt="" src="http://o7planning.org/vi/10435/cache/images/i/1463672.png" style="max-width: 100%; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 14.4px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(246, 246, 245);"><%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TaoGiaoDich.aspx.cs" Inherits="SoftwareStore.Admin.TaiKhoan.Dialog.TaoGiaoDich" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TaoTaiKhoan.aspx.cs" Inherits="SoftwareStore.Admin.TaiKhoan.Dialog.TaoTaiKhoan" %>
 
 
 <style>
@@ -19,41 +19,50 @@
 
     <div class="modal-body no-padding smart-form" style="margin: 20px auto 0px; background: white; padding: 30px; margin-top: 40px;">
         <label>
-            Giao dịch của
+            Tài khoản
         </label>
         <label class="input">
-            <input type="text" id="txtTransactionFor" disabled="disabled" />
+            <input type="text" id="txtUserName" runat="server" />
         </label>
         <label>
-            Số tiền còn lại
+            Họ tên
         </label>
         <label class="input">
-            <input type="text" id="txtMoneyLeft" disabled="disabled" />
+            <input type="text" id="txtFullName" runat="server" />
         </label>
         <label>
-            Số tiền
+            Email
         </label>
         <label class="input">
-            <input type="number" id="txtValue" />
+            <input type="text" id="txtEmail" runat="server" />
         </label>
         <label>
-            Nội dung giao dịch
+            Số điện thoại
         </label>
         <label class="input">
-            <textarea rows="4" style="width: 100%; resize: vertical" id="txtDescription" />
+            <input type="text" id="txtPhoneNumber" runat="server" />
+        </label>
+        <label runat="server" id="inputPassword">
+            Mật khẩu
+        </label>
+        <label class="input">
+            <input type="password" id="txtPassword" />
+        </label>
+        <label>
+            Xác Nhận Mật khẩu
+        </label>
+        <label class="input">
+            <input type="password" id="txtConfirmPassword" />
         </label>
         <div class="inline-group">
-            <label class="radio">
-                <input type="radio" name="rdTransactionType" checked="" value="1">
-                <i></i>Cộng tiền cho người này</label>
-            <label class="radio">
-                <input type="radio" name="rdTransactionType" value="2">
-                <i></i>Trừ tiền của người này</label>
+            <label class="toggle state-success" style="margin-right: 20px;">
+                <input type="checkbox" name="checkbox-toggle" checked="" runat="server" />
+                <i data-swchon-text="ON" data-swchoff-text="OFF"></i>Kích hoạt</label>
         </div>
 
 
         <div class="btn btn-sm btn-default" style="float: right; margin: 2px; margin-top: 10px; margin-right: 0px; width: 90px;" data-dismiss="modal">HỦY</div>
-        <div class="btn btn-sm btn-primary" style="float: right; margin: 2px; margin-top: 10px; width: 90px;" onclick="TaoGiaoDichScript.ThemGiaoDichMoi(); ">LƯU</div>
+        <div class="btn btn-sm btn-primary" style="float: right; margin: 2px; margin-top: 10px; width: 90px;" onclick="TaoTaiKhoanScript.ThemTaiKhoan(); ">LƯU</div>
     </div>
 </div>
 <style>
@@ -66,14 +75,25 @@
         $("#divAddNewCategory").delay(500).fadeIn(500).verticalAlign(400);
 
     });
-    var taikhoan = TaiKhoanScript.GetById(TaiKhoanScript.IdEdit);
-    if (taikhoan != null) {
-        var name = taikhoan.FullName + " " + taikhoan.Email;
-        $("#txtTransactionFor").val(name);
-        $("#txtMoneyLeft").val(taikhoan.Money);
-    }
-    var TaoGiaoDichScript = {
-        ThemGiaoDichMoi: function () {
+    var TaoTaiKhoanScript = {
+        ThemTaiKhoan: function () {
+
+            var username = $("#txtUserName").val();
+            if (username.trim() == "") {
+                alertSmallBox("Vui lòng nhập tài khoản", "1 giây trước!!", "Error");
+                return;
+            }
+            var fullname = $("#txtFullName").val();
+            if (fullname.trim() == "") {
+                alertSmallBox("Vui lòng nhập họ tên", "1 giây trước!!", "Error");
+                return;
+            }
+            var email = $("#txtEmail").val();
+            if (!validateEmail(email)) {
+                alertSmallBox("Vui lòng nhập đúng định dạng email", "1 giây trước!!", "Error");
+                return;
+            }
+
             var type = $('input[name=rdTransactionType]:checked').val();
             var value = $("#txtValue").val();
             if (value == "") {
@@ -81,14 +101,10 @@
                 return;
             }
             var description = $("#txtDescription").val().trim();
-            if(description=="")
-            {
+            if (description == "") {
                 alertSmallBox("Vui lòng nhập chi tiết giao dịch", "1 giây trước!!", "Error");
                 return;
             }
-            TaiKhoanScript.MakeATransaction(TaiKhoanScript.IdEdit, description, value, type);
-
         }
-
     }
 </script>
