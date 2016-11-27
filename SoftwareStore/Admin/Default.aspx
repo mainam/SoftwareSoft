@@ -27,7 +27,10 @@
                 <a href="giaodich/tatcagiaodich.aspx">Tất cả sản phẩm</a>
             </li>
             <li>
-                <a href="giaodich/giaodichcuatoi.aspx">Sản phẩm của bạn</a>
+                <a href="sanpham/sanphamcuatoi.aspx">Sản phẩm của bạn</a>
+            </li>
+            <li>
+                <a href="sanpham/sanphamdamua.aspx">Sản phẩm đã mua</a>
             </li>
         </ul>
     </li>
