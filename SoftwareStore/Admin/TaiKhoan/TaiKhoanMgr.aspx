@@ -82,7 +82,7 @@
                 });
                 var btntransaction = $('<label class="btn btn-xs btn-default" style="margin-left:1px;">');
                 btntransaction.attr('dataid', taikhoan.UserName);
-                btntransaction.append($('<i class="fa fa-times"/>'))
+                btntransaction.append($('<i class="fa fa-money"/>'))
 
                 btntransaction.click(function () {
                     var id = $(this).attr('dataid');
@@ -172,11 +172,6 @@
                     table.append(tr);
 
                 }
-            },
-            ShowNumberDevice: function (numberdevice) {
-                $("#btnSelectNumberDevice").empty().append("Hiển thị: " + numberdevice).append($('<i class="fa fa-caret-down" style="margin-left:5px;">'))
-                TaiKhoanScript.NumberInpage = numberdevice;
-                TaiKhoanScript.LoadData(1);
             },
             CreateCheckBox: function (id, allowborrow, check) {
                 var td = $('<td>');
@@ -320,7 +315,7 @@
             <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                 <!-- Widget ID (each widget will need unique ID)-->
-                <div class="jarviswidget  jarviswidget-color-teal" id="listrequest" style="margin-bottom: 0px;" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-sortable="false" data-widget-attstyle="jarviswidget-color-teal">
+                <div class="jarviswidget  jarviswidget-color-teal" id="listaccount" style="margin-bottom: 0px;" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-sortable="false" data-widget-attstyle="jarviswidget-color-teal">
                     <header>
                         <span class="widget-icon"><i class="fa fa-table"></i></span>
                         <h2>Danh sách các tài khoản</h2>

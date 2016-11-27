@@ -247,7 +247,7 @@
             <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                 <!-- Widget ID (each widget will need unique ID)-->
-                <div class="jarviswidget  jarviswidget-color-teal" id="listrequest" style="margin-bottom: 0px;" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-sortable="false" data-widget-attstyle="jarviswidget-color-teal">
+                <div class="jarviswidget  jarviswidget-color-teal" id="listcategory" style="margin-bottom: 0px;" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-sortable="false" data-widget-attstyle="jarviswidget-color-teal">
                     <header>
                         <span class="widget-icon"><i class="fa fa-table"></i></span>
                         <h2>Danh sách các chuyên mục</h2>

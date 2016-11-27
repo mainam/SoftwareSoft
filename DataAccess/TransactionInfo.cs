@@ -48,5 +48,98 @@ namespace DataAccess
                 return true;
             }
         }
+
+        public static object GetAll(string name, int currentpage, int numberinpage, string keyword, ref int totalitem)
+        {
+            using (var context = new TransactionDbFullDataContext())
+            {
+                var user = context.tbUsers.SingleOrDefault(x => x.UserName.Equals(name));
+                if (user == null || user.TypeUser != 1 || !user.Active)
+                    throw new Exception("Tài khoản của bạn không có quyền thực hiện chức năng này");
+
+                keyword = keyword.ToLower().Trim();
+                var list = context.tbTransactions.ToList();
+                totalitem = list.Count;
+                if (String.IsNullOrWhiteSpace(keyword))
+                    return list.Skip((currentpage - 1) * numberinpage).Take(numberinpage).Select(x => new
+                    {
+                        x.Id,
+                        InvokeId = x.InvokeId.HasValue ? x.InvokeId.Value : 0,
+                        x.Value,
+                        Type = x.tbTypeTransaction.Name,
+                        SourceId = x.Source,
+                        SourceName = x.tbUser.FullName,
+                        DesId = x.Destination,
+                        DesName = x.tbUser1.FullName,
+                        x.Description,
+                        CreatedDate = x.CreatedDate.ToString("dd/MM/yyyy")
+                    }).ToList();
+                list = list.FindAll(x =>
+               x.Description.ToLower().Contains(keyword)
+               || x.tbUser.FullName.ToLower().Contains(keyword)
+               || x.tbUser.UserName.ToLower().Contains(keyword)
+               || x.tbUser1.FullName.ToLower().Contains(keyword)
+               || x.tbUser1.UserName.ToLower().Contains(keyword));
+                totalitem = list.Count;
+                return list.Skip((currentpage - 1) * numberinpage).Take(numberinpage).Select(x => new
+                {
+                    x.Id,
+                    InvokeId = x.InvokeId.HasValue ? x.InvokeId.Value : 0,
+                    x.Value,
+                    Type = x.tbTypeTransaction.Name,
+                    SourceId = x.Source,
+                    SourceName = x.tbUser.FullName,
+                    DesId = x.Destination,
+                    DesName = x.tbUser1.FullName,
+                    x.Description,
+                    CreatedDate = x.CreatedDate.ToString("dd/MM/yyyy")
+                }).ToList();
+            }
+        }
+
+
+        public static object GetByUser(string name, int currentpage, int numberinpage, string keyword, ref int totalitem)
+        {
+            using (var context = new TransactionDbFullDataContext())
+            {
+                keyword = keyword.ToLower().Trim();
+                var list = context.tbTransactions.Where(x => x.Destination.Equals(name) || x.Source.Equals(name)).ToList();
+                totalitem = list.Count;
+                if (String.IsNullOrWhiteSpace(keyword))
+                    return list.Skip((currentpage - 1) * numberinpage).Take(numberinpage).Select(x => new
+                    {
+                        x.Id,
+                        InvokeId = x.InvokeId.HasValue ? x.InvokeId.Value : 0,
+                        x.Value,
+                        Type = x.tbTypeTransaction.Name,
+                        SourceId = x.Source,
+                        SourceName = x.tbUser.FullName,
+                        DesId = x.Destination,
+                        DesName = x.tbUser1.FullName,
+                        x.Description,
+                        CreatedDate = x.CreatedDate.ToString("dd/MM/yyyy")
+                    }).ToList();
+                list = list.FindAll(x =>
+               x.Description.ToLower().Contains(keyword)
+               || x.tbUser.FullName.ToLower().Contains(keyword)
+               || x.tbUser.UserName.ToLower().Contains(keyword)
+               || x.tbUser1.FullName.ToLower().Contains(keyword)
+               || x.tbUser1.UserName.ToLower().Contains(keyword));
+                totalitem = list.Count;
+                return list.Skip((currentpage - 1) * numberinpage).Take(numberinpage).Select(x => new
+                {
+                    x.Id,
+                    InvokeId = x.InvokeId.HasValue ? x.InvokeId.Value : 0,
+                    x.Value,
+                    Type = x.tbTypeTransaction.Name,
+                    SourceId = x.Source,
+                    SourceName = x.tbUser.FullName,
+                    DesId = x.Destination,
+                    DesName = x.tbUser1.FullName,
+                    x.Description,
+                    CreatedDate = x.CreatedDate.ToString("dd/MM/yyyy")
+                }).ToList();
+            }
+        }
     }
 }

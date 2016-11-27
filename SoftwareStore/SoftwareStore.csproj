@@ -104,6 +104,8 @@
     <Content Include="Admin\Device\Dialog\AllowMemberBorrowDevice.aspx" />
     <Content Include="Admin\Device\ListDeviceBorrowPending.aspx" />
     <Content Include="Admin\Device\ListDeviceTransferPending.aspx" />
+    <Content Include="Admin\GiaoDich\TatCaGiaoDich.aspx" />
+    <Content Include="Admin\GiaoDich\GiaoDichCuaToi.aspx" />
     <Content Include="Admin\Log\LoginSystem.aspx" />
     <Content Include="Admin\Log\LogTransferDevice.aspx" />
     <Content Include="Admin\Mail\SendMail.aspx" />
@@ -2235,6 +2237,20 @@
     </Compile>
     <Compile Include="Admin\Device\ListDeviceTransferPending.aspx.designer.cs">
       <DependentUpon>ListDeviceTransferPending.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GiaoDich\TatCaGiaoDich.aspx.cs">
+      <DependentUpon>TatCaGiaoDich.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GiaoDich\TatCaGiaoDich.aspx.designer.cs">
+      <DependentUpon>TatCaGiaoDich.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GiaoDich\GiaoDichCuaToi.aspx.cs">
+      <DependentUpon>GiaoDichCuaToi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GiaoDich\GiaoDichCuaToi.aspx.designer.cs">
+      <DependentUpon>GiaoDichCuaToi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Log\LoginSystem.aspx.cs">
       <DependentUpon>LoginSystem.aspx</DependentUpon>
