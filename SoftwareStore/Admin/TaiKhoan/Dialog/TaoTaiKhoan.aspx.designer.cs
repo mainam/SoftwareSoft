@@ -31,6 +31,15 @@ namespace SoftwareStore.Admin.TaiKhoan.Dialog {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtUserName;
         
         /// <summary>
+        /// cbUserType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cbUserType;
+        
+        /// <summary>
         /// txtFullName control.
         /// </summary>
         /// <remarks>

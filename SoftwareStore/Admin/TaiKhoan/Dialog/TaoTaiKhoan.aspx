@@ -24,7 +24,7 @@
         <label class="input">
             <input type="text" id="txtUserName" runat="server" />
         </label>
-                <label>
+        <label>
             Loại tài khoản
         </label>
         <select runat="server" id="cbUserType" class="select2">
@@ -81,6 +81,8 @@
         $("#divAddNewCategory").delay(500).fadeIn(500).verticalAlign(400);
 
     });
+    $("#<%=cbUserType.ClientID%>").select2();
+
     var TaoTaiKhoanScript = {
         ThemTaiKhoan: function () {
 
@@ -124,7 +126,7 @@
                            phonenumber: phonenumber,
                            active: active,
                            password: password,
-                           type: 1
+                           type: $("#<%=cbUserType.ClientID%>").val()
                        }, function (response) {
                            if (response.Status) {
                                TaiKhoanScript.ListHasSelected = [];

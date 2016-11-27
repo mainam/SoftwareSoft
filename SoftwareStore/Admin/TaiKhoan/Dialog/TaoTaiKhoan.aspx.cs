@@ -15,6 +15,11 @@ namespace SoftwareStore.Admin.TaiKhoan.Dialog
         protected void Page_Load(object sender, EventArgs e)
         {
             String id = Request.QueryString["id"];
+            cbUserType.DataSource = TypeUserInfo.GetAll();
+            cbUserType.DataTextField = "Name";
+            cbUserType.DataValueField = "Id";
+            cbUserType.DataBind();
+
             if (id == "")
             {
                 title.InnerText = "THÊM TÀI KHOẢN MỚI";
@@ -27,7 +32,8 @@ namespace SoftwareStore.Admin.TaiKhoan.Dialog
                 var user = UserInfo.GetById(id);
                 if(user!=null)
                 {
-                    txtFullName.Value = user.FullName;
+                    cbUserType.Value = user.TypeUser.ToString();
+                        txtFullName.Value = user.FullName;
                     txtEmail.Value = user.Email;
                     txtPhoneNumber.Value = user.Phone;
                     txtUserName.Value = user.UserName;
