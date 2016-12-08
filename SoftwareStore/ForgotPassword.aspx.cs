@@ -17,23 +17,23 @@ namespace SoftwareStore
         {
 
         }
-        [WebMethod]
-        public static string Submit(string username)
-        {
-            try
-            {
-                using (var context = new DatabaseDataContext())
-                {
-                    if (UserInfo.ForgorPassword(context, username))
-                        return new JavaScriptSerializer().Serialize(new { Status = true });
-                    return new JavaScriptSerializer().Serialize(new { Status = false });
-                }
-            }
-            catch (Exception)
-            {
-                return new JavaScriptSerializer().Serialize(new { Status = false });
-            }
-        }
+        //[WebMethod]
+        //public static string Submit(string username)
+        //{
+        //    try
+        //    {
+        //        using (var context = new DatabaseDataContext())
+        //        {
+        //            if (UserInfo.ForgorPassword(context, username))
+        //                return new JavaScriptSerializer().Serialize(new { Status = true });
+        //            return new JavaScriptSerializer().Serialize(new { Status = false });
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return new JavaScriptSerializer().Serialize(new { Status = false });
+        //    }
+        //}
 
 
 

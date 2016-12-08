@@ -91,23 +91,9 @@
     <Content Include="account\dialogChangeAvatar.aspx" />
     <Content Include="account\dialogChangePassword.aspx" />
     <Content Include="Admin\ChuyenMuc\Dialog\AddChuyenMuc.aspx" />
-    <Content Include="Admin\Config\Dialog\AddDataConfig.aspx" />
-    <Content Include="Admin\Config\SendMailNotification.aspx" />
-    <Content Include="Admin\Config\SetupDataConfig.aspx" />
     <Content Include="Admin\Default.aspx" />
-    <Content Include="Admin\Device\ConfigAllowBorrowDevice.aspx" />
-    <Content Include="Admin\Device\ConfigDevice.aspx" />
-    <Content Include="Admin\Device\ConfigDeviceManager.aspx" />
-    <Content Include="Admin\Device\ConfigTransferDeviceAllMember.aspx" />
-    <Content Include="Admin\Device\Dialog\AddDeviceManager.aspx" />
-    <Content Include="Admin\Device\Dialog\AddUserAllowTransferAllMember.aspx" />
-    <Content Include="Admin\Device\Dialog\AllowMemberBorrowDevice.aspx" />
-    <Content Include="Admin\Device\ListDeviceBorrowPending.aspx" />
-    <Content Include="Admin\Device\ListDeviceTransferPending.aspx" />
     <Content Include="Admin\GiaoDich\TatCaGiaoDich.aspx" />
     <Content Include="Admin\GiaoDich\GiaoDichCuaToi.aspx" />
-    <Content Include="Admin\Log\LoginSystem.aspx" />
-    <Content Include="Admin\Log\LogTransferDevice.aspx" />
     <Content Include="Admin\SanPham\DangSanPham.aspx" />
     <Content Include="Admin\SanPham\SanPhamCuaToi.aspx" />
     <Content Include="Admin\TaiKhoan\Dialog\TaoTaiKhoan.aspx" />
@@ -125,64 +111,6 @@
     <Content Include="css\tmscss.css" />
     <Content Include="Default.aspx" />
     <Content Include="Detail.aspx" />
-    <Content Include="device\AddNewNotice.aspx" />
-    <Content Include="device\AjaxProcess\ListDevice.aspx" />
-    <Content Include="device\MyApprove\ApproveGroupByDevice.aspx" />
-    <Content Include="device\BorrowDevice\Borrow.aspx" />
-    <Content Include="device\BorrowDevice\BorrowByModel.aspx" />
-    <Content Include="device\BorrowDevice\BorrowDevice.aspx" />
-    <Content Include="device\BorrowDevice\BorrowDeviceHaveReturn.aspx" />
-    <Content Include="device\CommonManagement.aspx" />
-    <Content Include="device\Common\CabinetManagement.aspx" />
-    <Content Include="device\Common\CategoryManagement.aspx" />
-    <Content Include="device\Common\ModelManagement.aspx" />
-    <Content Include="device\Confirmation\DialogTeamLeaderConfirmDevices.aspx" />
-    <Content Include="device\Confirmation\InventoryConfirm.aspx" />
-    <Content Include="device\Confirmation\LeaderInventoryPage.aspx" />
-    <Content Include="device\Confirmation\UserInventoryPage.aspx" />
-    <Content Include="device\ConfirmDevice.aspx" />
-    <Content Include="device\Confirmation\MyConfirm.aspx" />
-    <Content Include="device\Confirmation\TeamConfirm.aspx" />
-    <Content Include="device\Controls\ctLeaderHasAccepted.ascx" />
-    <Content Include="device\Controls\ctLeaderHasRejected.ascx" />
-    <Content Include="device\Controls\ctLeaderUserNotConfirm.ascx" />
-    <Content Include="device\Controls\ctMyConfirm.ascx" />
-    <Content Include="device\Controls\ctTeamConfirm.ascx" />
-    <Content Include="device\Controls\ctUserHasConfirm.ascx" />
-    <Content Include="device\Controls\ctUserLeaderAccept.ascx" />
-    <Content Include="device\Controls\ctUserLeaderReject.ascx" />
-    <Content Include="device\Controls\ctUserNeedConfirm.ascx" />
-    <Content Include="device\Controls\ctLeaderNeedAccept.ascx" />
-    <Content Include="device\DeviceDashboard.aspx" />
-    <Content Include="device\ListAllDevice.aspx" />
-    <Content Include="device\ListAllDeviceAllowBorrow.aspx" />
-    <Content Include="device\DeviceInTeam.aspx" />
-    <Content Include="device\DeviceManagement.aspx" />
-    <Content Include="device\Confirmation\DialogConfirmDevices.aspx" />
-    <Content Include="device\EditDevice.aspx" />
-    <Content Include="device\InventoryConfirm.aspx" />
-    <Content Include="device\InventoryExportForm.aspx" />
-    <Content Include="device\InventoryRequest.aspx" />
-    <Content Include="device\InventoryResolve.aspx" />
-    <Content Include="device\Management\ListDeviceAvailable.aspx" />
-    <Content Include="device\Management\SetUserBorrowMultiDevice.aspx" />
-    <Content Include="device\MyApprove\ApproveDevice.aspx" />
-    <Content Include="device\MyApprove\ApproveGroupByModel.aspx" />
-    <Content Include="device\MyApprove\ApproveMultiDevice.aspx" />
-    <Content Include="device\MyDevice\ApproveTransferDevice.aspx" />
-    <Content Include="device\MyDevice\ConfirmKeepingDevice.aspx" />
-    <Content Include="device\MyDevice\ListDeviceBorrowing.aspx" />
-    <Content Include="device\MyDevice\ListDeviceKeeping.aspx" />
-    <Content Include="device\MyDevice\MyNote.aspx" />
-    <Content Include="device\MyDevice\RequestTransferDevice.aspx" />
-    <Content Include="device\MyDevice\TransferMultipleDevice.aspx" />
-    <Content Include="device\Request.aspx" />
-    <Content Include="device\ReturnDevice.aspx" />
-    <Content Include="device\ReturnDeviceByIMEI.aspx" />
-    <Content Include="device\Management\SetUserBorrowDevice.aspx" />
-    <Content Include="device\style\styleText.css" />
-    <Content Include="device\MyDevice\TransferDevice.aspx" />
-    <Content Include="device\ViewNotice.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Global.asax" />
@@ -206,246 +134,17 @@
     <Content Include="Default1.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="GetMySingle.aspx" />
     <Content Include="home\Default.aspx" />
-    <Content Include="hr\AddUser.aspx" />
-    <Content Include="hr\Controls\ctAward.ascx" />
-    <Content Include="hr\Controls\ctCertification.ascx" />
-    <Content Include="hr\Controls\ctEducation.ascx" />
-    <Content Include="hr\Controls\ctLanguageAbility.ascx" />
-    <Content Include="hr\Controls\ctStatisticNumberPeopleInSel.ascx" />
-    <Content Include="hr\Controls\ctPersonalInformation.ascx" />
-    <Content Include="hr\Controls\ctReward.ascx" />
-    <Content Include="hr\Controls\ctStatisticEducation.ascx" />
-    <Content Include="hr\Controls\ctStatisticMemberAge.ascx" />
-    <Content Include="hr\Controls\ctStatisticSTCLevel.ascx" />
-    <Content Include="hr\DialogUserInformation.aspx" />
-    <Content Include="hr\HRManagement.aspx" />
-    <Content Include="hr\HRStatistic.aspx" />
-    <Content Include="hr\dialog\AddAwardReward.aspx" />
-    <Content Include="hr\dialog\AddCertification.aspx" />
-    <Content Include="hr\dialog\AddEducation.aspx" />
-    <Content Include="hr\dialog\AddLanguage.aspx" />
-    <Content Include="hr\LayoutImage\F15-top1.png" />
-    <Content Include="hr\Member.aspx" />
-    <Content Include="hr\OTSurvey.aspx" />
-    <Content Include="hr\SetupLayout.aspx" />
-    <Content Include="hr\SWMgrPMember.aspx" />
-    <Content Include="hr\TeamList.aspx" />
-    <Content Include="hr\SeMember.aspx" />
-    <Content Include="hr\TeamManagement.aspx" />
-    <Content Include="hr\UserProfile.aspx" />
     <Content Include="images\man-icon.png" />
     <Content Include="images\no_image.jpg" />
-    <Content Include="images\SEL_Images\Add1.png" />
-    <Content Include="images\SEL_Images\anh.minh.PNG" />
-    <Content Include="images\SEL_Images\Bui Thi Nguyet.PNG" />
-    <Content Include="images\SEL_Images\bui.qtuan.PNG" />
-    <Content Include="images\SEL_Images\bui.vcuong.PNG" />
-    <Content Include="images\SEL_Images\Bùi Công Khánh.PNG" />
-    <Content Include="images\SEL_Images\Bùi Thị Hà.PNG" />
-    <Content Include="images\SEL_Images\Bùi Thị Thanh.PNG" />
-    <Content Include="images\SEL_Images\Chu Văn Luong.PNG" />
-    <Content Include="images\SEL_Images\chu.ttrang.PNG" />
-    <Content Include="images\SEL_Images\cong.trinh.PNG" />
-    <Content Include="images\SEL_Images\congthanh.tr.PNG" />
-    <Content Include="images\SEL_Images\dang.tanh.PNG" />
-    <Content Include="images\SEL_Images\dao.tinh.PNG" />
-    <Content Include="images\SEL_Images\dao.ttung.PNG" />
-    <Content Include="images\SEL_Images\dieu.linh.ng.PNG" />
-    <Content Include="images\SEL_Images\dinhdang.ng.PNG" />
-    <Content Include="images\SEL_Images\dinhthao.ng.PNG" />
-    <Content Include="images\SEL_Images\doan.giang.PNG" />
-    <Content Include="images\SEL_Images\ductai.ng.PNG" />
-    <Content Include="images\SEL_Images\Giang Thanh Hà.PNG" />
-    <Content Include="images\SEL_Images\ha.lethi.PNG" />
-    <Content Include="images\SEL_Images\hai.trieu.PNG" />
-    <Content Include="images\SEL_Images\hai.yen.ng.PNG" />
-    <Content Include="images\SEL_Images\hien.phamthi.PNG" />
-    <Content Include="images\SEL_Images\hoang.dao.PNG" />
-    <Content Include="images\SEL_Images\hongquang.ph.PNG" />
-    <Content Include="images\SEL_Images\hongxuyen.vu.PNG" />
-    <Content Include="images\SEL_Images\hoàng MInh Quân.PNG" />
-    <Content Include="images\SEL_Images\Hoàng Thị Ngân.PNG" />
-    <Content Include="images\SEL_Images\Hoàng Viết Long.PNG" />
-    <Content Include="images\SEL_Images\HUh Jug Chul.PNG" />
-    <Content Include="images\SEL_Images\huongth.ng.PNG" />
-    <Content Include="images\SEL_Images\huyhieu.ph.PNG" />
-    <Content Include="images\SEL_Images\Hồ Ngọc Hùng.PNG" />
-    <Content Include="images\SEL_Images\Hồ Trương Phú Truân.png" />
-    <Content Include="images\SEL_Images\La Thi Hường.PNG" />
     <Content Include="images\logo3.png" />
-    <Content Include="images\SEL_Images\le.vananh.PNG" />
-    <Content Include="images\SEL_Images\le.vsang.PNG" />
-    <Content Include="images\SEL_Images\lethu.hang.PNG" />
-    <Content Include="images\SEL_Images\Lê Lợi.PNG" />
-    <Content Include="images\SEL_Images\Lê Thanh Lộc.PNG" />
-    <Content Include="images\SEL_Images\Lê Thị Dung.PNG" />
-    <Content Include="images\SEL_Images\Lê Thị Nguyên.PNG" />
-    <Content Include="images\SEL_Images\Lê thị Phương Thảo.PNG" />
-    <Content Include="images\SEL_Images\Lê Trung Tiến.PNG" />
-    <Content Include="images\SEL_Images\Lê Văn Hùng.PNG" />
-    <Content Include="images\SEL_Images\Lê Văn Long.PNG" />
-    <Content Include="images\SEL_Images\Lê Đăng Tuấn.PNG" />
-    <Content Include="images\SEL_Images\Lưu Thị Lý.PNG" />
-    <Content Include="images\SEL_Images\Lương Văn Tấn.PNG" />
-    <Content Include="images\SEL_Images\mac.manh.PNG" />
-    <Content Include="images\SEL_Images\Mai Ngọc Nam.PNG" />
-    <Content Include="images\SEL_Images\ng.htrang.PNG" />
-    <Content Include="images\SEL_Images\ng.thanhtuan.PNG" />
-    <Content Include="images\SEL_Images\ng.trungduc.PNG" />
-    <Content Include="images\SEL_Images\ngan.giang.PNG" />
-    <Content Include="images\SEL_Images\ngh.thuong.PNG" />
-    <Content Include="images\SEL_Images\ngoc.anh.ng.PNG" />
-    <Content Include="images\SEL_Images\ngt.kimhue.PNG" />
-    <Content Include="images\SEL_Images\nguyen.hly.PNG" />
-    <Content Include="images\SEL_Images\nguyen.tthao.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Hà Phương.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Hùng Cường.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Hương Giang.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Khắc Hưng.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn lương Mạnh.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Minh Thủy.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Mạnh Quân.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Ngọc Ánh.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Quang Đông.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thanh Loan.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thanh Tùng.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Bích Hạnh.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Chang.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Hoài Thu.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Kim Yến.jpg" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Mai.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Phương  Dung.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Sâm.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Thu Hà.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Thái.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Thúy.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Thư.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Tấm.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Xuyến %28J.S%29.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Xuyến%28S%29.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Thị Yến.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Tiến Dũng.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Trung Hiếu.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn trung Kiên.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Văn Khuyến.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Văn Tuấn.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Văn Tân.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Xuân TRường.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Đình Phương.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Đăng Tùng.PNG" />
-    <Content Include="images\SEL_Images\Nguyễn Đức anh.png" />
-    <Content Include="images\SEL_Images\Nguyễn Đức hân.PNG" />
-    <Content Include="images\SEL_Images\ng_thi.ngan.PNG" />
-    <Content Include="images\SEL_Images\Ngô Thế Bảo.PNG" />
-    <Content Include="images\SEL_Images\nong.thuy.PNG" />
-    <Content Include="images\SEL_Images\pham.nthao.PNG" />
-    <Content Include="images\SEL_Images\Phan Quốc Thắng.PNG" />
-    <Content Include="images\SEL_Images\Phan Thị Huế.PNG" />
-    <Content Include="images\SEL_Images\phan.hoc.PNG" />
-    <Content Include="images\SEL_Images\pht.trang.PNG" />
-    <Content Include="images\SEL_Images\Phạm Phương Bắc.PNG" />
-    <Content Include="images\SEL_Images\Phạm Phương Đông.PNG" />
-    <Content Include="images\SEL_Images\Phạm Thanh Phương.PNG" />
-    <Content Include="images\SEL_Images\Phạm Thị Hương.PNG" />
-    <Content Include="images\SEL_Images\Phạm Thị Thu.PNG" />
-    <Content Include="images\SEL_Images\Phạm Thị Thùy.PNG" />
-    <Content Include="images\SEL_Images\Phạm Tiến Đạt.PNG" />
-    <Content Include="images\SEL_Images\Phạm Trung Tuấn.PNG" />
-    <Content Include="images\SEL_Images\Phạm Tuấn Tú.PNG" />
-    <Content Include="images\SEL_Images\Phạm Văn Tỉnh.PNG" />
-    <Content Include="images\SEL_Images\quan.lt.PNG" />
-    <Content Include="images\SEL_Images\quang.mung.PNG" />
-    <Content Include="images\SEL_Images\que.ha.PNG" />
-    <Content Include="images\SEL_Images\quynh.ngthi.PNG" />
-    <Content Include="images\SEL_Images\quynhnga.nt.PNG" />
-    <Content Include="images\SEL_Images\ta.trung.PNG" />
-    <Content Include="images\SEL_Images\tat.hung.PNG" />
-    <Content Include="images\SEL_Images\tatdat.ph.PNG" />
-    <Content Include="images\SEL_Images\thanhtam.tr.PNG" />
-    <Content Include="images\SEL_Images\the.huyen.PNG" />
-    <Content Include="images\SEL_Images\thilan.ph.PNG" />
-    <Content Include="images\SEL_Images\thuhuyen.trt.PNG" />
-    <Content Include="images\SEL_Images\thuy.thing.PNG" />
-    <Content Include="images\SEL_Images\thuy.trinh.PNG" />
-    <Content Include="images\SEL_Images\thái.PNG" />
-    <Content Include="images\SEL_Images\to.linh.PNG" />
-    <Content Include="images\SEL_Images\tr.thuylinh.PNG" />
-    <Content Include="images\SEL_Images\tronghieu.d.PNG" />
-    <Content Include="images\SEL_Images\Trương Văn Bắc.PNG" />
-    <Content Include="images\SEL_Images\Trần Thanh Tâm.PNG" />
-    <Content Include="images\SEL_Images\Trần Thanh Tùng.PNG" />
-    <Content Include="images\SEL_Images\Trần Thị Hoa.PNG" />
-    <Content Include="images\SEL_Images\Trần Thị Hồng Sim.PNG" />
-    <Content Include="images\SEL_Images\Trần Thị Nga.PNG" />
-    <Content Include="images\SEL_Images\Trần Thị Nghĩa.PNG" />
-    <Content Include="images\SEL_Images\Trần Tính.PNG" />
-    <Content Include="images\SEL_Images\Trần Văn Toàn.PNG" />
-    <Content Include="images\SEL_Images\Trần Đức Bình.PNG" />
-    <Content Include="images\SEL_Images\Trần Đức Thanh.PNG" />
-    <Content Include="images\SEL_Images\Trịnh Tiến Sơn.PNG" />
-    <Content Include="images\SEL_Images\tthao.vu.PNG" />
-    <Content Include="images\SEL_Images\tuan.pht.PNG" />
-    <Content Include="images\SEL_Images\vankhoan.ng.PNG" />
-    <Content Include="images\SEL_Images\vietanh.hg.PNG" />
-    <Content Include="images\SEL_Images\vu.qtuyen.PNG" />
-    <Content Include="images\SEL_Images\vu.tnguyet.PNG" />
-    <Content Include="images\SEL_Images\vuthi.hong.PNG" />
-    <Content Include="images\SEL_Images\Võ Hoài Nam.PNG" />
-    <Content Include="images\SEL_Images\Vũ Bá Tiện.PNG" />
-    <Content Include="images\SEL_Images\Vũ Duy Dự.PNG" />
-    <Content Include="images\SEL_Images\Vũ Hương Giang.PNG" />
-    <Content Include="images\SEL_Images\Vũ Mạnh Hùng.PNG" />
-    <Content Include="images\SEL_Images\Vũ Văn Tịnh.PNG" />
-    <Content Include="images\SEL_Images\Vũ Văn Điệu.PNG" />
-    <Content Include="images\SEL_Images\Đinh Diệu An.PNG" />
-    <Content Include="images\SEL_Images\Đinh Xuân Hoàng.PNG" />
-    <Content Include="images\SEL_Images\Đoàn Quang Luận.PNG" />
-    <Content Include="images\SEL_Images\Đặng Thị Dung.PNG" />
-    <Content Include="images\SEL_Images\Đặng Thị Ngọc Loan.PNG" />
-    <Content Include="images\SEL_Images\Đặng Đình Nhất.PNG" />
-    <Content Include="images\SEL_Images\Đỗ Thế Tân.PNG" />
-    <Content Include="images\Slide\DSC_0199.JPG" />
-    <Content Include="images\Slide\DSC_0205.JPG" />
-    <Content Include="images\Slide\DSC_0223.JPG" />
-    <Content Include="images\Slide\DSC_0228.JPG" />
-    <Content Include="images\Slide\DSC_0258.JPG" />
-    <Content Include="images\Slide\DSC_0307.JPG" />
-    <Content Include="images\Slide\DSC_0312.JPG" />
-    <Content Include="images\Slide\DSC_0317.JPG" />
-    <Content Include="images\Slide\DSC_0319.JPG" />
-    <Content Include="images\Slide\DSC_0329.JPG" />
-    <Content Include="images\Slide\DSC_0332.JPG" />
-    <Content Include="images\Slide\DSC_0348.JPG" />
     <Content Include="js\validate.js" />
-    <Content Include="js\ImageMap\jquery.maphilight.min.js" />
-    <Content Include="js\ImageMap\jquery.maphilight.min1.js" />
-    <Content Include="js\ImageMap\jquery.maphilight.min2.js" />
-    <Content Include="js\ImageMap\jquery.rwdImageMaps.min.js" />
-    <Content Include="js\ImageMap\tooltip\imagesloaded.pkg.min.js" />
-    <Content Include="js\ImageMap\tooltip\jquery.qtip.css" />
-    <Content Include="js\ImageMap\tooltip\jquery.qtip.js" />
-    <Content Include="js\ImageMap\tooltip\jquery.qtip.min.css" />
-    <Content Include="js\ImageMap\tooltip\jquery.qtip.min.js" />
-    <Content Include="js\img\cancel.png" />
-    <Content Include="js\img\favicon\favicon.ico" />
-    <Content Include="js\img\mybg.png" />
-    <Content Include="js\img\pattern\overlay-pattern.png" />
-    <Content Include="js\img\spinner.gif" />
     <Content Include="js\app.config.js" />
     <Content Include="js\app.js" />
     <Content Include="js\appor.js" />
     <Content Include="js\bootstrap\bootstrap.js" />
     <Content Include="js\bootstrap\bootstrap.min.js" />
     <Content Include="js\common.js" />
-    <Content Include="js\communicator\images\available.png" />
-    <Content Include="js\communicator\images\away.png" />
-    <Content Include="js\communicator\images\busy.png" />
-    <Content Include="js\communicator\images\inactive.png" />
-    <Content Include="js\communicator\images\offline.png" />
-    <Content Include="js\communicator\images\unknown.png" />
-    <Content Include="js\communicator\mscommunicator.js" />
     <Content Include="js\demo.js" />
     <Content Include="js\envisionjs\attic\dev\finance\google-daily.js" />
     <Content Include="js\envisionjs\attic\dev\finance\parse.js" />
@@ -1314,198 +1013,8 @@
     <Content Include="js\envisionjs\spec\SpecRunner.html" />
     <Content Include="js\jquery.base64.js" />
     <Content Include="js\jquery.btechco.excelexport.js" />
-    <Content Include="js\libs\ajaxfileupload.js" />
-    <Content Include="js\libs\angular.js" />
-    <Content Include="js\libs\jquery-1.11.1.min.js" />
-    <Content Include="js\libs\jquery-2.0.2.min.js" />
-    <Content Include="js\libs\jquery-ui-1.10.3.min.js" />
-    <Content Include="js\libs\jquery.cookie.js" />
-    <Content Include="js\lotusdropzoneSingle.js" />
-    <Content Include="js\lotusEOAssign.js" />
     <Content Include="js\notification\SmartNotification.js" />
     <Content Include="js\notification\SmartNotification.min.js" />
-    <Content Include="js\plugin\amcharts\amcharts.js" />
-    <Content Include="js\plugin\amcharts\funnel.js" />
-    <Content Include="js\plugin\amcharts\gantt.js" />
-    <Content Include="js\plugin\amcharts\gauge.js" />
-    <Content Include="js\plugin\amcharts\images\dragIcon.gif" />
-    <Content Include="js\plugin\amcharts\images\dragIconBlack.gif" />
-    <Content Include="js\plugin\amcharts\images\dragIconH.gif" />
-    <Content Include="js\plugin\amcharts\images\dragIconHBlack.gif" />
-    <Content Include="js\plugin\amcharts\images\dragIconRectBig.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRectBigBlack.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRectBigBlackH.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRectBigH.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRectSmall.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRectSmallBlack.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRectSmallBlackH.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRectSmallH.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRoundBig.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRoundBigBlack.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRoundBigBlackH.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRoundBigH.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRoundSmall.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRoundSmallBlack.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRoundSmallBlackH.png" />
-    <Content Include="js\plugin\amcharts\images\dragIconRoundSmallH.png" />
-    <Content Include="js\plugin\amcharts\images\export.png" />
-    <Content Include="js\plugin\amcharts\images\exportWhite.png" />
-    <Content Include="js\plugin\amcharts\images\lens.png" />
-    <Content Include="js\plugin\amcharts\images\lensWhite.png" />
-    <Content Include="js\plugin\amcharts\images\lensWhite_old.png" />
-    <Content Include="js\plugin\amcharts\images\lens_old.png" />
-    <Content Include="js\plugin\amcharts\lang\az.js" />
-    <Content Include="js\plugin\amcharts\lang\bg.js" />
-    <Content Include="js\plugin\amcharts\lang\de.js" />
-    <Content Include="js\plugin\amcharts\lang\es.js" />
-    <Content Include="js\plugin\amcharts\lang\fi.js" />
-    <Content Include="js\plugin\amcharts\lang\fo.js" />
-    <Content Include="js\plugin\amcharts\lang\fr.js" />
-    <Content Include="js\plugin\amcharts\lang\hr.js" />
-    <Content Include="js\plugin\amcharts\lang\hu.js" />
-    <Content Include="js\plugin\amcharts\lang\id.js" />
-    <Content Include="js\plugin\amcharts\lang\is.js" />
-    <Content Include="js\plugin\amcharts\lang\it.js" />
-    <Content Include="js\plugin\amcharts\lang\lt.js" />
-    <Content Include="js\plugin\amcharts\lang\lv.js" />
-    <Content Include="js\plugin\amcharts\lang\mk.js" />
-    <Content Include="js\plugin\amcharts\lang\mn.js" />
-    <Content Include="js\plugin\amcharts\lang\mt.js" />
-    <Content Include="js\plugin\amcharts\lang\nl.js" />
-    <Content Include="js\plugin\amcharts\lang\no.js" />
-    <Content Include="js\plugin\amcharts\lang\pl.js" />
-    <Content Include="js\plugin\amcharts\lang\pt.js" />
-    <Content Include="js\plugin\amcharts\lang\ro.js" />
-    <Content Include="js\plugin\amcharts\lang\ru.js" />
-    <Content Include="js\plugin\amcharts\lang\rw.js" />
-    <Content Include="js\plugin\amcharts\lang\sk.js" />
-    <Content Include="js\plugin\amcharts\lang\so.js" />
-    <Content Include="js\plugin\amcharts\lang\th.js" />
-    <Content Include="js\plugin\amcharts\lang\tr.js" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern1.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern10.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern11.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern12.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern13.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern14.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern15.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern16.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern17.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern18.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern19.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern2.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern20.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern21.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern3.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern4.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern5.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern6.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern7.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern8.png" />
-    <Content Include="js\plugin\amcharts\patterns\black\pattern9.png" />
-    <Content Include="js\plugin\amcharts\patterns\chalk\pattern1.jpg" />
-    <Content Include="js\plugin\amcharts\patterns\chalk\pattern1r.jpg" />
-    <Content Include="js\plugin\amcharts\patterns\chalk\pattern2.jpg" />
-    <Content Include="js\plugin\amcharts\patterns\chalk\pattern3.jpg" />
-    <Content Include="js\plugin\amcharts\patterns\chalk\pattern4.jpg" />
-    <Content Include="js\plugin\amcharts\patterns\chalk\pattern5.jpg" />
-    <Content Include="js\plugin\amcharts\patterns\chalk\pattern6.jpg" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern1.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern10.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern11.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern12.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern13.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern14.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern15.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern16.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern17.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern18.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern19.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern2.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern20.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern21.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern3.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern4.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern5.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern6.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern7.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern8.png" />
-    <Content Include="js\plugin\amcharts\patterns\white\pattern9.png" />
-    <Content Include="js\plugin\amcharts\pie.js" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\dataloader.js" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\dataloader.min.js" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\map_json.html" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\pie_csv.html" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\pie_json.html" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\serial2_json.html" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\serial_csv.html" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\serial_json.html" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\stock_csv_data_and_events.html" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\lang\en.js" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\lang\lt.js" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\license.txt" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\export.config.advanced.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\export.config.default.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\funnel.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\gantt.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\gauge.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\images\bicycle.png" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\images\car.png" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\images\motorcycle.png" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\index.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\map.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\pie1.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\pie2.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\pie3.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\pie4.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\radar.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\serial1.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\serial2.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\serial3.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\stock.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\examples\xy.html" />
-    <Content Include="js\plugin\amcharts\plugins\export\export.css" />
-    <Content Include="js\plugin\amcharts\plugins\export\export.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\export.min.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\blob.js\blob.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\fabric.js\fabric.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\fabric.js\fabric.min.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\FileSaver.js\FileSaver.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\jszip\jszip.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\jszip\jszip.min.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\pdfmake\pdfmake.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\pdfmake\pdfmake.min.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\pdfmake\vfs_fonts.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\xlsx\xlsx.js" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\xlsx\xlsx.min.js" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\funnel.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\gantt.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\gauge.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\images\bicycle.png" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\images\car.png" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\images\motorcycle.png" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\index.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\map.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\pie1.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\pie2.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\pie3.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\radar.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\serial1.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\serial2.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\serial3.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\stock.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\examples\xy.html" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\license.txt" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\responsive.js" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\responsive.min.js" />
-    <Content Include="js\plugin\amcharts\radar.js" />
-    <Content Include="js\plugin\amcharts\serial.js" />
-    <Content Include="js\plugin\amcharts\themes\black.js" />
-    <Content Include="js\plugin\amcharts\themes\chalk.js" />
-    <Content Include="js\plugin\amcharts\themes\dark.js" />
-    <Content Include="js\plugin\amcharts\themes\light.js" />
-    <Content Include="js\plugin\amcharts\themes\patterns.js" />
-    <Content Include="js\plugin\amcharts\xy.js" />
     <Content Include="js\plugin\bootstrap-progressbar\bootstrap-progressbar.js" />
     <Content Include="js\plugin\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="js\plugin\bootstrap-slider\bootstrap-slider.min.js" />
@@ -1918,80 +1427,16 @@
     <Content Include="js\plugin\ckeditor\skins\moono\images\lock.png" />
     <Content Include="js\plugin\ckeditor\skins\moono\images\refresh.png" />
     <Content Include="js\plugin\ckeditor\styles.js" />
-    <Content Include="js\plugin\colorpicker\bootstrap-colorpicker.js" />
-    <Content Include="js\plugin\colorpicker\bootstrap-colorpicker.min.js" />
     <Content Include="js\plugin\datatable-responsive\datatables.responsive.min.js" />
-    <Content Include="js\plugin\datatables\ColReorder.min.js" />
-    <Content Include="js\plugin\datatables\ColVis.min.js" />
-    <Content Include="js\plugin\datatables\dataTables.bootstrap.min.js" />
-    <Content Include="js\plugin\datatables\dataTables.colVis.min.js" />
-    <Content Include="js\plugin\datatables\datatables.responsive.min.js" />
-    <Content Include="js\plugin\datatables\dataTables.tableTools.min.js" />
-    <Content Include="js\plugin\datatables\DT_bootstrap.js" />
-    <Content Include="js\plugin\datatables\FixedColumns.min.js" />
-    <Content Include="js\plugin\datatables\jquery.dataTables-cust.js" />
-    <Content Include="js\plugin\datatables\jquery.dataTables-cust.min.js" />
-    <Content Include="js\plugin\datatables\jquery.dataTables.min.js" />
-    <Content Include="js\plugin\datatables\media\css\TableTools.css" />
-    <Content Include="js\plugin\datatables\media\css\TableTools_JUI.css" />
-    <Content Include="js\plugin\datatables\media\images\background.png" />
-    <Content Include="js\plugin\datatables\media\images\collection.png" />
-    <Content Include="js\plugin\datatables\media\images\collection_hover.png" />
-    <Content Include="js\plugin\datatables\media\images\copy.png" />
-    <Content Include="js\plugin\datatables\media\images\copy_hover.png" />
-    <Content Include="js\plugin\datatables\media\images\csv.png" />
-    <Content Include="js\plugin\datatables\media\images\csv_hover.png" />
-    <Content Include="js\plugin\datatables\media\images\pdf.png" />
-    <Content Include="js\plugin\datatables\media\images\pdf_hover.png" />
-    <Content Include="js\plugin\datatables\media\images\print.png" />
-    <Content Include="js\plugin\datatables\media\images\print_hover.png" />
-    <Content Include="js\plugin\datatables\media\images\xls.png" />
-    <Content Include="js\plugin\datatables\media\images\xls_hover.png" />
-    <Content Include="js\plugin\datatables\media\js\TableTools.js" />
-    <Content Include="js\plugin\datatables\media\js\TableTools.min.js" />
-    <Content Include="js\plugin\datatables\media\js\ZeroClipboard.js" />
-    <Content Include="js\plugin\datatables\media\swf\copy_csv_xls.swf" />
-    <Content Include="js\plugin\datatables\media\swf\copy_csv_xls_pdf.swf" />
-    <Content Include="js\plugin\datatables\ZeroClipboard.js" />
-    <Content Include="js\plugin\delete-table-row\delete-table-row.js" />
     <Content Include="js\plugin\dist\html2canvas.js" />
     <Content Include="js\plugin\dist\html2canvas.min.js" />
     <Content Include="js\plugin\dist\html2canvas.svg.js" />
     <Content Include="js\plugin\dist\html2canvas.svg.min.js" />
-    <Content Include="js\plugin\dropzone\dropzone-amd-module.js" />
-    <Content Include="js\plugin\dropzone\dropzone-amd-module.min.js" />
-    <Content Include="js\plugin\dropzone\dropzone.js" />
-    <Content Include="js\plugin\dropzone\dropzone.min.js" />
-    <Content Include="js\plugin\easy-pie-chart\examples\excanvas.js" />
-    <Content Include="js\plugin\easy-pie-chart\examples\index.html" />
-    <Content Include="js\plugin\easy-pie-chart\examples\style.css" />
-    <Content Include="js\plugin\easy-pie-chart\jquery.easy-pie-chart.js" />
-    <Content Include="js\plugin\easy-pie-chart\jquery.easy-pie-chart.min.js" />
     <Content Include="js\plugin\fastclick\fastclick.min.js" />
-    <Content Include="js\plugin\flot\jquery.flot.categories.js" />
-    <Content Include="js\plugin\flot\jquery.flot.cust.js" />
-    <Content Include="js\plugin\flot\jquery.flot.cust.min.js" />
-    <Content Include="js\plugin\flot\jquery.flot.debug.js" />
-    <Content Include="js\plugin\flot\jquery.flot.fillbetween.js" />
-    <Content Include="js\plugin\flot\jquery.flot.fillbetween.min.js" />
-    <Content Include="js\plugin\flot\jquery.flot.min.js" />
-    <Content Include="js\plugin\flot\jquery.flot.orderBar.js" />
-    <Content Include="js\plugin\flot\jquery.flot.orderBar.min.js" />
-    <Content Include="js\plugin\flot\jquery.flot.pie.js" />
-    <Content Include="js\plugin\flot\jquery.flot.pie.min.js" />
-    <Content Include="js\plugin\flot\jquery.flot.resize.js" />
-    <Content Include="js\plugin\flot\jquery.flot.resize.min.js" />
-    <Content Include="js\plugin\flot\jquery.flot.time.min.js" />
-    <Content Include="js\plugin\flot\jquery.flot.tooltip.js" />
-    <Content Include="js\plugin\flot\jquery.flot.tooltip.min.js" />
     <Content Include="js\plugin\fuelux\wizard\wizard.js" />
-    <Content Include="js\plugin\fullcalendar\jquery.fullcalendar.js" />
-    <Content Include="js\plugin\fullcalendar\jquery.fullcalendar.min.js" />
     <Content Include="js\plugin\ie-placeholder\jquery.placeholder.min.js" />
     <Content Include="js\plugin\ion-slider\ion.rangeSlider.js" />
     <Content Include="js\plugin\ion-slider\ion.rangeSlider.min.js" />
-    <Content Include="js\plugin\jqgrid\grid.locale-en.min.js" />
-    <Content Include="js\plugin\jqgrid\jquery.jqGrid.min.js" />
     <Content Include="js\plugin\jquery-form\jquery-form.min.js" />
     <Content Include="js\plugin\jquery-nestable\jquery.nestable.js" />
     <Content Include="js\plugin\jquery-touch\jquery.ui.touch-punch.js" />
@@ -2014,13 +1459,6 @@
     <Content Include="js\plugin\masked-input\jquery.maskedinput.min.js" />
     <Content Include="js\plugin\maxlength\bootstrap-maxlength.js" />
     <Content Include="js\plugin\maxlength\bootstrap-maxlength.min.js" />
-    <Content Include="js\plugin\morris\morris-chart-settings.js" />
-    <Content Include="js\plugin\morris\morris.js" />
-    <Content Include="js\plugin\morris\morris.min.js" />
-    <Content Include="js\plugin\morris\morris.min1.js" />
-    <Content Include="js\plugin\morris\morris.min2.js" />
-    <Content Include="js\plugin\morris\raphael.2.1.0.min1.js" />
-    <Content Include="js\plugin\morris\raphael.2.1.0.min.js" />
     <Content Include="js\plugin\msie-fix\jquery.mb.browser.js" />
     <Content Include="js\plugin\msie-fix\jquery.mb.browser.min.js" />
     <Content Include="js\plugin\multiselect\bootstrap-multiselect.js" />
@@ -2076,23 +1514,12 @@
     <Content Include="js\plugin\typeahead\typeahead.min.js" />
     <Content Include="js\plugin\typeahead\typeaheadjs.js" />
     <Content Include="js\plugin\typeahead\typeaheadjs.min.js" />
-    <Content Include="js\plugin\vectormap\jquery-jvectormap-1.1.1.css" />
-    <Content Include="js\plugin\vectormap\jquery-jvectormap-1.1.1.min.js" />
-    <Content Include="js\plugin\vectormap\jquery-jvectormap-1.2.2.css" />
-    <Content Include="js\plugin\vectormap\jquery-jvectormap-1.2.2.min.js" />
-    <Content Include="js\plugin\vectormap\jquery-jvectormap-world-mill-en.js" />
     <Content Include="js\app.min.js" />
     <Content Include="js\demo.min.js" />
-    <Content Include="js\plugin\x-editable\jquery.mockjax.min.js" />
-    <Content Include="js\plugin\x-editable\moment.min.js" />
-    <Content Include="js\plugin\x-editable\x-editable.js" />
-    <Content Include="js\plugin\x-editable\x-editable.min.js" />
     <Content Include="js\selportalscript.js" />
     <Content Include="js\smartwidgets\jarvis.widget.js" />
     <Content Include="js\smartwidgets\jarvis.widget.min.js" />
-    <Content Include="js\speech\voicecommand.min.js" />
     <Content Include="Login.aspx" />
-    <Content Include="MyActivity\LogActivity.aspx" />
     <Content Include="ResetPassword.aspx" />
     <Content Include="sound\smallbox.mp3" />
     <Content Include="Styles\Image\Group-icon.png" />
@@ -2104,7 +1531,6 @@
     <Content Include="Styles\Image\load-a1.gif" />
     <Content Include="Styles\Image\loader.gif" />
     <Content Include="Styles\Image\loading.gif" />
-    <Content Include="Test.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -2148,96 +1574,12 @@
     <Compile Include="Admin\ChuyenMuc\Dialog\AddChuyenMuc.aspx.designer.cs">
       <DependentUpon>AddChuyenMuc.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Config\Dialog\AddDataConfig.aspx.cs">
-      <DependentUpon>AddDataConfig.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Config\Dialog\AddDataConfig.aspx.designer.cs">
-      <DependentUpon>AddDataConfig.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Config\SendMailNotification.aspx.cs">
-      <DependentUpon>SendMailNotification.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Config\SendMailNotification.aspx.designer.cs">
-      <DependentUpon>SendMailNotification.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Config\SetupDataConfig.aspx.cs">
-      <DependentUpon>SetupDataConfig.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Config\SetupDataConfig.aspx.designer.cs">
-      <DependentUpon>SetupDataConfig.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Device\ConfigAllowBorrowDevice.aspx.cs">
-      <DependentUpon>ConfigAllowBorrowDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Device\ConfigAllowBorrowDevice.aspx.designer.cs">
-      <DependentUpon>ConfigAllowBorrowDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Device\ConfigDevice.aspx.cs">
-      <DependentUpon>ConfigDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Device\ConfigDevice.aspx.designer.cs">
-      <DependentUpon>ConfigDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Device\ConfigDeviceManager.aspx.cs">
-      <DependentUpon>ConfigDeviceManager.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Device\ConfigDeviceManager.aspx.designer.cs">
-      <DependentUpon>ConfigDeviceManager.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Device\ConfigTransferDeviceAllMember.aspx.cs">
-      <DependentUpon>ConfigTransferDeviceAllMember.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Device\ConfigTransferDeviceAllMember.aspx.designer.cs">
-      <DependentUpon>ConfigTransferDeviceAllMember.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Device\Dialog\AddDeviceManager.aspx.cs">
-      <DependentUpon>AddDeviceManager.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Device\Dialog\AddDeviceManager.aspx.designer.cs">
-      <DependentUpon>AddDeviceManager.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Device\Dialog\AddUserAllowTransferAllMember.aspx.cs">
-      <DependentUpon>AddUserAllowTransferAllMember.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Device\Dialog\AddUserAllowTransferAllMember.aspx.designer.cs">
-      <DependentUpon>AddUserAllowTransferAllMember.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Device\Dialog\AllowMemberBorrowDevice.aspx.cs">
-      <DependentUpon>AllowMemberBorrowDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Device\Dialog\AllowMemberBorrowDevice.aspx.designer.cs">
-      <DependentUpon>AllowMemberBorrowDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Device\ListDeviceBorrowPending.aspx.cs">
-      <DependentUpon>ListDeviceBorrowPending.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Device\ListDeviceBorrowPending.aspx.designer.cs">
-      <DependentUpon>ListDeviceBorrowPending.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Device\ListDeviceTransferPending.aspx.cs">
-      <DependentUpon>ListDeviceTransferPending.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Device\ListDeviceTransferPending.aspx.designer.cs">
-      <DependentUpon>ListDeviceTransferPending.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\GiaoDich\TatCaGiaoDich.aspx.cs">
       <DependentUpon>TatCaGiaoDich.aspx</DependentUpon>
@@ -2252,20 +1594,6 @@
     </Compile>
     <Compile Include="Admin\GiaoDich\GiaoDichCuaToi.aspx.designer.cs">
       <DependentUpon>GiaoDichCuaToi.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Log\LoginSystem.aspx.cs">
-      <DependentUpon>LoginSystem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Log\LoginSystem.aspx.designer.cs">
-      <DependentUpon>LoginSystem.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Log\LogTransferDevice.aspx.cs">
-      <DependentUpon>LogTransferDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Log\LogTransferDevice.aspx.designer.cs">
-      <DependentUpon>LogTransferDevice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\SanPham\DangSanPham.aspx.cs">
       <DependentUpon>DangSanPham.aspx</DependentUpon>
@@ -2353,418 +1681,12 @@
     <Compile Include="Detail.aspx.designer.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="device\AddNewNotice.aspx.cs">
-      <DependentUpon>AddNewNotice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\AddNewNotice.aspx.designer.cs">
-      <DependentUpon>AddNewNotice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\AjaxProcess\ListDevice.aspx.cs">
-      <DependentUpon>ListDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\AjaxProcess\ListDevice.aspx.designer.cs">
-      <DependentUpon>ListDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyApprove\ApproveGroupByDevice.aspx.cs">
-      <DependentUpon>ApproveGroupByDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyApprove\ApproveGroupByDevice.aspx.designer.cs">
-      <DependentUpon>ApproveGroupByDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\BorrowDevice\Borrow.aspx.cs">
-      <DependentUpon>Borrow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\BorrowDevice\Borrow.aspx.designer.cs">
-      <DependentUpon>Borrow.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\BorrowDevice\BorrowByModel.aspx.cs">
-      <DependentUpon>BorrowByModel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\BorrowDevice\BorrowByModel.aspx.designer.cs">
-      <DependentUpon>BorrowByModel.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\BorrowDevice\BorrowDevice.aspx.cs">
-      <DependentUpon>BorrowDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\BorrowDevice\BorrowDevice.aspx.designer.cs">
-      <DependentUpon>BorrowDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\BorrowDevice\BorrowDeviceHaveReturn.aspx.cs">
-      <DependentUpon>BorrowDeviceHaveReturn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\BorrowDevice\BorrowDeviceHaveReturn.aspx.designer.cs">
-      <DependentUpon>BorrowDeviceHaveReturn.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\CommonManagement.aspx.cs">
-      <DependentUpon>CommonManagement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\CommonManagement.aspx.designer.cs">
-      <DependentUpon>CommonManagement.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Common\CabinetManagement.aspx.cs">
-      <DependentUpon>CabinetManagement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Common\CabinetManagement.aspx.designer.cs">
-      <DependentUpon>CabinetManagement.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Common\CategoryManagement.aspx.cs">
-      <DependentUpon>CategoryManagement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Common\CategoryManagement.aspx.designer.cs">
-      <DependentUpon>CategoryManagement.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Common\ModelManagement.aspx.cs">
-      <DependentUpon>ModelManagement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Common\ModelManagement.aspx.designer.cs">
-      <DependentUpon>ModelManagement.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Confirmation\DialogTeamLeaderConfirmDevices.aspx.cs">
-      <DependentUpon>DialogTeamLeaderConfirmDevices.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Confirmation\DialogTeamLeaderConfirmDevices.aspx.designer.cs">
-      <DependentUpon>DialogTeamLeaderConfirmDevices.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Confirmation\InventoryConfirm.aspx.cs">
-      <DependentUpon>InventoryConfirm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Confirmation\InventoryConfirm.aspx.designer.cs">
-      <DependentUpon>InventoryConfirm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Confirmation\LeaderInventoryPage.aspx.cs">
-      <DependentUpon>LeaderInventoryPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Confirmation\LeaderInventoryPage.aspx.designer.cs">
-      <DependentUpon>LeaderInventoryPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Confirmation\UserInventoryPage.aspx.cs">
-      <DependentUpon>UserInventoryPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Confirmation\UserInventoryPage.aspx.designer.cs">
-      <DependentUpon>UserInventoryPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\ConfirmDevice.aspx.cs">
-      <DependentUpon>ConfirmDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\ConfirmDevice.aspx.designer.cs">
-      <DependentUpon>ConfirmDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Confirmation\MyConfirm.aspx.cs">
-      <DependentUpon>MyConfirm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Confirmation\MyConfirm.aspx.designer.cs">
-      <DependentUpon>MyConfirm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Confirmation\TeamConfirm.aspx.cs">
-      <DependentUpon>TeamConfirm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Confirmation\TeamConfirm.aspx.designer.cs">
-      <DependentUpon>TeamConfirm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Controls\ctLeaderHasAccepted.ascx.cs">
-      <DependentUpon>ctLeaderHasAccepted.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Controls\ctLeaderHasAccepted.ascx.designer.cs">
-      <DependentUpon>ctLeaderHasAccepted.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Controls\ctLeaderHasRejected.ascx.cs">
-      <DependentUpon>ctLeaderHasRejected.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Controls\ctLeaderHasRejected.ascx.designer.cs">
-      <DependentUpon>ctLeaderHasRejected.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Controls\ctLeaderUserNotConfirm.ascx.cs">
-      <DependentUpon>ctLeaderUserNotConfirm.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Controls\ctLeaderUserNotConfirm.ascx.designer.cs">
-      <DependentUpon>ctLeaderUserNotConfirm.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Controls\ctMyConfirm.ascx.cs">
-      <DependentUpon>ctMyConfirm.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Controls\ctMyConfirm.ascx.designer.cs">
-      <DependentUpon>ctMyConfirm.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Controls\ctTeamConfirm.ascx.cs">
-      <DependentUpon>ctTeamConfirm.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Controls\ctTeamConfirm.ascx.designer.cs">
-      <DependentUpon>ctTeamConfirm.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Controls\ctUserHasConfirm.ascx.cs">
-      <DependentUpon>ctUserHasConfirm.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Controls\ctUserHasConfirm.ascx.designer.cs">
-      <DependentUpon>ctUserHasConfirm.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Controls\ctUserLeaderAccept.ascx.cs">
-      <DependentUpon>ctUserLeaderAccept.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Controls\ctUserLeaderAccept.ascx.designer.cs">
-      <DependentUpon>ctUserLeaderAccept.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Controls\ctUserLeaderReject.ascx.cs">
-      <DependentUpon>ctUserLeaderReject.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Controls\ctUserLeaderReject.ascx.designer.cs">
-      <DependentUpon>ctUserLeaderReject.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Controls\ctUserNeedConfirm.ascx.cs">
-      <DependentUpon>ctUserNeedConfirm.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Controls\ctUserNeedConfirm.ascx.designer.cs">
-      <DependentUpon>ctUserNeedConfirm.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Controls\ctLeaderNeedAccept.ascx.cs">
-      <DependentUpon>ctLeaderNeedAccept.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Controls\ctLeaderNeedAccept.ascx.designer.cs">
-      <DependentUpon>ctLeaderNeedAccept.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="device\DeviceDashboard.aspx.cs">
-      <DependentUpon>DeviceDashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\DeviceDashboard.aspx.designer.cs">
-      <DependentUpon>DeviceDashboard.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\ListAllDevice.aspx.cs">
-      <DependentUpon>ListAllDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\ListAllDevice.aspx.designer.cs">
-      <DependentUpon>ListAllDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\ListAllDeviceAllowBorrow.aspx.cs">
-      <DependentUpon>ListAllDeviceAllowBorrow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\ListAllDeviceAllowBorrow.aspx.designer.cs">
-      <DependentUpon>ListAllDeviceAllowBorrow.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\DeviceInTeam.aspx.cs">
-      <DependentUpon>DeviceInTeam.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\DeviceInTeam.aspx.designer.cs">
-      <DependentUpon>DeviceInTeam.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\DeviceManagement.aspx.cs">
-      <DependentUpon>DeviceManagement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\DeviceManagement.aspx.designer.cs">
-      <DependentUpon>DeviceManagement.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Confirmation\DialogConfirmDevices.aspx.cs">
-      <DependentUpon>DialogConfirmDevices.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Confirmation\DialogConfirmDevices.aspx.designer.cs">
-      <DependentUpon>DialogConfirmDevices.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\EditDevice.aspx.cs">
-      <DependentUpon>EditDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\EditDevice.aspx.designer.cs">
-      <DependentUpon>EditDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\InventoryConfirm.aspx.cs">
-      <DependentUpon>InventoryConfirm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\InventoryConfirm.aspx.designer.cs">
-      <DependentUpon>InventoryConfirm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\InventoryExportForm.aspx.cs">
-      <DependentUpon>InventoryExportForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\InventoryExportForm.aspx.designer.cs">
-      <DependentUpon>InventoryExportForm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\InventoryRequest.aspx.cs">
-      <DependentUpon>InventoryRequest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\InventoryRequest.aspx.designer.cs">
-      <DependentUpon>InventoryRequest.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\InventoryResolve.aspx.cs">
-      <DependentUpon>InventoryResolve.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\InventoryResolve.aspx.designer.cs">
-      <DependentUpon>InventoryResolve.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Management\ListDeviceAvailable.aspx.cs">
-      <DependentUpon>ListDeviceAvailable.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Management\ListDeviceAvailable.aspx.designer.cs">
-      <DependentUpon>ListDeviceAvailable.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Management\SetUserBorrowMultiDevice.aspx.cs">
-      <DependentUpon>SetUserBorrowMultiDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Management\SetUserBorrowMultiDevice.aspx.designer.cs">
-      <DependentUpon>SetUserBorrowMultiDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyApprove\ApproveDevice.aspx.cs">
-      <DependentUpon>ApproveDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyApprove\ApproveDevice.aspx.designer.cs">
-      <DependentUpon>ApproveDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyApprove\ApproveGroupByModel.aspx.cs">
-      <DependentUpon>ApproveGroupByModel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyApprove\ApproveGroupByModel.aspx.designer.cs">
-      <DependentUpon>ApproveGroupByModel.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyApprove\ApproveMultiDevice.aspx.cs">
-      <DependentUpon>ApproveMultiDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyApprove\ApproveMultiDevice.aspx.designer.cs">
-      <DependentUpon>ApproveMultiDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyDevice\ApproveTransferDevice.aspx.cs">
-      <DependentUpon>ApproveTransferDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyDevice\ApproveTransferDevice.aspx.designer.cs">
-      <DependentUpon>ApproveTransferDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyDevice\ConfirmKeepingDevice.aspx.cs">
-      <DependentUpon>ConfirmKeepingDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyDevice\ConfirmKeepingDevice.aspx.designer.cs">
-      <DependentUpon>ConfirmKeepingDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyDevice\ListDeviceBorrowing.aspx.cs">
-      <DependentUpon>ListDeviceBorrowing.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyDevice\ListDeviceBorrowing.aspx.designer.cs">
-      <DependentUpon>ListDeviceBorrowing.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyDevice\ListDeviceKeeping.aspx.cs">
-      <DependentUpon>ListDeviceKeeping.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyDevice\ListDeviceKeeping.aspx.designer.cs">
-      <DependentUpon>ListDeviceKeeping.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyDevice\MyNote.aspx.cs">
-      <DependentUpon>MyNote.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyDevice\MyNote.aspx.designer.cs">
-      <DependentUpon>MyNote.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyDevice\RequestTransferDevice.aspx.cs">
-      <DependentUpon>RequestTransferDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyDevice\RequestTransferDevice.aspx.designer.cs">
-      <DependentUpon>RequestTransferDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyDevice\TransferMultipleDevice.aspx.cs">
-      <DependentUpon>TransferMultipleDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyDevice\TransferMultipleDevice.aspx.designer.cs">
-      <DependentUpon>TransferMultipleDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Request.aspx.cs">
-      <DependentUpon>Request.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Request.aspx.designer.cs">
-      <DependentUpon>Request.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\ReturnDevice.aspx.cs">
-      <DependentUpon>ReturnDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\ReturnDevice.aspx.designer.cs">
-      <DependentUpon>ReturnDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\ReturnDeviceByIMEI.aspx.cs">
-      <DependentUpon>ReturnDeviceByIMEI.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\ReturnDeviceByIMEI.aspx.designer.cs">
-      <DependentUpon>ReturnDeviceByIMEI.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\Management\SetUserBorrowDevice.aspx.cs">
-      <DependentUpon>SetUserBorrowDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\Management\SetUserBorrowDevice.aspx.designer.cs">
-      <DependentUpon>SetUserBorrowDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\MyDevice\TransferDevice.aspx.cs">
-      <DependentUpon>TransferDevice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\MyDevice\TransferDevice.aspx.designer.cs">
-      <DependentUpon>TransferDevice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="device\ViewNotice.aspx.cs">
-      <DependentUpon>ViewNotice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="device\ViewNotice.aspx.designer.cs">
-      <DependentUpon>ViewNotice.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GetMySingle.aspx.cs">
-      <DependentUpon>GetMySingle.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GetMySingle.aspx.designer.cs">
-      <DependentUpon>GetMySingle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2790,201 +1712,12 @@
     <Compile Include="home\Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
-    <Compile Include="hr\AddUser.aspx.cs">
-      <DependentUpon>AddUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\AddUser.aspx.designer.cs">
-      <DependentUpon>AddUser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\Controls\ctAward.ascx.cs">
-      <DependentUpon>ctAward.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\Controls\ctAward.ascx.designer.cs">
-      <DependentUpon>ctAward.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\Controls\ctCertification.ascx.cs">
-      <DependentUpon>ctCertification.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\Controls\ctCertification.ascx.designer.cs">
-      <DependentUpon>ctCertification.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\Controls\ctEducation.ascx.cs">
-      <DependentUpon>ctEducation.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\Controls\ctEducation.ascx.designer.cs">
-      <DependentUpon>ctEducation.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\Controls\ctLanguageAbility.ascx.cs">
-      <DependentUpon>ctLanguageAbility.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\Controls\ctLanguageAbility.ascx.designer.cs">
-      <DependentUpon>ctLanguageAbility.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\Controls\ctStatisticNumberPeopleInSel.ascx.cs">
-      <DependentUpon>ctStatisticNumberPeopleInSel.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\Controls\ctStatisticNumberPeopleInSel.ascx.designer.cs">
-      <DependentUpon>ctStatisticNumberPeopleInSel.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\Controls\ctPersonalInformation.ascx.cs">
-      <DependentUpon>ctPersonalInformation.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\Controls\ctPersonalInformation.ascx.designer.cs">
-      <DependentUpon>ctPersonalInformation.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\Controls\ctReward.ascx.cs">
-      <DependentUpon>ctReward.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\Controls\ctReward.ascx.designer.cs">
-      <DependentUpon>ctReward.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\Controls\ctStatisticEducation.ascx.cs">
-      <DependentUpon>ctStatisticEducation.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\Controls\ctStatisticEducation.ascx.designer.cs">
-      <DependentUpon>ctStatisticEducation.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\Controls\ctStatisticMemberAge.ascx.cs">
-      <DependentUpon>ctStatisticMemberAge.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\Controls\ctStatisticMemberAge.ascx.designer.cs">
-      <DependentUpon>ctStatisticMemberAge.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\Controls\ctStatisticSTCLevel.ascx.cs">
-      <DependentUpon>ctStatisticSTCLevel.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\Controls\ctStatisticSTCLevel.ascx.designer.cs">
-      <DependentUpon>ctStatisticSTCLevel.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\DialogUserInformation.aspx.cs">
-      <DependentUpon>DialogUserInformation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\DialogUserInformation.aspx.designer.cs">
-      <DependentUpon>DialogUserInformation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\HRManagement.aspx.cs">
-      <DependentUpon>HRManagement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\HRManagement.aspx.designer.cs">
-      <DependentUpon>HRManagement.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\HRStatistic.aspx.cs">
-      <DependentUpon>HRStatistic.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\HRStatistic.aspx.designer.cs">
-      <DependentUpon>HRStatistic.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\dialog\AddAwardReward.aspx.cs">
-      <DependentUpon>AddAwardReward.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\dialog\AddAwardReward.aspx.designer.cs">
-      <DependentUpon>AddAwardReward.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\dialog\AddCertification.aspx.cs">
-      <DependentUpon>AddCertification.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\dialog\AddCertification.aspx.designer.cs">
-      <DependentUpon>AddCertification.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\dialog\AddEducation.aspx.cs">
-      <DependentUpon>AddEducation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\dialog\AddEducation.aspx.designer.cs">
-      <DependentUpon>AddEducation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\dialog\AddLanguage.aspx.cs">
-      <DependentUpon>AddLanguage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\dialog\AddLanguage.aspx.designer.cs">
-      <DependentUpon>AddLanguage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\Member.aspx.cs">
-      <DependentUpon>Member.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\Member.aspx.designer.cs">
-      <DependentUpon>Member.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\OTSurvey.aspx.cs">
-      <DependentUpon>OTSurvey.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\OTSurvey.aspx.designer.cs">
-      <DependentUpon>OTSurvey.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\SetupLayout.aspx.cs">
-      <DependentUpon>SetupLayout.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\SetupLayout.aspx.designer.cs">
-      <DependentUpon>SetupLayout.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\SWMgrPMember.aspx.cs">
-      <DependentUpon>SWMgrPMember.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\SWMgrPMember.aspx.designer.cs">
-      <DependentUpon>SWMgrPMember.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\TeamList.aspx.cs">
-      <DependentUpon>TeamList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\TeamList.aspx.designer.cs">
-      <DependentUpon>TeamList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\SeMember.aspx.cs">
-      <DependentUpon>SeMember.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\SeMember.aspx.designer.cs">
-      <DependentUpon>SeMember.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\TeamManagement.aspx.cs">
-      <DependentUpon>TeamManagement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\TeamManagement.aspx.designer.cs">
-      <DependentUpon>TeamManagement.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hr\UserProfile.aspx.cs">
-      <DependentUpon>UserProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hr\UserProfile.aspx.designer.cs">
-      <DependentUpon>UserProfile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MyActivity\LogActivity.aspx.cs">
-      <DependentUpon>LogActivity.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MyActivity\LogActivity.aspx.designer.cs">
-      <DependentUpon>LogActivity.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResetPassword.aspx.cs">
@@ -3000,13 +1733,6 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Test.aspx.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Test.aspx.designer.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -3030,14 +1756,6 @@
     <Content Include="js\plugin\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
     <Content Include="js\plugin\ckeditor\samples\sample_posteddata.php" />
     <Content Include="js\plugin\ckeditor\skins\moono\readme.md" />
-    <Content Include="js\plugin\datatables\media\as3\lib\AlivePDF.swc" />
-    <Content Include="js\plugin\datatables\media\as3\ZeroClipboard.as" />
-    <Content Include="js\plugin\datatables\media\as3\ZeroClipboardPdf.as" />
-    <Content Include="js\plugin\datatables\media\images\psd\collection.psd" />
-    <Content Include="js\plugin\datatables\media\images\psd\copy document.psd" />
-    <Content Include="js\plugin\datatables\media\images\psd\file_types.psd" />
-    <Content Include="js\plugin\datatables\media\images\psd\printer.psd" />
-    <Content Include="js\plugin\datatables\media\js\TableTools.min.js.gz" />
     <Content Include="js\plugin\slickgrid\slick.editors.js--" />
     <Content Include="js\envisionjs\.gitignore" />
     <Content Include="js\envisionjs\.gitmodules" />
@@ -3101,24 +1819,6 @@
     <Content Include="js\envisionjs\lib\flotr2\README.md" />
     <Content Include="js\envisionjs\lib\flotr2\spec\jasmine.yml" />
     <Content Include="account\AJAXImportAvatar.ashx" />
-    <Content Include="js\ImageMap\tooltip\jquery.qtip.min.map" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\data\map.json" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\data\MSFT.csv" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\data\MSFT_events.csv" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\data\pie.csv" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\data\pie.json" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\data\serial.csv" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\data\serial.json" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\data\serial2.json" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\examples\data\TXN.csv" />
-    <Content Include="js\plugin\amcharts\plugins\dataloader\readme.md" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\fabric.js\.travis.yml" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\pdfmake\pdfmake.min.map" />
-    <Content Include="js\plugin\amcharts\plugins\export\libs\xlsx\LICENSE" />
-    <Content Include="js\plugin\amcharts\plugins\export\LICENSE" />
-    <Content Include="js\plugin\amcharts\plugins\export\README.md" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\readme.md" />
-    <Content Include="js\plugin\amcharts\plugins\responsive\responsive.min.js.map" />
     <Content Include="AJAXProcess\UploadFile.ashx" />
     <Content Include="Admin\AdminMaster.Master" />
     <Content Include="Admin\AdminPage.Master" />
@@ -3139,8 +1839,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\Mail\" />
-    <Folder Include="Admin\NewFolder1\" />
     <Folder Include="js\envisionjs\spec\jasmine-jquery\" />
   </ItemGroup>
   <PropertyGroup>

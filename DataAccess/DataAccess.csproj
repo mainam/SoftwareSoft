@@ -135,8 +135,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database.dbml</DependentUpon>
     </Compile>
-    <Compile Include="DataConfigFolder\DataConfigInfo.cs" />
-    <Compile Include="DataConfigFolder\ProjectConfig.cs" />
     <Compile Include="Db\Category\CategoryDbFull\CategoryDbFull.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,16 +185,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserDb.dbml</DependentUpon>
     </Compile>
-    <Compile Include="DeviceFolder\ApproveInfo.cs" />
-    <Compile Include="DeviceFolder\DataApprove.cs" />
-    <Compile Include="DataConfigFolder\DeviceConfig.cs" />
-    <Compile Include="DeviceFolder\StatusDeviceInfo.cs" />
     <Compile Include="LinkFolder\LinkInfo.cs" />
-    <Compile Include="LogFolder\LogTransferDeviceInfo.cs" />
     <Compile Include="NotificationFolder\NotificationInfo.cs" />
-    <Compile Include="DeviceFolder\CabinetInfo.cs" />
-    <Compile Include="DeviceFolder\CategoryDeviceInfo.cs" />
-    <Compile Include="DeviceFolder\DeviceModelInfo.cs" />
     <Compile Include="HRFolder\UserAwardRewardInfo.cs" />
     <Compile Include="HRFolder\UserCertificationInfo.cs" />
     <Compile Include="HRFolder\DataCertificationInfo.cs" />
@@ -212,25 +202,14 @@
     <Compile Include="SoftwareStatusInfo.cs" />
     <Compile Include="TransactionInfo.cs" />
     <Compile Include="TypeUserInfo.cs" />
-    <Compile Include="UserFolder\DataUser.cs" />
     <Compile Include="UtilFolder\Compare.cs" />
     <Compile Include="UtilFolder\Converts.cs" />
-    <Compile Include="DeviceFolder\DataModelDevice.cs" />
-    <Compile Include="DeviceFolder\DeviceInfo.cs" />
-    <Compile Include="DeviceFolder\DataDevice.cs" />
-    <Compile Include="DeviceFolder\DeviceNoticeInfo.cs" />
     <Compile Include="UtilFolder\ExtensionMethod.cs" />
-    <Compile Include="Helper\OutlookDotComMail.cs" />
-    <Compile Include="Helper\SendMail.cs" />
-    <Compile Include="DeviceFolder\InventoryFolder\InventoryInfo.cs" />
-    <Compile Include="DeviceFolder\InventoryFolder\InventoryUserDeviceInfo.cs" />
-    <Compile Include="LogFolder\LogInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="TeamFolder\TeamInfo.cs" />
     <Compile Include="UtilFolder\Utils.cs" />
     <Compile Include="UserFolder\UserInfo.cs" />
   </ItemGroup>

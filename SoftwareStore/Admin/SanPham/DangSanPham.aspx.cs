@@ -1,18 +1,13 @@
 ﻿using DataAccess;
-using DataAccess.DataConfigFolder;
-using DataAccess.Db.Product.ProductDb;
 using DataAccess.Db.Product.ProductDbFull;
 using DataAccess.SendMailFolder;
 using DataAccess.UserFolder;
 using DataAccess.UtilFolder;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
 using System.Web.Services;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SoftwareStore.Admin.SanPham
 {
