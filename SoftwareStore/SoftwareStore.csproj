@@ -108,7 +108,7 @@
     <Content Include="Admin\GiaoDich\GiaoDichCuaToi.aspx" />
     <Content Include="Admin\Log\LoginSystem.aspx" />
     <Content Include="Admin\Log\LogTransferDevice.aspx" />
-    <Content Include="Admin\Mail\SendMail.aspx" />
+    <Content Include="Admin\SanPham\DangSanPham.aspx" />
     <Content Include="Admin\SanPham\SanPhamCuaToi.aspx" />
     <Content Include="Admin\TaiKhoan\Dialog\TaoTaiKhoan.aspx" />
     <Content Include="Admin\TaiKhoan\Dialog\TaoGiaoDich.aspx" />
@@ -2267,12 +2267,12 @@
     <Compile Include="Admin\Log\LogTransferDevice.aspx.designer.cs">
       <DependentUpon>LogTransferDevice.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Mail\SendMail.aspx.cs">
-      <DependentUpon>SendMail.aspx</DependentUpon>
+    <Compile Include="Admin\SanPham\DangSanPham.aspx.cs">
+      <DependentUpon>DangSanPham.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Mail\SendMail.aspx.designer.cs">
-      <DependentUpon>SendMail.aspx</DependentUpon>
+    <Compile Include="Admin\SanPham\DangSanPham.aspx.designer.cs">
+      <DependentUpon>DangSanPham.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\SanPham\SanPhamCuaToi.aspx.cs">
       <DependentUpon>SanPhamCuaToi.aspx</DependentUpon>
@@ -3139,6 +3139,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\Mail\" />
+    <Folder Include="Admin\NewFolder1\" />
     <Folder Include="js\envisionjs\spec\jasmine-jquery\" />
   </ItemGroup>
   <PropertyGroup>

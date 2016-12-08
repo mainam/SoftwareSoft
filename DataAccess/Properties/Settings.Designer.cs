@@ -26,9 +26,7 @@ namespace DataAccess.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=MNSHOP;Integrated Security" +
-            "=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIn" +
-            "tent=ReadWrite;MultiSubnetFailover=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HOA-TUYET-PC;Initial Catalog=MNSHOP;Integrated Security=True")]
         public string MNSHOPConnectionString
         {
             get {

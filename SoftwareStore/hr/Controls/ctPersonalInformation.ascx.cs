@@ -23,7 +23,7 @@ namespace SoftwareStore.hr.Controls
                 {
                     if (username != _username)
                     {
-                        if (!UserInfo.IsAdmin(context, username))
+                        if (!UserInfo.IsAdmin(username))
                         {
                             btnEdit.Visible = false;
                             btnChangeAvatar.Visible = false;

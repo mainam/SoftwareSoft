@@ -209,6 +209,7 @@
     <Compile Include="JobTitleInfo.cs" />
     <Compile Include="ProductInfo.cs" />
     <Compile Include="SendMailFolder\LogSendMailServiceInfo.cs" />
+    <Compile Include="SoftwareStatusInfo.cs" />
     <Compile Include="TransactionInfo.cs" />
     <Compile Include="TypeUserInfo.cs" />
     <Compile Include="UserFolder\DataUser.cs" />

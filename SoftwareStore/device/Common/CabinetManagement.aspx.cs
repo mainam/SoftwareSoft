@@ -54,7 +54,7 @@ namespace SoftwareStore.device.Common
                 using (var context = new DatabaseDataContext())
                 {
                     var username = HttpContext.Current.User.Identity.Name;
-                    if (UserInfo.IsAdmin(context, username) && CabinetInfo.Delete(context,id))
+                    if (UserInfo.IsAdmin(username) && CabinetInfo.Delete(context,id))
                         return new JavaScriptSerializer().Serialize(new { Status = true });
                     return new JavaScriptSerializer().Serialize(new { Status = false });
                 }
@@ -72,7 +72,7 @@ namespace SoftwareStore.device.Common
                 using (var context = new DatabaseDataContext())
                 {
                     var username = HttpContext.Current.User.Identity.Name;
-                    if (UserInfo.IsAdmin(context,username) && CabinetInfo.Save(context,id, name, location, status))
+                    if (UserInfo.IsAdmin(username) && CabinetInfo.Save(context,id, name, location, status))
                         return new JavaScriptSerializer().Serialize(new { Status = true });
                     return new JavaScriptSerializer().Serialize(new { Status = false });
                 }

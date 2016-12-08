@@ -84,7 +84,7 @@ namespace SoftwareStore.hr
             {
                 using (var context = new DatabaseDataContext())
                 {
-                    if (UserInfo.IsAdmin(context, HttpContext.Current.User.Identity.Name))
+                    if (UserInfo.IsAdmin(HttpContext.Current.User.Identity.Name))
                     {
                         if (DataUser.addUser(userClass))
                             return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new { Status = true });

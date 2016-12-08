@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoftwareStore.Admin.SanPham {
+namespace SoftwareStore.Admin.tbSoftware {
     
     
     public partial class SanPhamCuaToi {

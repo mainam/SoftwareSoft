@@ -63,7 +63,7 @@ namespace SoftwareStore.device.Common
                 {
                     var username = HttpContext.Current.User.Identity.Name;
                     //check permission;
-                    if (UserInfo.IsAdmin(context, username) && DeviceModelInfo.Delete(context,modelname))
+                    if (UserInfo.IsAdmin(username) && DeviceModelInfo.Delete(context,modelname))
                         return new JavaScriptSerializer().Serialize(new { Status = true });
                     return new JavaScriptSerializer().Serialize(new { Status = false });
                 }
@@ -82,7 +82,7 @@ namespace SoftwareStore.device.Common
                 {
                     var username = HttpContext.Current.User.Identity.Name;
                     //check permission;
-                    if (UserInfo.IsAdmin(context,username) && DeviceModelInfo.Save(context,oldmodelname, newmodelname, company, category))
+                    if (UserInfo.IsAdmin(username) && DeviceModelInfo.Save(context,oldmodelname, newmodelname, company, category))
                         return new JavaScriptSerializer().Serialize(new { Status = true });
                     return new JavaScriptSerializer().Serialize(new { Status = false });
                 }

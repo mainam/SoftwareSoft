@@ -23,28 +23,6 @@ namespace DataAccess.DataConfigFolder
             }
         }
 
-        public static bool AllowAddProject(DatabaseDataContext context, string username)
-        {
-            try
-            {
-                var list = context.DataConfigs.Where(x => x.DataKey == DataConfigEnum.AllowCreateProject.ToString()
-                    || x.DataKey == DataConfigEnum.AllowAllMemberCreateProject.ToString()
-                    || x.DataKey == DataConfigEnum.AllowTeamLeaderCreateProject.ToString()).ToList();
-
-                if (list.SingleOrDefault(x => x.DataKey == DataConfigEnum.AllowAllMemberCreateProject.ToString() && Converts.ToBool(x.DataValue)) != null)
-                    return true;
-
-                if (list.SingleOrDefault(x => x.DataKey == DataConfigEnum.AllowCreateProject.ToString() && x.DataValue == username) != null)
-                    return true;
-
-                if (list.SingleOrDefault(x => x.DataKey == DataConfigEnum.AllowTeamLeaderCreateProject.ToString() && Converts.ToBool(x.DataValue)) != null && UserInfo.IsAdmin(context, username))
-                    return true;
-                return false;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
+        
     }
 }

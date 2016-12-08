@@ -22,7 +22,7 @@ namespace SoftwareStore.hr.Controls
                 {
                     if (username != _username)
                     {
-                        if (!UserInfo.IsAdmin(context,username))
+                        if (!UserInfo.IsAdmin(username))
                             btnAdd.Visible = false;
                     }
                     user = UserInfo.GetByID(context, _username);

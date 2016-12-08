@@ -19,7 +19,7 @@ namespace SoftwareStore.Admin.Log
             using (var context = new DatabaseDataContext())
             {
                 var username = HttpContext.Current.User.Identity.Name;
-                if (!UserInfo.IsAdmin(context,username))
+                if (!UserInfo.IsAdmin(username))
                 {
                     Response.Redirect("/home/error404.html");
                 }

@@ -47,8 +47,8 @@
                 btnedit.append($('<i class="fa fa-edit"/>'))
                 btnedit.attr('dataid', SanPham.Id);
                 btnedit.click(function () {
-                    SanPhamScript.IdEdit = $(this).attr('dataid');
-                    AJAXFunction.ShowModal("remoteModal", "/admin/SanPham/dialog/TaoSanPham.aspx?id=" + SanPhamScript.IdEdit);
+                    var id = $(this).attr("dataid");
+                    location.href="/admin#sanpham/dangsanpham.aspx?id="+id;
                 });
 
                 var btndel = $('<label class="btn btn-xs btn-default" style="margin-left:1px;">');
@@ -165,7 +165,7 @@
                 confirm("Xác nhận", "Bạn có muốn xóa các phần mềm đã chọn!!", "OK Xóa", "Cancel", callback);
             }, CreateNew: function () {
                 SanPhamScript.IdEdit = "";
-                AJAXFunction.ShowModal("remoteModal", "/admin/SanPham/dialog/TaoSanPham.aspx?id=" );
+                location.href = "/admin#sanpham/dangsanpham.aspx?id=" + 0;
             }, ShowNumber: function (number) {
                 SanPhamScript.NumberInpage = number;
                 $("#btnSelectNumberItem").text("Hiện: " + number);
@@ -317,10 +317,10 @@
                                                 <th class="theadtable" style="width: 70px">Giá bán</th>
                                                 <th class="theadtable" style="width: 70px">Giảm giá</th>
                                                 <th class="theadtable" style="width: 70px">Bảo hành</th>
-                                                <th class="theadtable" style="width: 200px">Chuyên mục</th>
-                                                <th class="theadtable" style="width: 100px">Trạng thái</th>
-                                                <th class="theadtable" style="width: 100px">Ngày đóng</th>
-                                                <th class="theadtable" style="width: 100px">Hành động</th>
+                                                <th class="theadtable" >Chuyên mục</th>
+                                                <th class="theadtable" style="width: 70px">Trạng thái</th>
+                                                <th class="theadtable" style="width: 70px">Ngày đóng</th>
+                                                <th class="theadtable" style="width: 70px">Hành động</th>
                                             </tr>
                                         </thead>
                                         <tbody>

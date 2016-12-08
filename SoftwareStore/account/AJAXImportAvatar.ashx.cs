@@ -28,18 +28,18 @@ namespace SoftwareStore.account
                     var username = HttpContext.Current.User.Identity.Name;
                     var currentusername = context.Request.Form["username"];
                     if (username != currentusername)
-                        if (!UserInfo.IsAdmin(context2, username))
+                        if (!UserInfo.IsAdmin(username))
                         {
                             context.Response.Write(new JavaScriptSerializer().Serialize(new { Status = false }));
                             return;
                         }
 
-                    var user = UserInfo.GetByID(context2, currentusername);
-                    if (user == null)
-                    {
-                        context.Response.Write(new JavaScriptSerializer().Serialize(new { Status = false }));
-                        return;
-                    }
+                    //var user = UserInfo.GetByID( currentusername);
+                    //if (user == null)
+                    //{
+                    //    context.Response.Write(new JavaScriptSerializer().Serialize(new { Status = false }));
+                    //    return;
+                    //}
 
                     var httpPostedFile = context.Request.Files["File"];
 

@@ -24,7 +24,7 @@ namespace SoftwareStore.hr
                 {
                     if (currentuser != username)
                     {
-                        if (!UserInfo.IsAdmin(context,currentuser))
+                        if (!UserInfo.IsAdmin(currentuser))
                             Response.Redirect("~/#hr/userprofile.aspx?user=" + currentuser);
                     }
                 }
@@ -122,7 +122,7 @@ namespace SoftwareStore.hr
                     if (currentuser == null)
                         currentuser = username;
                     var dataresult = UserInfo.GetUserProfile(context, currentuser);
-                    var text = new JavaScriptSerializer().Serialize(new { Status = true, Data = dataresult, AllowEdit = (currentuser == null || currentuser == username || UserInfo.IsAdmin(context,username)) });
+                    var text = new JavaScriptSerializer().Serialize(new { Status = true, Data = dataresult, AllowEdit = (currentuser == null || currentuser == username || UserInfo.IsAdmin(username)) });
                     return text;
                 }
             }

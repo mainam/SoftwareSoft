@@ -597,7 +597,7 @@ namespace DataAccess.UserFolder
                     //if else admin
                     if (user.UserName != username)
                     {
-                        if (!UserInfo.IsAdmin(context, username))
+                        if (!UserInfo.IsAdmin(username))
                             return false;
                     }
                     var user2 = context.Users.Single(x => x.UserName == user.UserName);
@@ -986,14 +986,14 @@ namespace DataAccess.UserFolder
         /// </summary>
         /// <param name="usename"></param>
         /// <returns></returns>
-        public static bool IsAdmin(DatabaseDataContext context, string usename)
+        public static bool IsAdmin(string usename)
         {
             try
             {
-                //using (var context = new DatabaseDataContext())
+                using (var context = new UserDbDataContext())
                 {
-                    var user = context.Users.Single(x => x.UserName == usename);
-                    return IsAdmin(context, user);
+                    var user = context.tbUsers.Single(x => x.UserName == usename);
+                    return user.TypeUser == 1 || user.TypeUser == 2;
                 }
 
             }

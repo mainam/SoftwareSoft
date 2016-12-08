@@ -7,28 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoftwareStore.Admin.Mail {
+namespace SoftwareStore.Admin.SanPham {
     
     
-    public partial class SendMail {
-        
-        /// <summary>
-        /// LogSendMaiLBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LogSendMaiLBox;
-        
-        /// <summary>
-        /// txtSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtSearch;
+    public partial class DangSanPham {
         
         /// <summary>
         /// task_content control.
@@ -40,13 +22,40 @@ namespace SoftwareStore.Admin.Mail {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl task_content;
         
         /// <summary>
-        /// txtSubject control.
+        /// txtTenSanPham control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtSubject;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTenSanPham;
+        
+        /// <summary>
+        /// txtBaoHanh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtBaoHanh;
+        
+        /// <summary>
+        /// txtGiaGoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtGiaGoc;
+        
+        /// <summary>
+        /// Text1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Text1;
         
         /// <summary>
         /// divTaskForIdea control.
@@ -58,48 +67,48 @@ namespace SoftwareStore.Admin.Mail {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divTaskForIdea;
         
         /// <summary>
-        /// cbFrom control.
+        /// cbListCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cbFrom;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cbListCategory;
         
         /// <summary>
-        /// cbListTo control.
+        /// Section1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cbListTo;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Section1;
         
         /// <summary>
-        /// Section2 control.
+        /// cbListStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Section2;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cbListStatus;
         
         /// <summary>
-        /// cbListCC control.
+        /// txtDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cbListCC;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDescription;
         
         /// <summary>
-        /// txtMailContent control.
+        /// btnXoa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtMailContent;
+        protected global::System.Web.UI.HtmlControls.HtmlInputButton btnXoa;
     }
 }
